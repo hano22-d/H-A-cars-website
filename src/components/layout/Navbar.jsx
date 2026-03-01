@@ -38,11 +38,11 @@ function Navbar() {
         src="/Main-Logo.png"
         alt="Logo"
         sx={{
-          width: { xs: "200px", sm: "90px", md: "110px", lg: "130px" },
+          width: { xs: "250px", sm: "90px", md: "110px", lg: "130px" },
           height: "auto",
         }}
       />
-      <Stack direction={"row"} gap={{xs: 1,lg: 4}}>
+      <Stack textAlign={'center'} direction={{lg: 'row',xs: 'column'}} gap={{xs: 1,lg: 4}}>
         <NavItem to="/">HOME</NavItem>
         <NavItem to="/cars">CARS</NavItem>
         <NavItem to="/compare">Compare</NavItem>

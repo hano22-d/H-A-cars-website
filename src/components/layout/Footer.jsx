@@ -68,7 +68,7 @@ function Footer() {
           </Stack>
         </Grid>
         <Grid item lg={12} my={3}>
-          <Stack direction={"row"} justifyContent={"space-evenly"}>
+          <Stack gap={1} direction={"row"} justifyContent={"space-evenly"}>
             <Stack gap={1} textAlign={"center"}>
               <Typography variant="h3">الخدمات</Typography>
               <Link to={"/"}>خدمة البحث عن السيارات</Link>
@@ -102,7 +102,7 @@ function Footer() {
           }}
         >
           <SimpleAvatar
-            image={"public/IMG-20260301-WA0015.jpg"}
+            image={"/IMG-20260301-WA0015.jpg"}
             color={'#B2F0C8'}
             name={'Ali Saado'}
             text={'مهندس معلوماتية ومطوّر واجهات أمامية (Front-End Developer)، أبلغ من العمر 21 عامًا. انطلقت في مجال تطوير الويب عام 2025، وأعمل على بناء تطبيقات ويب عصرية تتميز بالنظافة البرمجية والمرونة والجودة العالية.'}
@@ -121,7 +121,7 @@ function Footer() {
           }}
         >
           <SimpleAvatar
-            image={"public/Picsart_25-03-11_18-50-57-574.jpg"}
+            image={"/Picsart_25-03-11_18-50-57-574.jpg"}
             color={'#B8DEFF'}
             name={'Hani Joma'}
             text={'مهندس ميكاترونيكس ومطوّر واجهات أمامية (Front-End Developer)، أبلغ من العمر 22 عامًا. بدأت مسيرتي في تطوير الويب عام 2025، وأسعى لدمج الدقة الهندسية مع تصميم واجهات حديثة تركز على الأداء وتجربة المستخدم.'}

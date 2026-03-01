@@ -24,14 +24,14 @@ const theme = createTheme({
     fontFamily: "tajawal, sans-serif",
 
     h1: {
-      fontSize: "3rem",
+      fontSize:{ lg:"3rem",xs:'2rem'},
       letterSpacing: "-1px",
       color: "#ff4c29",
       fontFamily: '"Montserrat", "sans-serif"',
       lineHeight: 2.2,
     },
     h2: {
-      fontSize: "2.2rem",
+      fontSize:{ lg:"2.5rem",xs:'1.8rem'},
       fontWeight: 600,
       color: "#ff4c29",
       fontFamily: '"Montserrat", "sans-serif"',
@@ -39,14 +39,14 @@ const theme = createTheme({
     },
 
     h3: {
-      fontSize: "1.8rem",
+      fontSize: {lg: '1.8rem',xs: '1rem'},
       fontWeight: 600,
       color: "#ff4c29",
       lineHeight: 1.7,
     },
 
     body1: {
-      fontSize: "1rem",
+      fontSize: {lg:"1rem",xs:'0.8rem'},
       lineHeight: 1.7,
     },
   },
