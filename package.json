@@ -10,8 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.x",
+    "@emotion/styled": "^11.11.x",
+    "@fontsource/montserrat": "^5.2.8",
+    "@fontsource/tajawal": "^5.2.7",
+    "@mui/icons-material": "^5.18.0",
+    "@mui/material": "^5.15.x",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
