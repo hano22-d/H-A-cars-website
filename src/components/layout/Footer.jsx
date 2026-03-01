@@ -136,7 +136,7 @@ function Footer() {
         </Grid>
         <Grid item lg={8} xs={12} alignContent={'center'}>
           <Typography variant="h3" justifySelf={'center'} my={2}>Why H-A Cars?</Typography>
-          <Stack direction={'row'} justifyContent={'space-evenly'} alignItems={'center'}>
+          <Stack textAlign={'center'} direction={'row'} justifyContent={'space-evenly'} alignItems={'center'}>
         {items.map((item) => (
           <Stack gap={1} alignItems={'center'} direction={{lg: 'row',xs: 'column'}}>
             <StyledIcon

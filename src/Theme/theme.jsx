@@ -39,7 +39,7 @@ const theme = createTheme({
     },
 
     h3: {
-      fontSize: {lg: '1.8rem',xs: '1rem'},
+      fontSize: {lg:'3rem',xs: '1rem'},
       fontWeight: 600,
       color: "#ff4c29",
       lineHeight: 1.7,
