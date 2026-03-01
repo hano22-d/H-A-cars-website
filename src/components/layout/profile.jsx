@@ -1,7 +1,7 @@
 import { Box, Card, Stack, Typography } from "@mui/material";
 import theme from "../../Theme/theme";
 
-function SimpleAvatar({ image, objectFit, color, name, text }) {
+function SimpleAvatar({ image, color, name, text }) {
   return (
     <Stack alignItems={"center"} sx={{}}>
       <Box
@@ -11,7 +11,6 @@ function SimpleAvatar({ image, objectFit, color, name, text }) {
         sx={{
           width: 130,
           height: 170,
-          objectFit: objectFit,
           border: `4px solid  ${theme.palette.background.paper}`,
           boxShadow: "0 4px 15px rgba(22, 15, 36, 0.3)",
           borderRadius: "30px 0 30px 0",
@@ -22,7 +21,7 @@ function SimpleAvatar({ image, objectFit, color, name, text }) {
       <Card
         sx={{
           justifySelf: "center",
-          width: { lg: "500px",md: '50vw', xs: "75vw" },
+          width: { lg: "500px",md: '50vw', xs: "80vw" },
           minHeight: "80vh",
           background: color,
           opacity: "0.8",

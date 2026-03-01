@@ -1,4 +1,4 @@
-import { Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import { Container, Grid, Stack, TextField, Typography,Box } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CallIcon from "@mui/icons-material/Call";
@@ -8,9 +8,23 @@ import Divider from "@mui/material/Divider";
 import { Link } from "@mui/material";
 import SimpleAvatar from "./profile";
 
+
+import SecurityIcon from "@mui/icons-material/Security";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import StarIcon from "@mui/icons-material/Star";
+
+  const items = [
+    { icon: <SecurityIcon />, text: "Secure Payment" },
+    { icon: <VerifiedIcon />, text: "Certified Cars" },
+    { icon: <LocalShippingIcon />, text: "Fast Delivery" },
+    { icon: <StarIcon />, text: "5-Star Rated" },
+  ];
+
+
 function Footer() {
   return (
-    <Container maxWidth="100%" sx={{ bgcolor: "background.paper" }}>
+    <Container maxWidth="100%" sx={{ bgcolor: "background.paper" ,py: 5}}>
       <Grid container spacing={5}>
         <Grid item lg={6} xs={12} alignSelf={"center"}>
           <TextField fullWidth label="Search" dir="rtl" />
@@ -88,8 +102,7 @@ function Footer() {
           }}
         >
           <SimpleAvatar
-            image={"public/IMG-20260228-WA0014.jpg"}
-            objectFit={"cover"}
+            image={"public/IMG-20260301-WA0015.jpg"}
             color={'#B2F0C8'}
             name={'Ali Saado'}
             text={'مهندس معلوماتية ومطوّر واجهات أمامية (Front-End Developer)، أبلغ من العمر 21 عامًا. انطلقت في مجال تطوير الويب عام 2025، وأعمل على بناء تطبيقات ويب عصرية تتميز بالنظافة البرمجية والمرونة والجودة العالية.'}
@@ -109,19 +122,43 @@ function Footer() {
         >
           <SimpleAvatar
             image={"public/Picsart_25-03-11_18-50-57-574.jpg"}
-            objectFit={""}
             color={'#B8DEFF'}
             name={'Hani Joma'}
             text={'مهندس ميكاترونيكس ومطوّر واجهات أمامية (Front-End Developer)، أبلغ من العمر 22 عامًا. بدأت مسيرتي في تطوير الويب عام 2025، وأسعى لدمج الدقة الهندسية مع تصميم واجهات حديثة تركز على الأداء وتجربة المستخدم.'}
           />
         </Grid>
-      {/*  <Grid  item lg={6} xs={12}>
+       <Grid  item lg={4} xs={12}>
         <iframe
-        style={{border: '3px solid #ff4c29' }}
+        style={{border: '3px solid #ff4c29',position: 'relative',left: '100px' }}
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-122.41941508468105!3d37.77492977975907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818a1234567%3A0xabcdef1234567890!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1234567890"
-          width="40%" height="200" loading="lazy" title="Our title" referrerpolicy="no-referrer-when-downgrade">
+          width="50%" height="200" loading="lazy" title="Our title" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        </Grid> */}
+        </Grid>
+        <Grid item lg={8} xs={12} alignContent={'center'}>
+          <Typography variant="h3" justifySelf={'center'} my={2}>Why H-A Cars?</Typography>
+          <Stack direction={'row'} justifyContent={'space-evenly'} alignItems={'center'}>
+        {items.map((item) => (
+          <Stack gap={1} alignItems={'center'} direction={{lg: 'row',xs: 'column'}}>
+            <StyledIcon
+            size='large'
+              sx={{
+                color: "primary.main",
+                transition: "0.3s",
+                "&:hover": {
+                  transform: "translateY(-5px)",
+                  color: "secondary.main",
+                },
+              }}
+            >
+              {item.icon}
+            </StyledIcon>
+            <Typography variant="body2">
+                {item.text}
+              </Typography>
+              </Stack>
+        ))}   
+        </Stack>
+        </Grid>
       </Grid>
     </Container>
   );
