@@ -1,5 +1,10 @@
-import { Box, Card, Stack, Typography } from "@mui/material";
+import { Box, Card, Link, Stack, Typography } from "@mui/material";
 import theme from "../../Theme/theme";
+import GitHubIcon from '@mui/icons-material/GitHub'
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+
+
 
 function SimpleAvatar({ image, color, name, text }) {
   return (
@@ -22,7 +27,7 @@ function SimpleAvatar({ image, color, name, text }) {
         sx={{
           justifySelf: "center",
           width: { lg: "500px",md: '50vw', xs: "80vw" },
-          minHeight: "80vh",
+          minHeight: {lg:"80vh",xs: '70vh'},
           background: color,
           opacity: "0.8",
           borderRadius: 15,
@@ -42,7 +47,21 @@ function SimpleAvatar({ image, color, name, text }) {
       >
         <Typography variant="h3">{name}</Typography>
         <Typography>{text}</Typography>
+        <Stack direction={'row'} gap={2} mt={3}>
+        <Link>
+      <GitHubIcon/>
+      </Link>
+      <Link>
+      <FacebookIcon/>
+      </Link>
+      <Link>
+      <InstagramIcon/>
+      </Link>
+        </Stack>
+     
       </Card>
+
+
     </Stack>
   );
 }

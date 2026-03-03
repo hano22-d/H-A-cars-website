@@ -8,7 +8,6 @@ import Divider from "@mui/material/Divider";
 import { Link } from "@mui/material";
 import SimpleAvatar from "./profile";
 
-
 import SecurityIcon from "@mui/icons-material/Security";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -127,7 +126,8 @@ function Footer() {
             text={'مهندس ميكاترونيكس ومطوّر واجهات أمامية (Front-End Developer)، أبلغ من العمر 22 عامًا. بدأت مسيرتي في تطوير الويب عام 2025، وأسعى لدمج الدقة الهندسية مع تصميم واجهات حديثة تركز على الأداء وتجربة المستخدم.'}
           />
         </Grid>
-       <Grid  item lg={4} xs={12}>
+       <Grid item lg={4} xs={12}>
+        <Typography my={2} textAlign={'center'} variant="h3">:موقعنا</Typography>
         <iframe
         style={{border: '3px solid #ff4c29',position: 'relative',left: '100px' }}
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-122.41941508468105!3d37.77492977975907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818a1234567%3A0xabcdef1234567890!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1234567890"

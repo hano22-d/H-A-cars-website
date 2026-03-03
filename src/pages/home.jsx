@@ -10,6 +10,7 @@ function Home() {
           mx: "auto",
           my: 20,
           p: 10,
+          
           display: "flex",
           alignItems: "center",
           flexDirection: "column",

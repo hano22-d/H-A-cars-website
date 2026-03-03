@@ -13,7 +13,7 @@ const theme = createTheme({
     },
     background: {
       default: "#cfd2d4",
-      paper: "rgba(255, 255, 255, 0.8);",
+      paper: "rgba(255, 255, 255, 0.8)",
     },
     text: {
       primary: "#1B1B1B",
