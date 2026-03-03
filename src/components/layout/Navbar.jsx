@@ -45,8 +45,8 @@ function Navbar() {
           sx={{
             width: { xs: "125px", sm: "90px", md: "110px", lg: "130px" },
             height: "auto",
-            mt: 2,
-            transform: {xs: `translate(${progress*100}px,${-progress*55}px)`,lg: 'translate(0)'}
+            mt: 5,
+            transform: {xs: `translate(${progress*100}px,${-progress*45}px)`,lg: 'translate(0)'}
           }}
         />
         </Link>
