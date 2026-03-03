@@ -40,7 +40,7 @@ function Navbar() {
         <Link to={'/'}>
         <Box
           component="img"
-          src="public/WebsiteLogo.png"
+          src="/WebsiteLogo.png"
           alt="Logo"
           sx={{
             width: { xs: "125px", sm: "90px", md: "110px", lg: "130px" },
