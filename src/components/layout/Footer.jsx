@@ -12,6 +12,7 @@ import SecurityIcon from "@mui/icons-material/Security";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import StarIcon from "@mui/icons-material/Star";
+import { UsethemeToggle } from "../../context/themeContext";
 
   const items = [
     { icon: <SecurityIcon />, text: "Secure Payment" },
@@ -22,6 +23,9 @@ import StarIcon from "@mui/icons-material/Star";
 
 
 function Footer() {
+
+  const {toggleMode} = UsethemeToggle()
+
   return (
     <Container maxWidth="100%" sx={{ bgcolor: "background.paper" ,py: 5}}>
       <Grid container spacing={5}>
@@ -47,7 +51,7 @@ function Footer() {
           <Typography sx={{ mt: 7, mb: 3, textAlign: "center" }} variant="h3">
             :تواصل معنا عبر
           </Typography>
-          <Stack direction="row" spacing={{lg: 15,xs: 7}} justifyContent={"center"}>
+          <Stack direction="row" spacing={{lg: 15,xs: 5}} justifyContent={"center"}>
             <StyledIcon
               component={FacebookIcon}
               size="large"
@@ -67,7 +71,7 @@ function Footer() {
           </Stack>
         </Grid>
         <Grid item lg={12} my={3}>
-          <Stack gap={1} direction={"row"} justifyContent={"space-evenly"}>
+          <Stack direction={"row"} justifyContent={"space-evenly"}>
             <Stack gap={1} textAlign={"center"}>
               <Typography variant="h3">الخدمات</Typography>
               <Link to={"/"}>خدمة البحث عن السيارات</Link>
@@ -102,7 +106,7 @@ function Footer() {
         >
           <SimpleAvatar
             image={"/IMG-20260301-WA0015.jpg"}
-            color={'#B2F0C8'}
+            color={toggleMode? '#555':'#B2F0C8'}
             name={'Ali Saado'}
             text={'مهندس معلوماتية ومطوّر واجهات أمامية (Front-End Developer)، أبلغ من العمر 21 عامًا. انطلقت في مجال تطوير الويب عام 2025، وأعمل على بناء تطبيقات ويب عصرية تتميز بالنظافة البرمجية والمرونة والجودة العالية.'}
           />
@@ -121,7 +125,7 @@ function Footer() {
         >
           <SimpleAvatar
             image={"/Picsart_25-03-11_18-50-57-574.jpg"}
-            color={'#B8DEFF'}
+            color={toggleMode? '#555': '#B8DEFF'}
             name={'Hani Joma'}
             text={'مهندس ميكاترونيكس ومطوّر واجهات أمامية (Front-End Developer)، أبلغ من العمر 22 عامًا. بدأت مسيرتي في تطوير الويب عام 2025، وأسعى لدمج الدقة الهندسية مع تصميم واجهات حديثة تركز على الأداء وتجربة المستخدم.'}
           />

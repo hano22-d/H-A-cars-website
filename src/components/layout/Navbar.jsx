@@ -1,12 +1,14 @@
-import { Stack, Box } from "@mui/material";
+import { Stack, Box, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { NavItem } from "../UiComponents/navLink";
-import { UseHeroContext } from "../../context/heroContext";
 import Drawer from "./drawer";
-
+import { UsethemeToggle } from "../../context/themeContext";
+import BedtimeIcon from "@mui/icons-material/Bedtime";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Navbar() {
-  let { progress } = UseHeroContext();
+  const { toggleMode, toggleModeChange } = UsethemeToggle();
 
   return (
     <>
@@ -15,10 +17,10 @@ function Navbar() {
           zIndex: 9,
           position: "fixed",
           top: 0,
-          background: "linear-gradient(90deg, #0A0A0A 0%, #1A0F0A 40%, #ff4c29 120%)",
+          background:
+            "linear-gradient(90deg, #0A0A0A 0%, #1A0F0A 40%, #ff4c29 120%)",
           height: "100px",
           width: "100%",
-          opacity: progress,
         }}
       />
       <Stack
@@ -28,42 +30,62 @@ function Navbar() {
           top: 0,
           width: "100%",
           height: "100px",
-          gap: [1, 3, 5, 7],
-          p: [4, 3, 2, 1],
+          p: [4, 3, 2, 3],
           bgcolor: "transparent",
           justifyContent: "space-between",
           alignItems: "center",
-          borderBottom: progress > 0.5 ? "2px solid #ff4c29" : "none",
+          borderBottom: "2px solid #ff4c29",
         }}
         direction={["column", "column", "row", "row"]}
       >
-        <Link to={'/'}>
-        <Box
-          component="img"
-          src="/WebsiteLogo.png"
-          alt="Logo"
-          sx={{
-            width: { xs: "125px", sm: "90px", md: "110px", lg: "130px" },
-            height: "auto",
-            mt: 5,
-            transform: {xs: `translate(${progress*100}px,${-progress*80}px)`,lg: 'translate(0)'}
-          }}
-        />
+        <Link to={"/home"}>
+          <Box
+            component="img"
+            src="/WebsiteLogo.png"
+            alt="Logo"
+            sx={{
+              width: { xs: "125px", sm: "90px", md: "110px", lg: "130px" },
+              height: "auto",
+              mt: 2,
+              transform: { xs: `translate(100px,-55px)`, lg: "translate(0)" },
+            }}
+          />
         </Link>
-       
+        <Stack sx={{position:'absolute',left: '12%'}} direction={"row"}>
+          <Button
+          title="Theme"
+            sx={{
+              display: { lg: "block", xs: "none" },
+              "&:hover": {
+                bgcolor: "transparent",
+                color: "background.paper",
+              },
+            }}
+            onClick={toggleModeChange}
+          >
+            {toggleMode ? <BedtimeIcon /> : <WbSunnyIcon />}
+          </Button>
+          <Button title="User" sx={{right: 10,  display: { lg: "block", xs: "none" },  "&:hover": {
+            bgcolor: "transparent",
+            color: "background.paper",
+          },}}>
+            <AccountCircleIcon />
+          </Button>
+        </Stack>
+
         <Stack
-        display={{xs: 'none',lg: 'block'}}
+          display={{ xs: "none", lg: "block" }}
           textAlign={"center"}
           direction={{ lg: "row", xs: "column" }}
           gap={{ xs: 1, lg: 4 }}
         >
-          <NavItem to="/">HOME</NavItem>
+          <NavItem to="/home">HOME</NavItem>
           <NavItem to="/cars">CARS</NavItem>
           <NavItem to="/compare">Compare</NavItem>
           <NavItem to="/news">News</NavItem>
-          <NavItem to="store">Store</NavItem>
+          <NavItem to="/store">Store</NavItem>
         </Stack>
-        <Drawer/>
+        <Drawer />
       </Stack>
     </>
   );

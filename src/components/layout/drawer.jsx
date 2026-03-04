@@ -6,11 +6,18 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import { NavItem } from "../UiComponents/navLink";
 import Divider from "@mui/material/Divider";
 import HelpIcon from "@mui/icons-material/Help";
-import Brightness4Icon from "@mui/icons-material/Brightness4"; // تبديل بين الوضعين
+import { UsethemeToggle } from "../../context/themeContext";
+import BedtimeIcon from "@mui/icons-material/Bedtime";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle"
+
 
 function Drawer() {
+
+  const {toggleMode, toggleModeChange} = UsethemeToggle()
+
   const navLinkList = [
-    { id: 1, text: "Home", link: "/" },
+    { id: 1, text: "Home", link: "home" },
     { id: 2, text: "Cars", link: "/cars" },
     { id: 3, text: "Compare", link: "/compare" },
     { id: 4, text: "News", link: "/news" },
@@ -74,6 +81,10 @@ function Drawer() {
         </Stack>
         <Divider />
         <Button sx={{ mt: 3 }}>
+        <AccountCircleIcon/> <Typography color={"wheat"} variant="h3" mx={1}>Login</Typography> 
+        </Button>
+        <br />
+        <Button>
           <SettingsIcon />
           <Typography variant="h3" color={"wheat"} mx={1}>
             Setting
@@ -87,8 +98,8 @@ function Drawer() {
           </Typography>
         </Button>
         <br />
-        <Button>
-          <Brightness4Icon />
+        <Button onClick={toggleModeChange}>
+          {toggleMode? <BedtimeIcon/> : <WbSunnyIcon/>}
           <Typography variant="h3" color={"wheat"} mx={1}>
             Theme
           </Typography>
