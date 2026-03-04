@@ -31,20 +31,21 @@ function HeroContent() {
 
 // Mobile Hero show Images
   const imagesHeroMobile = [
-    'public/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
-    'public/CarHeroMobileImg/pexels-highervibration-10215508.jpg',
-    'public/CarHeroMobileImg/pexels-maxavans-5058350.jpg',
-    'public/CarHeroMobileImg/pexels-odobesku-9018708.jpg',
-    'public/CarHeroMobileImg/pexels-saimon-6070046.jpg'
+    '/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
+    '/CarHeroMobileImg/pexels-highervibration-10215508.jpg',
+    '/CarHeroMobileImg/pexels-maxavans-5058350.jpg',
+    '/CarHeroMobileImg/pexels-odobesku-9018708.jpg',
+    '/CarHeroMobileImg/pexels-saimon-6070046.jpg'
   ] 
 
   const [heroImgMobile,setHeroImgMobile] = useState(
-    'public/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
+    '/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
   )
 
-let countMobile = 0
+
  
   useEffect(() => {
+    let countMobile = 0
     let intervalMobile = setInterval(() => {
         countMobile = (countMobile + 1) % imagesHeroMobile.length;
         const img = new Image();
@@ -70,9 +71,10 @@ let countMobile = 0
     "/imgHero/pexels-vladalex94-1402787.jpg",
   );
 
-let count = 0
+
 
   useEffect(() => {
+    let count = 0
     let interval = setInterval(() => {
         count = (count + 1) % images.length;
         const img = new Image();
