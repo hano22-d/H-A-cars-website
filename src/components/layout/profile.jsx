@@ -18,7 +18,7 @@ function SimpleAvatar({ image, color, name, text }) {
           border: `4px solid #ff4c29`,
           boxShadow: "0 4px 15px rgba(22, 15, 36, 0.3)",
           borderRadius: "30px 0 30px 0",
-          transform: "translateY(65px)",
+          transform: "translateY(75px)",
           zIndex: 1,
         }}
       />

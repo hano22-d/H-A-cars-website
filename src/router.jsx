@@ -8,6 +8,7 @@ import Compare from "./pages/compare"
 
 export const router = createBrowserRouter([
   {
+    path: "/",
     element: <MainLayout />,
     children: [
       { path: "cars", element: <Cars /> },
@@ -17,9 +18,5 @@ export const router = createBrowserRouter([
     ],
   },
   //فصلنا الصفحة الرئيسية عن (الماين لاياوت) كي تعتمد على الهيدر الخاص بها
-  { path: "/", element: <Home /> },
-  {
-    path: "*",
-    element: <div>Page Not Found</div>,
-  }
+  { path: "/home", element: <Home /> },
 ]);
