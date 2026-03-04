@@ -91,7 +91,7 @@ function Navbar() {
           direction={{ lg: "row", xs: "column" }}
           gap={{ xs: 1, lg: 4 }}
         >
-          <NavItem to="/home">HOME</NavItem>
+          <NavItem to="/">HOME</NavItem>
           <NavItem to="/cars">CARS</NavItem>
           <NavItem to="/compare">Compare</NavItem>
           <NavItem to="/news">News</NavItem>

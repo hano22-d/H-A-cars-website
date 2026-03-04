@@ -17,7 +17,7 @@ function Drawer() {
   const {toggleMode, toggleModeChange} = UsethemeToggle()
 
   const navLinkList = [
-    { id: 1, text: "Home", link: "home" },
+    { id: 1, text: "Home", link: "/" },
     { id: 2, text: "Cars", link: "/cars" },
     { id: 3, text: "Compare", link: "/compare" },
     { id: 4, text: "News", link: "/news" },

@@ -29,6 +29,34 @@ function ArrowIcon() {
 function HeroContent() {
   const { progress } = UseHeroContext();
 
+// Mobile Hero show Images
+  const imagesHeroMobile = [
+    'public/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
+    'public/CarHeroMobileImg/pexels-highervibration-10215508.jpg',
+    'public/CarHeroMobileImg/pexels-maxavans-5058350.jpg',
+    'public/CarHeroMobileImg/pexels-odobesku-9018708.jpg',
+    'public/CarHeroMobileImg/pexels-saimon-6070046.jpg'
+  ] 
+
+  const [heroImgMobile,setHeroImgMobile] = useState(
+    'public/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
+  )
+
+let countMobile = 0
+ 
+  useEffect(() => {
+    let intervalMobile = setInterval(() => {
+        countMobile = (countMobile + 1) % imagesHeroMobile.length;
+        const img = new Image();
+        img.src = imagesHeroMobile[countMobile];
+        img.onload = () => setHeroImgMobile(imagesHeroMobile[countMobile]);
+    }, 10000);
+
+    return () => clearInterval(intervalMobile);
+  }, []);
+
+
+// Laptop Hero show Images
   const images = [
     "/imgHero/pexels-alex-amorales-321095-909907.jpg",
     "/imgHero/pexels-lalesh-168938.jpg",
@@ -41,23 +69,20 @@ function HeroContent() {
   const [heroBackgroundImage, setHeroBackgroundImage] = useState(
     "/imgHero/pexels-vladalex94-1402787.jpg",
   );
-  const [count, setCount] = useState(0);
 
-  console.log(count);
+let count = 0
 
   useEffect(() => {
     let interval = setInterval(() => {
-      setCount((prev) => {
-        let nextCount = (prev + 1) % images.length;
+        count = (count + 1) % images.length;
         const img = new Image();
-        img.src = images[nextCount];
-        img.onload = () => setHeroBackgroundImage(images[nextCount]);
-        return nextCount;
-      });
+        img.src = images[count];
+        img.onload = () => setHeroBackgroundImage(images[count]);
     }, 10000);
 
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <Box
@@ -73,7 +98,10 @@ function HeroContent() {
         sx={{
           position: "absolute",
           inset: 0,
-          backgroundImage: `url(${heroBackgroundImage})`,
+          backgroundImage: {
+          lg : `url(${heroBackgroundImage})`,
+          xs : `url(${heroImgMobile})`
+          },
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
