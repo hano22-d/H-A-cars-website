@@ -4,20 +4,21 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 
+
 function SimpleAvatar({ image, color, name, text }) {
   return (
-    <Stack alignItems={"center"}>
+    <Stack alignItems={"center"} sx={{}}>
       <Box
         component={"img"}
         src={image}
         alt="صورة شخصية"
         sx={{
-          width: 100,
-          height: 140,
+          width: 130,
+          height: 170,
           border: `4px solid #ff4c29`,
           boxShadow: "0 4px 15px rgba(22, 15, 36, 0.3)",
           borderRadius: "30px 0 30px 0",
-          transform: "translateY(60px)",
+          transform: "translateY(65px)",
           zIndex: 1,
         }}
       />

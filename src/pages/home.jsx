@@ -47,7 +47,7 @@ function Navbar() {
         }}
         direction={["column", "column", "row", "row"]}
       >
-        <Link to="/home">
+        <Link to="/">
           <Box
             component="img"
             src="/WebsiteLogo.png"
@@ -91,7 +91,7 @@ function Navbar() {
           direction={{ lg: "row", xs: "column" }}
           gap={{ xs: 1, lg: 4 }}
         >
-          <NavItem to="/home">HOME</NavItem>
+          <NavItem to="/">HOME</NavItem>
           <NavItem to="/cars">CARS</NavItem>
           <NavItem to="/compare">Compare</NavItem>
           <NavItem to="/news">News</NavItem>
