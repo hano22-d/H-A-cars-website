@@ -3,61 +3,36 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
-import { useEffect, useState, useRef } from "react";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import { Grid } from "@mui/material";
-import CarCard from "./CarCard-store";
+import CarCard from "../components/UiComponents/CarCard-store";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 const carsGallery = [
   {
     name: "Toyota Camry 2022",
     price: "$25,000",
-    image: "/cars/camry.jpg",
+    image: "public/Images/Toyota Camry 2022.avif",
   },
   {
     name: "BMW X5 2021",
     price: "$45,000",
-    image: "/cars/bmw.jpg",
+    image: "public/Images/BMW X5 2021.jpg",
   },
   {
     name: "Mercedes C300",
     price: "$40,000",
-    image: "/cars/mercedes.jpg",
+    image: "public/Images/Mercedes C300.jpg",
   },
 ];
 
 function Store() {
-  const [index, setIndex] = useState(0);
-  const intervalRef = useRef(null);
 
-  const startAutoChange = () => {
-    intervalRef.current = setInterval(() => {
-      setIndex((prev) => (prev + 1) % carsGallery.length);
-    }, 15000);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % carsGallery.length);
-    }, 10000); // 10 ثانية
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextCar = () => {
-    clearInterval(intervalRef.current);
-    setIndex((prev) => (prev + 1) % carsGallery.length);
-    startAutoChange();
-  };
-
-  const prevCar = () => {
-    clearInterval(intervalRef.current);
-    setIndex((prev) => (prev - 1 + carsGallery.length) % carsGallery.length);
-    startAutoChange();
-  };
-
-  const car = carsGallery[index];
 
   const cars = [
     {
@@ -136,51 +111,78 @@ function Store() {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          position: "relative",
         }}
       >
-        <button
-          onClick={prevCar}
-          style={{
-            backgroundColor: "#ff4c29",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            width: "50px",
-            height: "50px",
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={3}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
           }}
+          navigation={true}
+          modules={[EffectCoverflow, Navigation]}
         >
-          <SkipPreviousIcon />
-        </button>
-
-        <Card sx={{ maxWidth: 400, width: "100%", margin: "0" }}>
-          <CardMedia
-            component="img"
-            height="250"
-            image={car.image}
-            alt={car.name}
-          />
-          <CardContent>
-            <Typography variant="h6">{car.name}</Typography>
-            <Typography variant="h5" color="primary">
-              {car.price}
-            </Typography>
-          </CardContent>
-        </Card>
-
-        <button
-          onClick={nextCar}
-          style={{
-            backgroundColor: "#ff4c29",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            width: "50px",
-            height: "50px",
-          }}
-        >
-          <SkipNextIcon />
-        </button>
+          <SwiperSlide>
+            <Card>
+              <CardMedia
+                component="img"
+                height="300"
+                image="public/Images/Toyota Camry 2022.avif"
+                alt="Toyota Camry 2022"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Toyota Camry 2022
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  $25,000
+                </Typography>
+              </CardContent>
+            </Card>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card>
+              <CardMedia
+                component="img"
+                height="300"
+                image="public/Images/BMW X5 2021.jpg"
+                alt="BMW X5 2021"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  BMW X5 2021
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  $45,000
+                </Typography>
+              </CardContent>
+            </Card>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card>
+              <CardMedia
+                component="img"
+                height="300"
+                image="public/Images/Mercedes C300.jpg"
+                alt="Mercedes C300"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Mercedes C300
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  $40,000
+                </Typography>
+              </CardContent>
+            </Card>
+          </SwiperSlide>
+        </Swiper>
       </Container>
       {/* End of Carousel Section */}
 

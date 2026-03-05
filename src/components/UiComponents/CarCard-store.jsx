@@ -36,7 +36,7 @@ function CarCard({ car }) {
           <FavoriteBorderIcon />
         </IconButton>
       </Box>
-      <CardContent>
+      <CardContent sx={{marginTop: 3}}>
         <Typography variant="subtitle1" fontWeight="bold">
           {car.name}
         </Typography>
