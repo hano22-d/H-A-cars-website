@@ -135,7 +135,7 @@ function Footer() {
         <iframe
         style={{border: '3px solid #ff4c29',position: 'relative',left: '100px' }}
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-122.41941508468105!3d37.77492977975907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818a1234567%3A0xabcdef1234567890!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1234567890"
-          width="50%" height="200" loading="lazy" title="Our title" referrerpolicy="no-referrer-when-downgrade">
+          width="50%" height="200" loading="lazy" title="Our title" referrerPolicy="no-referrer-when-downgrade">
         </iframe>
         </Grid>
         <Grid item lg={8} xs={12} alignContent={'center'}>
