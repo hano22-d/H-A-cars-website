@@ -3,8 +3,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import { Grid } from "@mui/material";
 import CarCard from "../components/UiComponents/CarCard-store";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,21 +11,23 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
+
+
 const carsGallery = [
   {
     name: "Toyota Camry 2022",
     price: "$25,000",
-    image: "public/Images/Toyota Camry 2022.avif",
+    image: "/Images/Toyota Camry 2022.avif",
   },
   {
     name: "BMW X5 2021",
     price: "$45,000",
-    image: "public/Images/BMW X5 2021.jpg",
+    image: "/Images/BMW X5 2021.jpg",
   },
   {
     name: "Mercedes C300",
     price: "$40,000",
-    image: "public/Images/Mercedes C300.jpg",
+    image: "/Images/Mercedes C300.jpg",
   },
 ];
 
@@ -133,7 +133,7 @@ function Store() {
               <CardMedia
                 component="img"
                 height="300"
-                image="public/Images/Toyota Camry 2022.avif"
+                image="/Images/Toyota Camry 2022.avif"
                 alt="Toyota Camry 2022"
               />
               <CardContent>
@@ -151,7 +151,7 @@ function Store() {
               <CardMedia
                 component="img"
                 height="300"
-                image="public/Images/BMW X5 2021.jpg"
+                image="/Images/BMW X5 2021.jpg"
                 alt="BMW X5 2021"
               />
               <CardContent>
@@ -169,7 +169,7 @@ function Store() {
               <CardMedia
                 component="img"
                 height="300"
-                image="public/Images/Mercedes C300.jpg"
+                image="/Images/Mercedes C300.jpg"
                 alt="Mercedes C300"
               />
               <CardContent>
@@ -202,3 +202,4 @@ function Store() {
   );
 }
 export default Store;
+

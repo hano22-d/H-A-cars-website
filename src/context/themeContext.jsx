@@ -1,11 +1,19 @@
-import { createContext } from "react";
+import { createContext, useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
 
 const ThemeContext = createContext();
 
 function ThemeToggleProvider({ children }) {
-  const [toggleMode, setToggleMode] = useState(true);
+
+  const [toggleMode, setToggleMode] = useState(() => {
+    const saved = localStorage.getItem("theme");
+    return saved !== null ? JSON.parse(saved) : true;
+  });
+  
+useEffect(() => {
+  localStorage.setItem('theme',JSON.stringify(toggleMode))
+},[toggleMode])
 
   function toggleModeChange() {
     setToggleMode((prev) => !prev);

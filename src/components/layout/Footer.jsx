@@ -15,10 +15,10 @@ import StarIcon from "@mui/icons-material/Star";
 import { UsethemeToggle } from "../../context/themeContext";
 
   const items = [
-    { icon: <SecurityIcon />, text: "Secure Payment" },
-    { icon: <VerifiedIcon />, text: "Certified Cars" },
-    { icon: <LocalShippingIcon />, text: "Fast Delivery" },
-    { icon: <StarIcon />, text: "5-Star Rated" },
+    {id: 1, icon: <SecurityIcon />, text: "Secure Payment" },
+    {id: 2, icon: <VerifiedIcon />, text: "Certified Cars" },
+    { id: 3, icon: <LocalShippingIcon />, text: "Fast Delivery" },
+    { id: 4, icon: <StarIcon />, text: "5-Star Rated" },
   ];
 
 
@@ -142,7 +142,7 @@ function Footer() {
           <Typography variant="h3" justifySelf={'center'} my={2}>Why H-A Cars?</Typography>
           <Stack textAlign={'center'} direction={'row'} justifyContent={'space-evenly'} alignItems={'center'}>
         {items.map((item) => (
-          <Stack gap={1} alignItems={'center'} direction={{lg: 'row',xs: 'column'}}>
+          <Stack key={item.id} gap={1} alignItems={'center'} direction={{lg: 'row',xs: 'column'}}>
             <StyledIcon
             size='large'
               sx={{
