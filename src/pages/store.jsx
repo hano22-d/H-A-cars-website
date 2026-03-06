@@ -210,7 +210,7 @@ function Store() {
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 400,
+            depth: 300,
             modifier: 1,
             slideShadows: true,
             scale: 0.95,
@@ -224,8 +224,9 @@ function Store() {
                 sx={{
                   maxWidth: "100%",
                   mx: "auto",
-                  borderRadius: 1,
                   transition: "all 0.3s ease",
+                  boxShadow:"none",
+                  backgroundColor:"white"
                 }}
               >
                 <CardMedia
