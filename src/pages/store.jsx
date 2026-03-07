@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
 import { Grid } from "@mui/material";
 import CarCard from "../components/UiComponents/CarCard-store";
+import { Chip } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -27,7 +28,7 @@ const carsGallery = [
     engine: "2.5L",
     transmission: "Automatic",
     mileage: "20,000 km",
-    status: "New",
+    status: "Used",
   },
   {
     name: "BMW X5 2021",
@@ -226,7 +227,7 @@ function Store() {
                   mx: "auto",
                   transition: "all 0.3s ease",
                   boxShadow:"none",
-                  backgroundColor:"white"
+                  
                 }}
               >
                 <CardMedia
@@ -239,6 +240,12 @@ function Store() {
                   image={car.image}
                   alt={car.name}
                 />
+                <Chip
+                          label={car.status}
+                          color="warning"
+                          size="small"
+                          sx={{ position: "absolute", top: 10, left: 10 }}
+                        />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {car.name}

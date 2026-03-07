@@ -13,7 +13,7 @@ function ThemeWrapper({ children }) {
     palette: {
       primary: { main: "#ff4c29" },
       secondary: { main: "#2B2B2B" },
-      background: { default: "#cfd2d4", paper: "rgba(255, 255, 255, 0.8)" },
+      background: { default: "#cfd2d4", paper: "rgb(255, 255, 255)" },
       text: { primary: "#1B1B1B", secondary: "#555555" },
       mode: "light",
     },
