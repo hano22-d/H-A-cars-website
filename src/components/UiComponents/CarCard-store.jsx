@@ -13,7 +13,17 @@ function CarCard({ car }) {
   return (
     <Card>
       <Box sx={{ position: "relative" }}>
-        <CardMedia />
+        <CardMedia
+          component="img"
+          sx={{
+            width: "100%",
+            height: 200,
+            objectFit: "cover",
+            borderBottom: "3px double",
+          }}
+          image={car.image}
+          alt={car.name}
+        />
         <Chip
           label={car.status}
           color="warning"
@@ -24,16 +34,24 @@ function CarCard({ car }) {
           <FavoriteBorderIcon />
         </IconButton>
       </Box>
-      <CardContent sx={{ marginTop: 3 }}>
-        <Typography variant="subtitle1" fontWeight="bold">
+      <CardContent sx={{ marginTop: 1 }}>
+        <Typography
+          variant="subtitle1"
+          fontWeight="bold"
+          align="center"
+          fontSize={25}
+          fontFamily="ui-serif"
+        >
           {car.name}
         </Typography>
-        <Typography variant="h5" color="primary" sx={{ mt: 1, mb: 1 }}>
+        <Typography variant="h5" fontWeight="bold" color="primary" sx={{ mt: 1 }} align="center">
           {car.price}
         </Typography>
         <Box
           sx={{
             display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             gap: 2,
             color: "gray",
             fontSize: 14,

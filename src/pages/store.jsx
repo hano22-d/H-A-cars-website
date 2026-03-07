@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Container } from "@mui/material";
+import { Container, InputAdornment } from "@mui/material";
 import { Grid } from "@mui/material";
 import CarCard from "../components/UiComponents/CarCard-store";
 import { Chip } from "@mui/material";
@@ -18,6 +18,9 @@ import {
   Pagination,
   Autoplay,
 } from "swiper/modules";
+import { useState } from "react";
+import { TextField, Box, Stack } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import "../App.css";
 
 const carsGallery = [
@@ -25,34 +28,34 @@ const carsGallery = [
     name: "Toyota Camry 2022",
     price: "$25,000",
     image: "/Images/Toyota Camry 2022.avif",
-    engine: "2.5L",
+    engine: "V4 2.5L",
     transmission: "Automatic",
     mileage: "20,000 km",
     status: "Used",
   },
   {
     name: "BMW X5 2021",
-    price: "$45,000",
+    price: "$58,000",
     image: "/Images/BMW X5 2021.jpg",
-    engine: "3.0L",
+    engine: "V6 3.0L",
     transmission: "Automatic",
-    mileage: "15,000 km",
+    mileage: "20,000 km",
     status: "Used",
   },
   {
-    name: "Mercedes C300",
-    price: "$40,000",
-    image: "/Images/Mercedes C300.jpg",
-    engine: "2.0L",
+    name: "Mercedes C300 2020",
+    price: "$45,000",
+    image: "/Images/Mercedes C300 2020.jpg",
+    engine: "V4 2.0L",
     transmission: "Automatic",
     mileage: "10,000 km",
-    status: "New",
+    status: "Used",
   },
   {
     name: "Audi A4 2020",
-    price: "$30,000",
+    price: "$37,000",
     image: "/Images/Audi A4 2020.jpg",
-    engine: "2.0L",
+    engine: "V4 2.0L",
     transmission: "Automatic",
     mileage: "25,000 km",
     status: "Used",
@@ -61,19 +64,19 @@ const carsGallery = [
     name: "Honda Accord 2021",
     price: "$28,000",
     image: "/Images/Honda Accord 2021.webp",
-    engine: "1.5L",
+    engine: "V4 1.5L",
     transmission: "Automatic",
-    mileage: "20,000 km",
+    mileage: "15,000 km",
     status: "Used",
   },
   {
     name: "Ford Mustang 2022",
     price: "$35,000",
     image: "/Images/Ford Mustang 2022.jpg",
-    engine: "5.0L",
+    engine: "V8 5.0L",
     transmission: "Automatic",
-    mileage: "15,000 km",
-    status: "New",
+    mileage: "8,000 km",
+    status: "Used",
   },
   {
     name: "Tesla Model 3 2022",
@@ -81,14 +84,14 @@ const carsGallery = [
     image: "/Images/Tesla Model 3 2022.jpg",
     engine: "Electric",
     transmission: "Automatic",
-    mileage: "5,000 km",
+    mileage: "570 km",
     status: "New",
   },
   {
     name: "Chevrolet Malibu 2021",
     price: "$22,000",
     image: "/Images/Chevrolet Malibu 2021.jpg",
-    engine: "1.5L",
+    engine: "V4 1.5L",
     transmission: "Automatic",
     mileage: "20,000 km",
     status: "Used",
@@ -97,7 +100,7 @@ const carsGallery = [
     name: "Nissan Altima 2020",
     price: "$24,000",
     image: "/Images/Nissan Altima 2020.avif",
-    engine: "2.0L",
+    engine: "V4 2.5L",
     transmission: "Automatic",
     mileage: "30,000 km",
     status: "Used",
@@ -106,7 +109,7 @@ const carsGallery = [
     name: "Volkswagen Passat 2021",
     price: "$27,000",
     image: "/Images/Volkswagen Passat 2021.jpg",
-    engine: "2.0L",
+    engine: "V4 2.0L",
     transmission: "Automatic",
     mileage: "20,000 km",
     status: "Used",
@@ -114,68 +117,80 @@ const carsGallery = [
 ];
 
 function Store() {
+  const [search, setSearch] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+  const [year, setYear] = useState("");
+
   const cars = [
     {
-      name: "Toyota Camry 2022",
-      price: "$25,000",
-      image: "/cars/camry.jpg",
-      year: "2022",
-      engine: "2.5L",
-      transmission: "Automatic",
-      mileage: "20,000 km",
-      status: "New",
-    },
-    {
-      name: "BMW X5 2021",
-      price: "$45,000",
-      image: "/cars/bmw.jpg",
+      name: "Audi A8",
+      price: "$61,000",
+      image: "/Images/Audi A8 2021.jpg",
       year: "2021",
-      engine: "3.0L",
+      engine: "V6 3.0L",
       transmission: "Automatic",
       mileage: "15,000 km",
       status: "Used",
     },
     {
-      name: "Mercedes C300",
-      price: "$40,000",
-      image: "/cars/mercedes.jpg",
-      year: "2022",
-      engine: "2.0L",
+      name: "BMW M4",
+      price: "$65,000",
+      image: "/Images/BMW M4 2018.avif",
+      year: "2018",
+      engine: "V6 4.0L",
+      transmission: "Automatic",
+      mileage: "20,000 km",
+      status: "Used",
+    },
+    {
+      name: "Hyundai Tucson",
+      price: "$25,000",
+      image: "/Images/Hyundai Tucson 2019.jpg",
+      year: "2019",
+      engine: "V4 2.0L",
+      transmission: "Automatic",
+      mileage: "20,000 km",
+      status: "Used",
+    },
+    {
+      name: "Hyundai Palisade",
+      price: "$45,000",
+      image: "/Images/Hyundai Palisade 2023.webp",
+      year: "2023",
+      engine: "V6 3.8L",
+      transmission: "Automatic",
+      mileage: "1,000 km",
+      status: "New",
+    },
+    {
+      name: "Kia Seltos",
+      price: "$19,000",
+      image: "/Images/Kia Seltos 2020.avif",
+      year: "2020",
+      engine: "V4 2.0L",
+      transmission: "Automatic",
+      mileage: "20,000 km",
+      status: "Used",
+    },
+    {
+      name: "Mercedes CLS",
+      price: "$70,000",
+      image: "/Images/Mercedes CLS 2020.jpg",
+      year: "2020",
+      engine: "V6 3.0L",
       transmission: "Automatic",
       mileage: "10,000 km",
-      status: "New",
-    },
-    {
-      name: "Audi A4 2020",
-      price: "$30,000",
-      image: "/cars/audi.jpg",
-      year: "2020",
-      engine: "2.0L",
-      transmission: "Automatic",
-      mileage: "25,000 km",
       status: "Used",
-    },
-    {
-      name: "Honda Accord 2021",
-      price: "$28,000",
-      image: "/cars/accord.jpg",
-      year: "2021",
-      engine: "1.5L",
-      transmission: "Automatic",
-      mileage: "20,000 km",
-      status: "Used",
-    },
-    {
-      name: "Ford Mustang 2022",
-      price: "$35,000",
-      image: "/cars/mustang.jpg",
-      year: "2022",
-      engine: "5.0L",
-      transmission: "Automatic",
-      mileage: "15,000 km",
-      status: "New",
     },
   ];
+
+  const filteredCars = cars.filter(
+    (car) =>
+      car.name.toLowerCase().includes(search.toLowerCase()) &&
+      (maxPrice === "" ||
+        parseInt(car.price.replace(/[$,]/g, "")) <= parseInt(maxPrice)) &&
+      (year === "" || car.year === year),
+  );
 
   return (
     <>
@@ -226,8 +241,7 @@ function Store() {
                   maxWidth: "100%",
                   mx: "auto",
                   transition: "all 0.3s ease",
-                  boxShadow:"none",
-                  
+                  boxShadow: "none",
                 }}
               >
                 <CardMedia
@@ -241,11 +255,11 @@ function Store() {
                   alt={car.name}
                 />
                 <Chip
-                          label={car.status}
-                          color="warning"
-                          size="small"
-                          sx={{ position: "absolute", top: 10, left: 10 }}
-                        />
+                  label={car.status}
+                  color="warning"
+                  size="small"
+                  sx={{ position: "absolute", top: 10, left: 10 }}
+                />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {car.name}
@@ -265,11 +279,87 @@ function Store() {
       </Container>
       {/* End of Carousel Section */}
 
+      <Container sx={{ mt: 4 }}>
+        <Typography
+          align="center"
+          color="primary"
+          fontWeight="bold"
+          fontSize="45px"
+          fontFamily="ui-serif"
+          marginBottom="100px"
+          gutterBottom
+        >
+          Find Your Car
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            gap: 2,
+            alignItems: "center",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {/* Search Bar Section */}
+
+          <TextField
+            label="Search Cars"
+            variant="outlined"
+            value={search}
+            fullWidth
+            onChange={(e) => setSearch(e.target.value)}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+            sx={{
+              width: "820px",
+            }}
+          />
+          {/* End of Search Bar Section */}
+
+          {/* Max Price Filter */}
+          <TextField
+            label="Max Price"
+            variant="outlined"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(e.target.value)}
+            sx={{
+              width: "150px",
+            }}
+            inputProps={{
+              inputMode: "numeric",
+              lang: "en",
+            }}
+          />
+          {/* End of Max Price Filter */}
+
+          {/* Year Filter */}
+          <TextField
+            label="Year"
+            variant="outlined"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+            sx={{
+              width: "150px",
+            }}
+            inputProps={{
+              inputMode: "numeric",
+              lang: "en",
+            }}
+          />
+          {/* End of Year Filter */}
+        </Box>
+      </Container>
+
       {/* Cars Grid Section */}
 
       <Container sx={{ mt: 4, padding: 5 }}>
         <Grid container spacing={4}>
-          {cars.map((car, idx) => (
+          {filteredCars.map((car, idx) => (
             <Grid item xs={12} sm={6} md={4} key={idx}>
               <CarCard car={car} />
             </Grid>
