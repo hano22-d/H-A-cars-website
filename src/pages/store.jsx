@@ -12,15 +12,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/autoplay";
-import {
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-  Autoplay,
-} from "swiper/modules";
+import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
 import { useState } from "react";
 import { TextField, Box, Stack } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
+
 import "../App.css";
 
 const carsGallery = [
@@ -195,14 +194,33 @@ function Store() {
   return (
     <>
       {/* Carousel Section */}
+      <Container sx={{ mt: 15 }} align="center">
+        <Typography
+          width={300}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "primary.main",
+            fontWeight: "bold",
+            fontSize: "45px",
+            fontFamily: "ui-serif",
+          }}
+          gutterBottom
+        >
+          Suggestions
+        </Typography>
+      </Container>
+
       <Container
         sx={{
           maxWidth: { xs: "100%", sm: "90%", md: "850px", lg: "1200px" },
           width: "100%",
           height: "auto",
           mx: "auto",
-          my: { xs: 20, sm: 20, md: 10, lg: 15 },
-          p: { xs: 2, md: 5, lg: 10 },
+          mt: { xs: 10, sm: 10, md: 7, lg: 0.1 },
+          mb: { xs: 10, sm: 10, md: 7, lg: 20 },
+          p: { xs: 2, md: 5, lg: 2 },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -280,17 +298,23 @@ function Store() {
       {/* End of Carousel Section */}
 
       <Container sx={{ mt: 4 }}>
-        <Typography
-          align="center"
-          color="primary"
-          fontWeight="bold"
-          fontSize="45px"
-          fontFamily="ui-serif"
-          marginBottom="100px"
-          gutterBottom
-        >
-          Find Your Car
-        </Typography>
+        <Container sx={{ my: 10 }} align="center">
+          <Typography
+            width={350}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "primary.main",
+              fontWeight: "bold",
+              fontSize: "45px",
+              fontFamily: "ui-serif",
+            }}
+            gutterBottom
+          >
+            Find Your Car
+          </Typography>
+        </Container>
         <Box
           sx={{
             display: "flex",
@@ -311,7 +335,7 @@ function Store() {
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
-                  <SearchIcon />
+                  <SearchIcon color="text.primary" />
                 </InputAdornment>
               ),
             }}
@@ -334,6 +358,13 @@ function Store() {
               inputMode: "numeric",
               lang: "en",
             }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <AttachMoneyIcon />
+                </InputAdornment>
+              ),
+            }}
           />
           {/* End of Max Price Filter */}
 
@@ -350,6 +381,13 @@ function Store() {
               inputMode: "numeric",
               lang: "en",
             }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <CalendarTodayOutlinedIcon />
+                </InputAdornment>
+              ),
+            }}
           />
           {/* End of Year Filter */}
         </Box>
@@ -361,12 +399,14 @@ function Store() {
         <Grid container spacing={4}>
           {filteredCars.map((car, idx) => (
             <Grid item xs={12} sm={6} md={4} key={idx}>
-              <CarCard car={car} />
+              <CarCard car={car}/>
             </Grid>
           ))}
         </Grid>
       </Container>
       {/* End of Cars Grid Section */}
+
+
     </>
   );
 }
