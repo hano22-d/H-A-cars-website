@@ -168,7 +168,6 @@ function CarCard({ car }) {
                     alt="car"
                     sx={{
                       width: "100%",
-                      height: 150,
                       objectFit: "cover",
                       borderRadius: "10px",
                     }}
@@ -188,70 +187,70 @@ function CarCard({ car }) {
           </Typography>
           <Typography
             color="primary"
-            variant="h6"
+            variant="body1"
             mt="2px"
             backgroundColor="background.details"
             borderRadius="5px"
             align="center"
             p="10px"
           >
-            <Typography variant="h6" color="text.primary" align="left">
+            <Typography variant="body1" color="text.primary" align="left">
               Price:
             </Typography>
             {selectedCar?.price}
           </Typography>
           <Typography
             color="primary"
-            variant="h6"
+            variant="body1"
             mt="2px"
             backgroundColor="background.details"
             borderRadius="5px"
             align="center"
             p="10px"
           >
-            <Typography variant="h6" color="text.primary" align="left">
+            <Typography variant="body1" color="text.primary" align="left">
               Engine:
             </Typography>
             {selectedCar?.engine}
           </Typography>
           <Typography
             color="primary"
-            variant="h6"
+            variant="body1"
             mt="2px"
             backgroundColor="background.details"
             borderRadius="5px"
             align="center"
             p="10px"
           >
-            <Typography variant="h6" color="text.primary" align="left">
+            <Typography variant="body1" color="text.primary" align="left">
               Transmission:
             </Typography>
             {selectedCar?.transmission}
           </Typography>
           <Typography
             color="primary"
-            variant="h6"
+            variant="body1"
             mt="2px"
             backgroundColor="background.details"
             borderRadius="5px"
             align="center"
             p="10px"
           >
-            <Typography variant="h6" color="text.primary" align="left">
+            <Typography variant="body1" color="text.primary" align="left">
               Mileage:
             </Typography>
             {selectedCar?.mileage}
           </Typography>
           <Typography
             color="primary"
-            variant="h6"
+            variant="body1"
             mt="2px"
             backgroundColor="background.details"
             borderRadius="5px"
             align="center"
             p="10px"
           >
-            <Typography variant="h6" color="text.primary" align="left">
+            <Typography variant="body1" color="text.primary" align="left">
               Status:
             </Typography>
             {selectedCar?.status}
