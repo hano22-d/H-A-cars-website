@@ -18,8 +18,7 @@ import { TextField, Box, Stack } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
-
+import { cars } from "../components/UiComponents/CarsData-Store";
 import "../App.css";
 
 const carsGallery = [
@@ -119,69 +118,6 @@ function Store() {
   const [search, setSearch] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [year, setYear] = useState("");
-
-  const cars = [
-    {
-      name: "Audi A8",
-      price: "$61,000",
-      image: "/Images/Audi A8 2021.jpg",
-      year: "2021",
-      engine: "V6 3.0L",
-      transmission: "Automatic",
-      mileage: "15,000 km",
-      status: "Used",
-    },
-    {
-      name: "BMW M4",
-      price: "$65,000",
-      image: "/Images/BMW M4 2018.avif",
-      year: "2018",
-      engine: "V6 4.0L",
-      transmission: "Automatic",
-      mileage: "20,000 km",
-      status: "Used",
-    },
-    {
-      name: "Hyundai Tucson",
-      price: "$25,000",
-      image: "/Images/Hyundai Tucson 2019.jpg",
-      year: "2019",
-      engine: "V4 2.0L",
-      transmission: "Automatic",
-      mileage: "20,000 km",
-      status: "Used",
-    },
-    {
-      name: "Hyundai Palisade",
-      price: "$45,000",
-      image: "/Images/Hyundai Palisade 2023.webp",
-      year: "2023",
-      engine: "V6 3.8L",
-      transmission: "Automatic",
-      mileage: "1,000 km",
-      status: "New",
-    },
-    {
-      name: "Kia Seltos",
-      price: "$19,000",
-      image: "/Images/Kia Seltos 2020.avif",
-      year: "2020",
-      engine: "V4 2.0L",
-      transmission: "Automatic",
-      mileage: "20,000 km",
-      status: "Used",
-    },
-    {
-      name: "Mercedes CLS",
-      price: "$70,000",
-      image: "/Images/Mercedes CLS 2020.jpg",
-      year: "2020",
-      engine: "V6 3.0L",
-      transmission: "Automatic",
-      mileage: "10,000 km",
-      status: "Used",
-    },
-  ];
 
   const filteredCars = cars.filter(
     (car) =>
@@ -399,14 +335,12 @@ function Store() {
         <Grid container spacing={4}>
           {filteredCars.map((car, idx) => (
             <Grid item xs={12} sm={6} md={4} key={idx}>
-              <CarCard car={car}/>
+              <CarCard car={car} />
             </Grid>
           ))}
         </Grid>
       </Container>
       {/* End of Cars Grid Section */}
-
-
     </>
   );
 }
