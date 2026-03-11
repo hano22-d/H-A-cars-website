@@ -6,6 +6,8 @@ import {
   Box,
   Chip,
   IconButton,
+  Grid,
+  Stack,
 } from "@mui/material";
 import { useState } from "react";
 import {
@@ -22,12 +24,18 @@ import {
   Autoplay,
   Pagination,
 } from "swiper/modules";
+import ForwardIcon from "@mui/icons-material/Forward";
 
 import "swiper/css";
 
+const info = ["Price", "Engine", "Transmission", "Mileage", "Status"];
+const info2 = ["price", "engine", "transmission", "mileage", "status"];
+
 function CarCard({ car }) {
+  const [fullImages, setFullImages] = useState(null);
   const [open, setOpen] = useState(false);
   const [selectedCar, setSelectedCar] = useState(null);
+
   const handleOpen = (car) => {
     setSelectedCar(car);
     setOpen(true);
@@ -36,6 +44,7 @@ function CarCard({ car }) {
 
   const [openConfirm, setOpenConfirm] = useState(false);
   const handleConfirmClose = () => setOpenConfirm(false);
+
   const handleBuyClick = () => {
     setOpenConfirm(true);
   };
@@ -116,21 +125,17 @@ function CarCard({ car }) {
       {/* Details Dialog */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle
+          variant="h3"
           sx={{
+            fontSize: "30px",
             color: "primary.text",
-            fontWeight: "bold",
-            fontFamily: "ui-serif",
             textAlign: "center",
             backgroundColor: "background.default",
           }}
         >
           Car Details
         </DialogTitle>
-        <DialogContent
-          sx={{
-            backgroundColor: "background.default",
-          }}
-        >
+        <Box bgcolor={"background.default"}>
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -163,6 +168,7 @@ function CarCard({ car }) {
               Object.values(car.images).map((img, index) => (
                 <SwiperSlide key={index} style={{ width: "200px" }}>
                   <CardMedia
+                    onClick={() => setFullImages(img)}
                     component="img"
                     image={img}
                     alt="car"
@@ -176,86 +182,65 @@ function CarCard({ car }) {
                 </SwiperSlide>
               ))}
           </Swiper>
-
-          <Typography
-            variant="h6"
-            color="primary"
-            align="center"
-            fontWeight="bold"
-            sx={{ mt: 2 }}
-          >
-            {selectedCar?.name}
-          </Typography>
-          <Typography
-            color="primary"
-            variant="h6"
-            mt="2px"
-            backgroundColor="background.details"
-            borderRadius="5px"
-            align="center"
-            p="10px"
-          >
-            <Typography variant="h6" color="text.primary" align="left">
-              Price:
-            </Typography>
-            {selectedCar?.price}
-          </Typography>
-          <Typography
-            color="primary"
-            variant="h6"
-            mt="2px"
-            backgroundColor="background.details"
-            borderRadius="5px"
-            align="center"
-            p="10px"
-          >
-            <Typography variant="h6" color="text.primary" align="left">
-              Engine:
-            </Typography>
-            {selectedCar?.engine}
-          </Typography>
-          <Typography
-            color="primary"
-            variant="h6"
-            mt="2px"
-            backgroundColor="background.details"
-            borderRadius="5px"
-            align="center"
-            p="10px"
-          >
-            <Typography variant="h6" color="text.primary" align="left">
-              Transmission:
-            </Typography>
-            {selectedCar?.transmission}
-          </Typography>
-          <Typography
-            color="primary"
-            variant="h6"
-            mt="2px"
-            backgroundColor="background.details"
-            borderRadius="5px"
-            align="center"
-            p="10px"
-          >
-            <Typography variant="h6" color="text.primary" align="left">
-              Mileage:
-            </Typography>
-            {selectedCar?.mileage}
-          </Typography>
-          <Typography
-            color="primary"
-            variant="h6"
-            mt="2px"
-            backgroundColor="background.details"
-            borderRadius="5px"
-            align="center"
-            p="10px"
-          >
-            <Typography variant="h6" color="text.primary" align="left">
-              Status:
-            </Typography>
-            {selectedCar?.status}
-          </Typography>
+        </Box>
+        <DialogContent
+          sx={{
+            backgroundColor: "background.default",
+          }}
+        >
+          <Grid container spacing={2}>
+            <Grid item lg={12} xs={12}>
+              <Typography
+                variant="h6"
+                color="primary"
+                align="center"
+                fontWeight="bold"
+                sx={{ mt: 2 }}
+              >
+                {selectedCar?.name}
+              </Typography>
+            </Grid>
+            <Grid item lg={4} xs={5} justifyItems={"center"}>
+              <Stack gap={2}>
+                {info.map((n,i) => (
+                  <Typography
+                    textAlign={"center"}
+                    bgcolor={"primary.main"}
+                    key={i}
+                    variant="h6"
+                    color="text.primary"
+                    px={1}
+                    borderRadius={1}
+                    fontSize={{xs: '1rem'}}
+                  >
+                    {n}
+                  </Typography>
+                ))}
+              </Stack>
+            </Grid>
+            <Grid item lg={4} xs={3} justifyItems={'center'}>
+              <Stack gap={2} >
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <ForwardIcon sx={{bgcolor:'primary.main',mb: 0.2 ,color: 'wheat',}}  key={i} />
+                ))}
+              </Stack>
+            </Grid>
+            <Grid item lg={4} xs={4} justifyItems={"center"}>
+              <Stack gap={2}>
+                {info2.map((n,i) => (
+                  <Typography
+                    key={i}
+                    textAlign={"center"}
+                    color="text.primary"
+                    variant="h6"
+                    fontSize={{xs: '1rem'}}
+                  >
+                    {selectedCar?.[n]}
+                  </Typography>
+                ))}
+              </Stack>
+            </Grid>
+          </Grid>
         </DialogContent>
         <DialogActions
           sx={{
@@ -269,6 +254,38 @@ function CarCard({ car }) {
             Buy Now
           </Button>
         </DialogActions>
+        {/*View images in full screen mode*/}
+        {fullImages && (
+          <>
+            <div
+              onClick={() => setFullImages(null)}
+              style={{
+                width: "100vw",
+                height: "100vh",
+                position: "fixed",
+                top: 0,
+                left: 0,
+                background: "rgba(0, 0, 0, 0.6)",
+                zIndex: 999,
+              }}
+            ></div>
+            <CardMedia
+              component="img"
+              image={fullImages}
+              alt="car"
+              sx={{
+                zIndex: 999,
+                position: "fixed",
+                top: { lg: 30, xs: "35%" },
+                left: { lg: 65, xs: 17 },
+                width: { lg: "90vw", xs: "90vw" },
+                height: { lg: "90vh", xs: "40vh" },
+                objectFit: "cover",
+                borderRadius: "10px",
+              }}
+            />
+          </>
+        )}
       </Dialog>
       {/* End of Details Dialog */}
       {/* Confirmation Dialog */}

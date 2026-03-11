@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export const NavItem = styled(Link)(({ theme }) => ({
+export const NavItem = styled(NavLink)(({ theme }) => ({
+  fontSize: 17,
+  borderRadius: 2 ,
   color: "wheat",
-  margin: theme.spacing(0),
+  margin: theme.spacing(0,1),
   padding: theme.spacing(1, 2),
   textDecoration: "none",
   fontFamily: theme.typography.h1.fontFamily,
@@ -11,8 +13,14 @@ export const NavItem = styled(Link)(({ theme }) => ({
     duration: theme.transitions.duration.standard,
     easing: theme.transitions.easing.easeOut,
   }),
+ 
   "&:hover": {
-    backgroundColor: "#ff4c29",
-    color: "#111",
+    color: theme.palette.primary.main,
+   background: 'rgb(245, 245, 220)',
+   opacity: 0.8
+  },
+  "&.active": {
+    color: theme.palette.primary.main,
+      background: 'rgb(245, 245, 220)'
   },
 }));

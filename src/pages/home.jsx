@@ -12,9 +12,26 @@ import BedtimeIcon from "@mui/icons-material/Bedtime";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
+import "../App.css";
+import HomeIcon from "@mui/icons-material/Home";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import ArticleIcon from "@mui/icons-material/Article";
+import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+
 
 
 function Navbar() {
+
+  const navLinkList = [
+    { id: 1, text: "Home", link: "/", icon: <HomeIcon/> },
+    { id: 2, text: "Cars", link: "/cars" , icon: <DirectionsCarIcon/> },
+    { id: 3, text: "Compare", link: "/compare", icon: <CompareArrowsIcon/> },
+    { id: 4, text: "News", link: "/news",icon: <ArticleIcon/> },
+    { id: 5, text: "Store", link: "/store",icon: <LocalGroceryStoreIcon/> },
+  ];
+
+
   let { progress } = UseHeroContext();
     const { toggleMode, toggleModeChange } = UsethemeToggle();
 
@@ -89,13 +106,15 @@ function Navbar() {
           display={{ xs: "none", lg: "block" }}
           textAlign={"center"}
           direction={{ lg: "row", xs: "column" }}
-          gap={{ xs: 1, lg: 4 }}
         >
-          <NavItem to="/">HOME</NavItem>
-          <NavItem to="/cars">CARS</NavItem>
-          <NavItem to="/compare">Compare</NavItem>
-          <NavItem to="/news">News</NavItem>
-          <NavItem to="/store">Store</NavItem>
+       {navLinkList.map((nav) => {
+            return (
+              <NavItem className={'nav-item'}  key={nav.id} to={nav.link}>
+                <span className="label">{nav.text}</span>
+                <span className="icon">{nav.icon}</span>
+              </NavItem>
+            );
+          })}
         </Stack>
         <Drawer />
       </Stack>

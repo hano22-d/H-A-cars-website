@@ -130,18 +130,11 @@ function Store() {
   return (
     <>
       {/* Carousel Section */}
-      <Container sx={{ mt: 15 }} align="center">
+      <Container sx={{ mt: 15 }}>
         <Typography
-          width={300}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "primary.main",
-            fontWeight: "bold",
-            fontSize: "45px",
-            fontFamily: "ui-serif",
-          }}
+          variant="h3"
+          fontSize={{lg: 45, xs: 40}}
+          textAlign={'center'}
           gutterBottom
         >
           Suggestions
@@ -154,8 +147,8 @@ function Store() {
           width: "100%",
           height: "auto",
           mx: "auto",
-          mt: { xs: 10, sm: 10, md: 7, lg: 0.1 },
-          mb: { xs: 10, sm: 10, md: 7, lg: 20 },
+          mt: { xs: 5, sm: 10, md: 7, lg: 0.1 },
+          mb: { xs: 7, sm: 10, md: 7, lg: 20 },
           p: { xs: 2, md: 5, lg: 2 },
           display: "flex",
           alignItems: "center",
@@ -234,18 +227,11 @@ function Store() {
       {/* End of Carousel Section */}
 
       <Container sx={{ mt: 4 }}>
-        <Container sx={{ my: 10 }} align="center">
+        <Container sx={{ my: 5 }}>
           <Typography
-            width={350}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "primary.main",
-              fontWeight: "bold",
-              fontSize: "45px",
-              fontFamily: "ui-serif",
-            }}
+          textAlign={'center'}
+          variant="h3"
+          fontSize={{lg: 45, xs: 40}}
             gutterBottom
           >
             Find Your Car
@@ -270,7 +256,7 @@ function Store() {
             onChange={(e) => setSearch(e.target.value)}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position="start"  sx={{color: 'text.primary'}}>
                   <SearchIcon color="text.primary" />
                 </InputAdornment>
               ),
@@ -296,7 +282,7 @@ function Store() {
             }}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position="start"  sx={{color: 'text.primary'}}>
                   <AttachMoneyIcon />
                 </InputAdornment>
               ),
@@ -319,7 +305,7 @@ function Store() {
             }}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position="start" sx={{color: 'text.primary'}}>
                   <CalendarTodayOutlinedIcon />
                 </InputAdornment>
               ),

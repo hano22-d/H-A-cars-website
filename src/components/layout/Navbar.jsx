@@ -1,4 +1,4 @@
-import { Stack, Box, Button } from "@mui/material";
+import { Stack, Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { NavItem } from "../UiComponents/navLink";
 import Drawer from "./drawer";
@@ -6,6 +6,23 @@ import { UsethemeToggle } from "../../context/themeContext";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import "../../App.css";
+
+import HomeIcon from "@mui/icons-material/Home";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import ArticleIcon from "@mui/icons-material/Article";
+import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+
+
+  const navLinkList = [
+    { id: 1, text: "Home", link: "/", icon: <HomeIcon/> },
+    { id: 2, text: "Cars", link: "/cars" , icon: <DirectionsCarIcon/> },
+    { id: 3, text: "Compare", link: "/compare", icon: <CompareArrowsIcon/> },
+    { id: 4, text: "News", link: "/news",icon: <ArticleIcon/> },
+    { id: 5, text: "Store", link: "/store",icon: <LocalGroceryStoreIcon/> },
+  ];
+
 
 function Navbar() {
   const { toggleMode, toggleModeChange } = UsethemeToggle();
@@ -51,9 +68,9 @@ function Navbar() {
             }}
           />
         </Link>
-        <Stack sx={{position:'absolute',left: '12%'}} direction={"row"}>
+        <Stack sx={{ position: "absolute", left: "12%" }} direction={"row"}>
           <Button
-          title="Theme"
+            title="Theme"
             sx={{
               display: { lg: "block", xs: "none" },
               "&:hover": {
@@ -65,10 +82,17 @@ function Navbar() {
           >
             {toggleMode ? <BedtimeIcon /> : <WbSunnyIcon />}
           </Button>
-          <Button title="User" sx={{right: 10,  display: { lg: "block", xs: "none" },  "&:hover": {
-            bgcolor: "transparent",
-            color: "background.paper",
-          },}}>
+          <Button
+            title="User"
+            sx={{
+              right: 10,
+              display: { lg: "block", xs: "none" },
+              "&:hover": {
+                bgcolor: "transparent",
+                color: "background.paper",
+              },
+            }}
+          >
             <AccountCircleIcon />
           </Button>
         </Stack>
@@ -77,13 +101,15 @@ function Navbar() {
           display={{ xs: "none", lg: "block" }}
           textAlign={"center"}
           direction={{ lg: "row", xs: "column" }}
-          gap={{ xs: 1, lg: 4 }}
         >
-          <NavItem to="/">HOME</NavItem>
-          <NavItem to="/cars">CARS</NavItem>
-          <NavItem to="/compare">Compare</NavItem>
-          <NavItem to="/news">News</NavItem>
-          <NavItem to="/store">Store</NavItem>
+       {navLinkList.map((nav) => {
+            return (
+              <NavItem className={'nav-item'} key={nav.id} to={nav.link}>
+                <span className="label">{nav.text}</span>
+                <span className="icon">{nav.icon}</span>
+              </NavItem>
+            );
+          })}
         </Stack>
         <Drawer />
       </Stack>

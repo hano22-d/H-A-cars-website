@@ -7,7 +7,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 function SimpleAvatar({ image, color, name, text }) {
   return (
-    <Stack alignItems={"center"} sx={{}}>
+    <Stack alignItems={"center"} sx={{mr:4 }}>
       <Box
         component={"img"}
         src={image}

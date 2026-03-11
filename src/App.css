@@ -42,3 +42,31 @@
     padding: 10px;
   }
 }
+/*تنسيقات إظهار ايقونات الروابط*/
+.icon {
+  display: inline-block;
+  opacity: 0;
+  position: relative;
+  top: 5px;
+}
+.label {
+  display: inline-block;
+  transform: translateX(5px);
+}
+.nav-item:hover .icon{
+  opacity: 1;
+  transform: translateX(7px);
+  transition: transform 0.3s ease;
+}
+.nav-item.active .icon {
+opacity: 1;
+transform: translateX(7px);
+}
+.nav-item:hover .label {
+transform: translateX(-5px);
+transition: 0.3s;
+}
+.nav-item.active .label {
+transform: translateX(-5px);
+transition: 0.3s;
+}
