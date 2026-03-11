@@ -174,7 +174,6 @@ function CarCard({ car }) {
                     alt="car"
                     sx={{
                       width: "100%",
-                      height: 150,
                       objectFit: "cover",
                       borderRadius: "10px",
                     }}
