@@ -11,22 +11,26 @@ import { useNavigate } from "react-router-dom";
 const slides = [
   {
     title: "Cars",
+    description: "Explore our wide range of cars from leading global brands such as Mercedes, BMW, Audi, and more. Find the perfect car that suits your style and needs.",
     image: "/Images/Mercedes-S-Class.jpg",
     buttonTitle: "Explore Cars",
   },
   {
     title: "Compare",
+    description: "Compare different car easily to see the differences in performance, features, and prices. Make an informed decision before making your purchase.",
     image: "/Images/Mercedes-S-Class-1.jpg",
     buttonTitle: "Compare Cars",
 
   },
   {
     title: "Store",
+    description: "Visit our store to find the best deals on cars, accessories, and services. We offer competitive prices and excellent customer service to ensure you have a great shopping experience.",
     image: "/Images/Mercedes-S-Class-2.jpg",
     buttonTitle: "Visit Store",
   },
   {
     title: "News",
+    description: "Stay updated with the latest news and trends in the automotive world.",
     image: "/Images/Mercedes-S-Class-3.webp",
     buttonTitle: "Read News",
   },
@@ -98,7 +102,7 @@ export default function HeroSlider() {
           </Typography>
 
           <Typography sx={{ mt: 2, mb: 3 }}>
-            Discover beautiful destinations around the world.
+            {slides[activeIndex].description}
           </Typography>
 
           <Button variant="outlined" onClick={() => navigate(`/${slides[activeIndex].title.toLowerCase()}`)}>
@@ -120,7 +124,7 @@ export default function HeroSlider() {
             slidesPerView={3}
             spaceBetween={5}
             navigation
-            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            autoplay={{ delay: 6000, disableOnInteraction: false }}
             loop
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
@@ -148,19 +152,6 @@ export default function HeroSlider() {
                       backgroundPosition: "center",
                     }}
                   />
-
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      bottom: 0,
-                      p: 3,
-                      width: "100%",
-                      background:
-                        "linear-gradient(transparent, rgba(0,0,0,0.9))",
-                    }}
-                  >
-                    <Typography variant="h6">{item.title}</Typography>
-                  </Box>
                 </Card>
               </SwiperSlide>
             ))}
