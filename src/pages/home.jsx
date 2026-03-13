@@ -21,6 +21,8 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "../components/UiComponents/languageSelector";
 
+import HeroSlider from "../components/UiComponents/Dynamic-home";
+
 
 
 function Navbar() {
@@ -133,39 +135,11 @@ function Navbar() {
 }
 
 function Home() {
-
-  const {t} = useTranslation()
-
   return (
     <>
       <CarHero />
       <Navbar />
-      <Card
-        sx={{
-          maxWidth: { xs: 0.8, lg: 0.55 },
-          height: "auto",
-          mx: "auto",
-          my: 20,
-          p: 10,
-
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-          justifyContent: "center",
-          textAlign: "center",
-        }}
-      >
-        <Typography
-          variant="h1"
-          sx={{ fontSize: { xs: "1.5rem", sm: "2rem", lg: "2.5rem" } }}
-        >
-        {t("main.title")}
-        </Typography>
-        <Typography>Devolopers: Hani and Ali</Typography>
-        <Typography>
-         {t("main.content")}
-        </Typography>
-      </Card>
+      <HeroSlider />
       <Footer />
     </>
   );

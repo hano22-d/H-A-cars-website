@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Container, InputAdornment } from "@mui/material";
 import { Grid } from "@mui/material";
-import CarCard from "../components/UiComponents/CarCard-store";
+import CarCard from "../components/UIComponents/CarCard-store";
 import { Chip } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -18,7 +18,7 @@ import { TextField, Box, Stack } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import { cars } from "../components/UiComponents/CarsData-Store";
+import { cars } from "../components/UIComponents/CarsData-store";
 import "../App.css";
 import { useTranslation } from "react-i18next";
 
