@@ -47,9 +47,11 @@ export default function HeroSlider() {
     >
       <Box
         sx={{
-          height: "80vh",
+          width: "100%",
+          height: "85vh",
           position: "relative",
           display: "flex",
+          justifyContent: "space-between",
           alignItems: "center",
           px: 8,
           color: "white",
