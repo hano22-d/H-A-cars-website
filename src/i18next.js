@@ -1,7 +1,7 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
-//language filess
+//language files
 import english from "./locales/english/translation.json"
 import arabic from "./locales/arabic/translation.json"
 
