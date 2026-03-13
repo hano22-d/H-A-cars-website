@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Container, InputAdornment } from "@mui/material";
 import { Grid } from "@mui/material";
-import CarCard from "../components/UiComponents/CarCard-store";
+import CarCard from "../components/UiComponents/CarCardStore";
 import { Chip } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
