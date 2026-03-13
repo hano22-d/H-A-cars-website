@@ -7,25 +7,25 @@ import BedtimeIcon from "@mui/icons-material/Bedtime";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "../../App.css";
-
 import HomeIcon from "@mui/icons-material/Home";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ArticleIcon from "@mui/icons-material/Article";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import LanguageSelector from "../UiComponents/languageSelector";
+import { useTranslation } from "react-i18next";
 
-
-  const navLinkList = [
-    { id: 1, text: "Home", link: "/", icon: <HomeIcon/> },
-    { id: 2, text: "Cars", link: "/cars" , icon: <DirectionsCarIcon/> },
-    { id: 3, text: "Compare", link: "/compare", icon: <CompareArrowsIcon/> },
-    { id: 4, text: "News", link: "/news",icon: <ArticleIcon/> },
-    { id: 5, text: "Store", link: "/store",icon: <LocalGroceryStoreIcon/> },
-  ];
-
+const navLinkList = [
+  { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
+  { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
+  { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
+  { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
+  { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
+];
 
 function Navbar() {
   const { toggleMode, toggleModeChange } = UsethemeToggle();
+  const {t} = useTranslation()
 
   return (
     <>
@@ -95,6 +95,9 @@ function Navbar() {
           >
             <AccountCircleIcon />
           </Button>
+          <Box sx={{display:{lg: 'block',xs: 'none'}}}>
+          <LanguageSelector/>
+          </Box>
         </Stack>
 
         <Stack
@@ -102,10 +105,10 @@ function Navbar() {
           textAlign={"center"}
           direction={{ lg: "row", xs: "column" }}
         >
-       {navLinkList.map((nav) => {
+          {navLinkList.map((nav) => {
             return (
-              <NavItem className={'nav-item'} key={nav.id} to={nav.link}>
-                <span className="label">{nav.text}</span>
+              <NavItem className={"nav-item"} key={nav.id} to={nav.link}>
+                <span className="label">{t(nav.text)}</span>
                 <span className="icon">{nav.icon}</span>
               </NavItem>
             );

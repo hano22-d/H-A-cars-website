@@ -5,7 +5,6 @@ import {
   Typography,
   Box,
   Chip,
-  IconButton,
   Grid,
   Stack,
 } from "@mui/material";
@@ -25,13 +24,22 @@ import {
   Pagination,
 } from "swiper/modules";
 import ForwardIcon from "@mui/icons-material/Forward";
+import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 
-const info = ["Price", "Engine", "Transmission", "Mileage", "Status"];
+const info = [
+  { key: "main.carsInfo.price", text: "main.carsInfo.price" },
+  { key: "main.carsInfo.engine", text: "main.carsInfo.engine" },
+  { key: "main.carsInfo.transmission", text: "main.carsInfo.transmission" },
+  { key: "main.carsInfo.mileage", text: "main.carsInfo.mileage" },
+  { key: "main.carsInfo.status", text: "main.carsInfo.status" },
+];
 const info2 = ["price", "engine", "transmission", "mileage", "status"];
 
 function CarCard({ car }) {
+  const { t } = useTranslation();
+
   const [fullImages, setFullImages] = useState(null);
   const [open, setOpen] = useState(false);
   const [selectedCar, setSelectedCar] = useState(null);
@@ -68,15 +76,17 @@ function CarCard({ car }) {
             borderBottom: "3px double",
           }}
           image={car.image}
-          alt={car.name}
+          alt={t(car.name)}
         />
+
         <Chip
-          label={car.status}
+          label={t(car.status)}
           color="warning"
           size="small"
           sx={{ position: "absolute", top: 10, left: 10 }}
         />
       </Box>
+
       <CardContent sx={{ marginTop: 1 }}>
         <Typography
           variant="subtitle1"
@@ -85,8 +95,9 @@ function CarCard({ car }) {
           fontSize={25}
           fontFamily="ui-serif"
         >
-          {car.name}
+          {t(car.name)}
         </Typography>
+
         <Typography
           variant="h5"
           fontWeight="bold"
@@ -96,20 +107,25 @@ function CarCard({ car }) {
         >
           {car.price}
         </Typography>
+
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            gap: 2,
+            gap: 1,
             color: "gray",
-            fontSize: 14,
+            textAlign: "center",
           }}
         >
-          <Typography>{car.year}</Typography>
-          <Typography>{car.engine}</Typography>
-          <Typography>{car.transmission}</Typography>
-          <Typography>{car.mileage}</Typography>
+          <Stack gap={1}>
+            <Typography>{car.year}</Typography>
+            <Typography>{t(car.engine)}</Typography>
+          </Stack>
+          <Stack gap={1}>
+            <Typography>{t(car.transmission)}</Typography>
+            <Typography>{t(car.mileage)}</Typography>
+          </Stack>
         </Box>
       </CardContent>
 
@@ -120,20 +136,19 @@ function CarCard({ car }) {
         onClick={() => handleOpen(car)}
         variant="outlined"
       >
-        Details
+        {t("main.Details")}
       </Button>
       {/* Details Dialog */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle
           variant="h3"
           sx={{
-            fontSize: "30px",
             color: "primary.text",
             textAlign: "center",
             backgroundColor: "background.default",
           }}
         >
-          Car Details
+          {t("main.CarDetails")}
         </DialogTitle>
         <Box bgcolor={"background.default"}>
           <Swiper
@@ -187,7 +202,7 @@ function CarCard({ car }) {
             backgroundColor: "background.default",
           }}
         >
-          <Grid container spacing={2}>
+          <Grid container spacing={1}>
             <Grid item lg={12} xs={12}>
               <Typography
                 variant="h6"
@@ -196,45 +211,53 @@ function CarCard({ car }) {
                 fontWeight="bold"
                 sx={{ mt: 2 }}
               >
-                {selectedCar?.name}
+                {t(selectedCar?.name)}
               </Typography>
             </Grid>
             <Grid item lg={4} xs={5} justifyItems={"center"}>
-              <Stack gap={2}>
-                {info.map((n,i) => (
+              <Stack gap={{ lg: 4.2, xs: 5 }}>
+                {info.map((n) => (
                   <Typography
                     textAlign={"center"}
                     bgcolor={"primary.main"}
-                    key={i}
-                    variant="h6"
+                    key={n.key}
+                    variant="body2"
                     color="text.primary"
                     px={1}
                     borderRadius={1}
-                    fontSize={{xs: '1rem'}}
+                    fontSize={{ xs: "0.9rem" }}
                   >
-                    {n}
+                    {t(n.text)}
                   </Typography>
                 ))}
               </Stack>
             </Grid>
-            <Grid item lg={4} xs={3} justifyItems={'center'}>
-              <Stack gap={2} >
+            <Grid item lg={4} xs={3} justifyItems={"center"}>
+              <Stack gap={{ lg: 3.5, xs: 4.3 }}>
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <ForwardIcon sx={{bgcolor:'primary.main',mb: 0.2 ,color: 'wheat',}}  key={i} />
+                  <ForwardIcon
+                    sx={{
+                      bgcolor: "primary.main",
+                      mb: 0.2,
+                      color: "wheat",
+                      borderRadius: "50%",
+                    }}
+                    key={i}
+                  />
                 ))}
               </Stack>
             </Grid>
             <Grid item lg={4} xs={4} justifyItems={"center"}>
-              <Stack gap={2}>
-                {info2.map((n,i) => (
+              <Stack gap={{ lg: 4, xs: 3.7 }}>
+                {info2.map((n, i) => (
                   <Typography
                     key={i}
                     textAlign={"center"}
                     color="text.primary"
                     variant="h6"
-                    fontSize={{xs: '1rem'}}
+                    fontSize={{ xs: "0.8rem" }}
                   >
-                    {selectedCar?.[n]}
+                    {t(selectedCar?.[n])}
                   </Typography>
                 ))}
               </Stack>
@@ -247,10 +270,10 @@ function CarCard({ car }) {
           }}
         >
           <Button onClick={handleClose} border="10px solid" variant="outlined">
-            Close
+            {t("main.Close")}
           </Button>
           <Button onClick={handleBuyClick} color="primary" variant="contained">
-            Buy Now
+            {t("main.BuyNow")}
           </Button>
         </DialogActions>
         {/*View images in full screen mode*/}

@@ -2,14 +2,13 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import SettingsIcon from "@mui/icons-material/Settings";
 import { NavItem } from "../UiComponents/navLink";
 import Divider from "@mui/material/Divider";
 import HelpIcon from "@mui/icons-material/Help";
 import { UsethemeToggle } from "../../context/themeContext";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle"
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import "../../App.css";
 
@@ -18,18 +17,17 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ArticleIcon from "@mui/icons-material/Article";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
-
+import LanguageSelector from "../UiComponents/languageSelector";
 
 function Drawer() {
-
-  const {toggleMode, toggleModeChange} = UsethemeToggle()
+  const { toggleMode, toggleModeChange } = UsethemeToggle();
 
   const navLinkList = [
-    { id: 1, text: "Home", link: "/", icon: <HomeIcon/> },
-    { id: 2, text: "Cars", link: "/cars" , icon: <DirectionsCarIcon/> },
-    { id: 3, text: "Compare", link: "/compare", icon: <CompareArrowsIcon/> },
-    { id: 4, text: "News", link: "/news",icon: <ArticleIcon/> },
-    { id: 5, text: "Store", link: "/store",icon: <LocalGroceryStoreIcon/> },
+    { id: 1, text: "Home", link: "/", icon: <HomeIcon /> },
+    { id: 2, text: "Cars", link: "/cars", icon: <DirectionsCarIcon /> },
+    { id: 3, text: "Compare", link: "/compare", icon: <CompareArrowsIcon /> },
+    { id: 4, text: "News", link: "/news", icon: <ArticleIcon /> },
+    { id: 5, text: "Store", link: "/store", icon: <LocalGroceryStoreIcon /> },
   ];
 
   const [open, setOpen] = useState(true);
@@ -46,7 +44,7 @@ function Drawer() {
           cursor: "pointer",
           position: "absolute",
           top: 25,
-          left: open ? 15 : "55%",
+          left: open ? 15 : "50%",
           display: { xs: "block", lg: "none", md: "none" },
           "&:hover": {
             bgcolor: "transparent",
@@ -59,6 +57,7 @@ function Drawer() {
       </Button>
       <Box
         sx={{
+          overflow: 'auto',
           display: { xs: "block", lg: "none", md: "none" },
           transform: `translateX(${open ? "-400px" : 0})`,
           transition: "transform 0.4s ease",
@@ -78,39 +77,71 @@ function Drawer() {
           pt: 10,
         }}
       >
-        <Stack mb={2}>
+        <Stack direction={"row"}>
+          <Typography color={"primary.main"} variant="body1" px={1}>
+            User
+          </Typography>
+          <Divider
+            orientation="vertical"
+            sx={{ width: "60%", alignSelf: "center" }}
+          />
+        </Stack>
+        <Stack my={2} gap={1} alignItems={"center"}>
+          <Button sx={{ width: "50%" }} variant="outlined">
+           <AccountCircleIcon sx={{mr: 1}}/> Login
+          </Button>
+          <Button sx={{ width: "50%" }} variant="contained">
+            Sign up
+          </Button>
+        </Stack>
+
+        <Stack direction={"row"}>
+          <Typography color={"primary.main"} variant="body1" px={1}>
+            Pages
+          </Typography>
+          <Divider
+            orientation="vertical"
+            sx={{ width: "60%", alignSelf: "center" }}
+          />
+        </Stack>
+        <Stack my={2}>
           {navLinkList.map((nav) => {
             return (
-              <NavItem className={'nav-item'} onClick={openHandle} key={nav.id} to={nav.link}>
+              <NavItem
+                className={"nav-item"}
+                onClick={openHandle}
+                key={nav.id}
+                to={nav.link}
+              >
                 <span className="label">{nav.text}</span>
                 <span className="icon">{nav.icon}</span>
               </NavItem>
             );
           })}
         </Stack>
-        <Divider />
-        <Button sx={{ mt: 3 }}>
-        <AccountCircleIcon/> <Typography color={"wheat"} variant="h3" mx={1}>Login</Typography> 
-        </Button>
-        <br />
-        <Button>
-          <SettingsIcon />
-          <Typography variant="h3" color={"wheat"} mx={1}>
-            Setting
+        <Stack direction={"row"}>
+          <Typography color={"primary.main"} variant="body1" px={1}>
+            Settings
+          </Typography>
+          <Divider
+            orientation="vertical"
+            sx={{ width: "55%", alignSelf: "center" }}
+          />
+        </Stack>
+        <Button onClick={toggleModeChange}>
+          {toggleMode ? <BedtimeIcon /> : <WbSunnyIcon />}
+          <Typography variant="body1" color={"wheat"} mx={1}>
+            Theme
           </Typography>
         </Button>
         <br />
+        <Box m={2}>
+          <LanguageSelector />
+        </Box>
         <Button>
           <HelpIcon />
-          <Typography variant="h3" color={"wheat"} mx={1}>
+          <Typography variant="body1" color={"wheat"} mx={1}>
             Support
-          </Typography>
-        </Button>
-        <br />
-        <Button onClick={toggleModeChange}>
-          {toggleMode? <BedtimeIcon/> : <WbSunnyIcon/>}
-          <Typography variant="h3" color={"wheat"} mx={1}>
-            Theme
           </Typography>
         </Button>
       </Box>

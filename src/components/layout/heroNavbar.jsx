@@ -7,6 +7,7 @@ import { UseHeroContext } from "../../context/heroContext";
 import "@fontsource/black-ops-one";
 import { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function ArrowIcon() {
   return (
@@ -27,6 +28,7 @@ function ArrowIcon() {
 }
 
 function HeroContent() {
+  const {t} = useTranslation()
   const { progress } = UseHeroContext();
 
 // Mobile Hero show Images
@@ -175,7 +177,7 @@ function HeroContent() {
             transform: `translateY(-${progress * 100}px)`,
           }}
         >
-          وجهتك لعالم السيارات
+         {t("home.hero.destination")}
         </Typography>
 
         <TextField
@@ -200,7 +202,7 @@ function HeroContent() {
               color: "#fff",
             },
           }}
-          label="ابحث  عما تريد استكشافه"
+          label={t("home.hero.labelInput")}
           dir="rtl"
         />
         <Stack
@@ -226,7 +228,7 @@ function HeroContent() {
               },
             }}
           >
-            الانتقال للمعرض
+          {t("home.hero.button1")}
           </Button>
 
           <Button
@@ -250,7 +252,7 @@ function HeroContent() {
               },
             }}
           >
-            أخبار السيارات
+            {t("home.hero.button2")}
           </Button>
         </Stack>
       </Container>

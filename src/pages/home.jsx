@@ -18,22 +18,26 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ArticleIcon from "@mui/icons-material/Article";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "../components/UiComponents/languageSelector";
 
 
 
 function Navbar() {
 
+  const {t} = useTranslation()
+
   const navLinkList = [
-    { id: 1, text: "Home", link: "/", icon: <HomeIcon/> },
-    { id: 2, text: "Cars", link: "/cars" , icon: <DirectionsCarIcon/> },
-    { id: 3, text: "Compare", link: "/compare", icon: <CompareArrowsIcon/> },
-    { id: 4, text: "News", link: "/news",icon: <ArticleIcon/> },
-    { id: 5, text: "Store", link: "/store",icon: <LocalGroceryStoreIcon/> },
+    { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
+    { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
+    { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
+    { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
+    { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
   ];
 
 
   let { progress } = UseHeroContext();
-    const { toggleMode, toggleModeChange } = UsethemeToggle();
+  const { toggleMode, toggleModeChange } = UsethemeToggle();
 
   return (
     <>
@@ -64,7 +68,7 @@ function Navbar() {
         }}
         direction={["column", "column", "row", "row"]}
       >
-        <Link to="/home">
+        <Link to="/">
           <Box
             component="img"
             src="/WebsiteLogo.png"
@@ -100,6 +104,12 @@ function Navbar() {
           },}}>
             <AccountCircleIcon />
           </Button>
+
+          <Box sx={{display:{lg: 'block',xs: 'none'}}}>
+          <LanguageSelector/>
+          </Box>
+     
+
         </Stack>
 
         <Stack
@@ -110,7 +120,7 @@ function Navbar() {
        {navLinkList.map((nav) => {
             return (
               <NavItem className={'nav-item'}  key={nav.id} to={nav.link}>
-                <span className="label">{nav.text}</span>
+                <span className="label">{t(nav.text)}</span>
                 <span className="icon">{nav.icon}</span>
               </NavItem>
             );
@@ -123,6 +133,9 @@ function Navbar() {
 }
 
 function Home() {
+
+  const {t} = useTranslation()
+
   return (
     <>
       <CarHero />
@@ -146,11 +159,11 @@ function Home() {
           variant="h1"
           sx={{ fontSize: { xs: "1.5rem", sm: "2rem", lg: "2.5rem" } }}
         >
-          Welcome in Home Page
+        {t("main.title")}
         </Typography>
         <Typography>Devolopers: Hani and Ali</Typography>
         <Typography>
-          هل تريد أن تستكشف عالم السيارات؟ أنت في المكان الصحيح
+         {t("main.content")}
         </Typography>
       </Card>
       <Footer />

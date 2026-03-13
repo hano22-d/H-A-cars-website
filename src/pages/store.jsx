@@ -20,101 +20,104 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import { cars } from "../components/UiComponents/CarsData-Store";
 import "../App.css";
-
-const carsGallery = [
-  {
-    name: "Toyota Camry 2022",
-    price: "$25,000",
-    image: "/Images/Toyota Camry 2022.avif",
-    engine: "V4 2.5L",
-    transmission: "Automatic",
-    mileage: "20,000 km",
-    status: "Used",
-  },
-  {
-    name: "BMW X5 2021",
-    price: "$58,000",
-    image: "/Images/BMW X5 2021.jpg",
-    engine: "V6 3.0L",
-    transmission: "Automatic",
-    mileage: "20,000 km",
-    status: "Used",
-  },
-  {
-    name: "Mercedes C300 2020",
-    price: "$45,000",
-    image: "/Images/Mercedes C300 2020.jpg",
-    engine: "V4 2.0L",
-    transmission: "Automatic",
-    mileage: "10,000 km",
-    status: "Used",
-  },
-  {
-    name: "Mercedes-Benz CLS 2020",
-    price: "$54,000",
-    image: "/Images/Mercedes-Benz CLS 2020.jpg",
-    engine: "V6 3.0L",
-    transmission: "Automatic",
-    mileage: "25,000 km",
-    status: "Used",
-  },
-  {
-    name: "Honda Accord 2021",
-    price: "$28,000",
-    image: "/Images/Honda Accord 2021.webp",
-    engine: "V4 1.5L",
-    transmission: "Automatic",
-    mileage: "15,000 km",
-    status: "Used",
-  },
-  {
-    name: "Ford Mustang 2022",
-    price: "$35,000",
-    image: "/Images/Ford Mustang 2022.jpg",
-    engine: "V8 5.0L",
-    transmission: "Automatic",
-    mileage: "8,000 km",
-    status: "Used",
-  },
-  {
-    name: "Tesla Model 3 2022",
-    price: "$40,000",
-    image: "/Images/Tesla Model 3 2022.jpg",
-    engine: "Electric",
-    transmission: "Automatic",
-    mileage: "570 km",
-    status: "New",
-  },
-  {
-    name: "Chevrolet Malibu 2021",
-    price: "$22,000",
-    image: "/Images/Chevrolet Malibu 2021.jpg",
-    engine: "V4 1.5L",
-    transmission: "Automatic",
-    mileage: "20,000 km",
-    status: "Used",
-  },
-  {
-    name: "Nissan Altima 2020",
-    price: "$24,000",
-    image: "/Images/Nissan Altima 2020.avif",
-    engine: "V4 2.5L",
-    transmission: "Automatic",
-    mileage: "30,000 km",
-    status: "Used",
-  },
-  {
-    name: "Volkswagen Passat 2021",
-    price: "$27,000",
-    image: "/Images/Volkswagen Passat 2021.jpg",
-    engine: "V4 2.0L",
-    transmission: "Automatic",
-    mileage: "20,000 km",
-    status: "Used",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 function Store() {
+  const { t } = useTranslation();
+
+  const carsGallery = [
+    {
+      name: "main.carsGallery.camry2022.name",
+      price: "$25,000",
+      image: "/Images/Toyota Camry 2022.avif",
+      engine: "main.carsGallery.camry2022.engine",
+      transmission: "main.carsGallery.camry2022.transmission",
+      mileage: "main.carsGallery.camry2022.mileage",
+      status: "main.carsGallery.camry2022.status",
+    },
+    {
+      name: "main.carsGallery.bmwX52021.name",
+      price: "$58,000",
+      image: "/Images/BMW X5 2021.jpg",
+      engine: "main.carsGallery.bmwX52021.engine",
+      transmission: "main.carsGallery.bmwX52021.transmission",
+      mileage: "main.carsGallery.bmwX52021.mileage",
+      status: "main.carsGallery.bmwX52021.status",
+    },
+    {
+      name: "main.carsGallery.mercedesC300.name",
+      price: "$45,000",
+      image: "/Images/Mercedes C300 2020.jpg",
+      engine: "main.carsGallery.mercedesC300.engine",
+      transmission: "main.carsGallery.mercedesC300.transmission",
+      mileage: "main.carsGallery.mercedesC300.mileage",
+      status: "main.carsGallery.mercedesC300.status",
+    },
+    {
+      name: "main.carsGallery.mercedesCLS.name",
+      price: "$54,000",
+      image: "/Images/Mercedes-Benz CLS 2020.jpg",
+      engine: "main.carsGallery.mercedesCLS.engine",
+      transmission: "main.carsGallery.mercedesCLS.transmission",
+      mileage: "main.carsGallery.mercedesCLS.mileage",
+      status: "main.carsGallery.mercedesCLS.status",
+    },
+    {
+      name: "main.carsGallery.accord2021.name",
+      price: "$28,000",
+      image: "/Images/Honda Accord 2021.webp",
+      engine: "main.carsGallery.accord2021.engine",
+      transmission: "main.carsGallery.accord2021.transmission",
+      mileage: "main.carsGallery.accord2021.mileage",
+      status: "main.carsGallery.accord2021.status",
+    },
+    {
+      name: "main.carsGallery.mustang2022.name",
+      price: "$35,000",
+      image: "/Images/Ford Mustang 2022.jpg",
+      engine: "main.carsGallery.mustang2022.engine",
+      transmission: "main.carsGallery.mustang2022.transmission",
+      mileage: "main.carsGallery.mustang2022.mileage",
+      status: "main.carsGallery.mustang2022.status",
+    },
+    {
+      name: "main.carsGallery.teslaModel3.name",
+      price: "$40,000",
+      image: "/Images/Tesla Model 3 2022.jpg",
+      engine: "main.carsGallery.teslaModel3.engine",
+      transmission: "main.carsGallery.teslaModel3.transmission",
+      mileage: "main.carsGallery.teslaModel3.mileage",
+      status: "main.carsGallery.teslaModel3.status",
+    },
+    {
+      name: "main.carsGallery.malibu2021.name",
+      price: "$22,000",
+      image: "/Images/Chevrolet Malibu 2021.jpg",
+      engine: "main.carsGallery.malibu2021.engine",
+      transmission: "main.carsGallery.malibu2021.transmission",
+      mileage: "main.carsGallery.malibu2021.mileage",
+      status: "main.carsGallery.malibu2021.status",
+    },
+    {
+      name: "main.carsGallery.altima2020.name",
+      price: "$24,000",
+      image: "/Images/Nissan Altima 2020.avif",
+      engine: "main.carsGallery.altima2020.engine",
+      transmission: "main.carsGallery.altima2020.transmission",
+      mileage: "main.carsGallery.altima2020.mileage",
+      status: "main.carsGallery.altima2020.status",
+    },
+    {
+      name: "main.carsGallery.passat2021.name",
+      price: "$27,000",
+      image: "/Images/Volkswagen Passat 2021.jpg",
+      engine: "main.carsGallery.passat2021.engine",
+      transmission: "main.carsGallery.passat2021.transmission",
+      mileage: "main.carsGallery.passat2021.mileage",
+      status: "main.carsGallery.passat2021.status",
+    },
+  ];
+
   const [search, setSearch] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [year, setYear] = useState("");
@@ -124,7 +127,7 @@ function Store() {
       car.name.toLowerCase().includes(search.toLowerCase()) &&
       (maxPrice === "" ||
         parseInt(car.price.replace(/[$,]/g, "")) <= parseInt(maxPrice)) &&
-      (year === "" || car.year === year),
+      (year === "" || car.year === year)
   );
 
   return (
@@ -133,11 +136,11 @@ function Store() {
       <Container sx={{ mt: 15 }}>
         <Typography
           variant="h3"
-          fontSize={{lg: 45, xs: 40}}
-          textAlign={'center'}
+          fontSize={{ lg: 45, xs: 40 }}
+          textAlign={"center"}
           gutterBottom
         >
-          Suggestions
+          {t("main.Suggestions")}
         </Typography>
       </Container>
 
@@ -199,24 +202,28 @@ function Store() {
                     objectFit: "cover",
                   }}
                   image={car.image}
-                  alt={car.name}
+                  alt={t(car.name)}
                 />
+
                 <Chip
-                  label={car.status}
+                  label={t(car.status)}
                   color="warning"
                   size="small"
                   sx={{ position: "absolute", top: 10, left: 10 }}
                 />
+
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    {car.name}
+                    {t(car.name)}
                   </Typography>
+
                   <Typography variant="body2" color="text.secondary">
                     {car.price}
                   </Typography>
+
                   <Typography>
-                    {car.engine} | {car.transmission} | {car.mileage} |{" "}
-                    {car.status}
+                    {t(car.engine)} | {t(car.transmission)} | {t(car.mileage)} |{" "}
+                    {t(car.status)}
                   </Typography>
                 </CardContent>
               </Card>
@@ -229,12 +236,12 @@ function Store() {
       <Container sx={{ mt: 4 }}>
         <Container sx={{ my: 5 }}>
           <Typography
-          textAlign={'center'}
-          variant="h3"
-          fontSize={{lg: 45, xs: 40}}
+            textAlign={"center"}
+            variant="h3"
+            fontSize={{ lg: 45, xs: 40 }}
             gutterBottom
           >
-            Find Your Car
+            {t("main.findCar")}
           </Typography>
         </Container>
         <Box
@@ -249,14 +256,14 @@ function Store() {
           {/* Search Bar Section */}
 
           <TextField
-            label="Search Cars"
+            label={t("main.SearchCars")}
             variant="outlined"
             value={search}
             fullWidth
             onChange={(e) => setSearch(e.target.value)}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start"  sx={{color: 'text.primary'}}>
+                <InputAdornment position="start" sx={{ color: "text.primary" }}>
                   <SearchIcon color="text.primary" />
                 </InputAdornment>
               ),
@@ -269,7 +276,7 @@ function Store() {
 
           {/* Max Price Filter */}
           <TextField
-            label="Max Price"
+            label={t("main.MaxPrice")}
             variant="outlined"
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
@@ -282,7 +289,7 @@ function Store() {
             }}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start"  sx={{color: 'text.primary'}}>
+                <InputAdornment position="start" sx={{ color: "text.primary" }}>
                   <AttachMoneyIcon />
                 </InputAdornment>
               ),
@@ -292,7 +299,7 @@ function Store() {
 
           {/* Year Filter */}
           <TextField
-            label="Year"
+            label={t("main.Year")}
             variant="outlined"
             value={year}
             onChange={(e) => setYear(e.target.value)}
@@ -305,7 +312,7 @@ function Store() {
             }}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start" sx={{color: 'text.primary'}}>
+                <InputAdornment position="start" sx={{ color: "text.primary" }}>
                   <CalendarTodayOutlinedIcon />
                 </InputAdornment>
               ),

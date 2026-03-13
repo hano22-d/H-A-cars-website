@@ -1,0 +1,188 @@
+{
+  "navbar": {
+    "home": "Home",
+    "cars": "Cars",
+    "compare": "Compare",
+    "news": "News",
+    "store": "Store"
+  },
+  "home": {
+    "hero": {
+      "destination": "Your destination for the world of cars",
+      "button1": "Go to the gallery",
+      "button2": "Cars News",
+      "labelInput": "Find what you want to explore"
+    }
+  },
+  "main": {
+    "title": "Welcome to the Homepage",
+    "content": "Ready to explore the world of automobiles? You've come to the right place",
+    "Suggestions": "Suggestions",
+    "findCar": "Find Your Car",
+    "carsGallery": {
+      "camry2022": {
+        "name": "Toyota Camry 2022",
+        "engine": "V4 2.5L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "20,000 km",
+        "status": "Used"
+      },
+      "bmwX52021": {
+        "name": "BMW X5 2021",
+        "engine": "V6 3.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "20,000 km",
+        "status": "Used"
+      },
+      "mercedesC300": {
+        "name": "Mercedes C300 2020",
+        "engine": "V4 2.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "10,000 km",
+        "status": "Used"
+      },
+      "mercedesCLS": {
+        "name": "Mercedes-Benz CLS 2020",
+        "engine": "V6 3.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "25,000 km",
+        "status": "Used"
+      },
+      "accord2021": {
+        "name": "Honda Accord 2021",
+        "engine": "V4 1.5L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "15,000 km",
+        "status": "Used"
+      },
+      "mustang2022": {
+        "name": "Ford Mustang 2022",
+        "engine": "V8 5.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "8,000 km",
+        "status": "Used"
+      },
+      "teslaModel3": {
+        "name": "Tesla Model 3 2022",
+        "engine": "Electric Motor",
+        "transmission": "Automatic Transmission",
+        "mileage": "570 km",
+        "status": "New"
+      },
+      "malibu2021": {
+        "name": "Chevrolet Malibu 2021",
+        "engine": "V4 1.5L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "20,000 km",
+        "status": "Used"
+      },
+      "altima2020": {
+        "name": "Nissan Altima 2020",
+        "engine": "V4 2.5L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "30,000 km",
+        "status": "Used"
+      },
+      "passat2021": {
+        "name": "Volkswagen Passat 2021",
+        "engine": "V4 2.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "20,000 km",
+        "status": "Used"
+      }
+    },
+    "cars": {
+      "audiA8": {
+        "name": "Audi A8",
+        "engine": "V6 3.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "10,000 km",
+        "status": "Used"
+      },
+      "bmwM4": {
+        "name": "BMW M4",
+        "engine": "I6 3.0L Engine",
+        "transmission": "Manual Transmission",
+        "mileage": "30,000 km",
+        "status": "Used"
+      },
+      "hyundaiTucson": {
+        "name": "Hyundai Tucson",
+        "engine": "I4 2.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "15,000 km",
+        "status": "Used"
+      },
+      "hyundaiPalisade": {
+        "name": "Hyundai Palisade",
+        "engine": "V6 3.8L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "5,000 km",
+        "status": "New"
+      },
+      "kiaSorento": {
+        "name": "Kia Sorento",
+        "engine": "V6 3.5L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "20,000 km",
+        "status": "Used"
+      },
+      "mercedesCLS": {
+        "name": "Mercedes-Benz CLS",
+        "engine": "V6 3.0L Engine",
+        "transmission": "Automatic Transmission",
+        "mileage": "25,000 km",
+        "status": "Used"
+      }
+    },
+    "carsInfo": {
+      "price": "Price",
+      "engine": "Engine",
+      "transmission": "Transmission",
+      "mileage": "Mileage",
+      "status": "Status"
+    },
+    "Details": "Details",
+    "CarDetails": "Car Details",
+    "Close": "Close",
+    "BuyNow": "Buy Now",
+    "SearchCars": "Search Cars",
+    "MaxPrice": "Max Price",
+    "Year": "Year"
+  },
+  "footer": {
+    "aboutTitle": "Welcome to H & A Cars",
+    "aboutText": "We are Hani Jumaa and Ali Saado, and our passion for the world of automobiles has been the driving force behind the creation of this website. Here, we take you on a journey through the latest models, industry news, and cutting-edge automotive technologies. Our goal is to become your go-to reference for everything car-related—from specifications and pricing to the newest releases and smart tips. At H & A Cars, we believe that a car is not just a means of transportation, but an experience, a story, and a world of creativity.",
+    "siteSections": {
+      "contactUs": "Contact Us",
+      "sitePolicies": "Site Policies",
+      "termsAndConditions": "Terms & Conditions",
+      "cookiesPolicy": "Cookies Policy",
+      "blog": "Blog",
+      "carNews": "Car News",
+      "buyingGuide": "Buying Guide",
+      "carComparison": "Car Comparison",
+      "services": "Services",
+      "carSearchService": "Car Search Service",
+      "usedCarEvaluation": "Used Car Evaluation"
+    },
+    "avatars": {
+      "aliSaado": {
+        "name": "Ali Saado",
+        "text": "Information Systems Engineer and Front-End Developer, 21 years old. I started in web development in 2025 and focus on building modern web applications with clean code, flexibility, and high quality."
+      },
+      "haniJoma": {
+        "name": "Hani Joma",
+        "text": "Mechatronics Engineer and Front-End Developer, 22 years old. I began my web development journey in 2025, combining engineering precision with modern UI design focusing on performance and user experience."
+      }
+    },
+    "features": {
+      "location": "Our location",
+      "whyH&ACars": "Why H-A Cars",
+      "securePayment": "Secure Payment",
+      "certifiedCars": "Certified Cars",
+      "fastDelivery": "Fast Delivery",
+      "fiveStarRated": "5-Star Rated"
+    }
+  }
+}
