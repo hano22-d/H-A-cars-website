@@ -1,4 +1,8 @@
 {
+  "drawer":{
+    "theme": "Theme",
+    "support": "Support"
+  },
   "navbar": {
     "home": "Home",
     "cars": "Cars",

@@ -18,16 +18,18 @@ import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ArticleIcon from "@mui/icons-material/Article";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import LanguageSelector from "../UiComponents/languageSelector";
+import { useTranslation } from "react-i18next";
 
 function Drawer() {
+  const {t} = useTranslation()
   const { toggleMode, toggleModeChange } = UsethemeToggle();
 
   const navLinkList = [
-    { id: 1, text: "Home", link: "/", icon: <HomeIcon /> },
-    { id: 2, text: "Cars", link: "/cars", icon: <DirectionsCarIcon /> },
-    { id: 3, text: "Compare", link: "/compare", icon: <CompareArrowsIcon /> },
-    { id: 4, text: "News", link: "/news", icon: <ArticleIcon /> },
-    { id: 5, text: "Store", link: "/store", icon: <LocalGroceryStoreIcon /> },
+    { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
+    { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
+    { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
+    { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
+    { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
   ];
 
   const [open, setOpen] = useState(true);
@@ -105,19 +107,14 @@ function Drawer() {
           />
         </Stack>
         <Stack my={2}>
-          {navLinkList.map((nav) => {
-            return (
-              <NavItem
-                className={"nav-item"}
-                onClick={openHandle}
-                key={nav.id}
-                to={nav.link}
-              >
-                <span className="label">{nav.text}</span>
-                <span className="icon">{nav.icon}</span>
-              </NavItem>
-            );
-          })}
+           {navLinkList.map((nav) => {
+                     return (
+                       <NavItem className={"nav-item"} key={nav.id} to={nav.link}>
+                         <span className="label">{t(nav.text)}</span>
+                         <span className="icon">{nav.icon}</span>
+                       </NavItem>
+                     );
+                   })}
         </Stack>
         <Stack direction={"row"}>
           <Typography color={"primary.main"} variant="body1" px={1}>
@@ -131,7 +128,7 @@ function Drawer() {
         <Button onClick={toggleModeChange}>
           {toggleMode ? <BedtimeIcon /> : <WbSunnyIcon />}
           <Typography variant="body1" color={"wheat"} mx={1}>
-            Theme
+            {t("drawer.theme")}
           </Typography>
         </Button>
         <br />
@@ -141,7 +138,7 @@ function Drawer() {
         <Button>
           <HelpIcon />
           <Typography variant="body1" color={"wheat"} mx={1}>
-            Support
+            {t("drawer.support")}
           </Typography>
         </Button>
       </Box>
