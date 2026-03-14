@@ -109,7 +109,7 @@ export default function HeroSlider() {
             {slides[activeIndex].title}
           </Typography>
 
-          <Typography sx={{ mt: { lg: 2, xs: 1 }, mb: { lg: 3, xs: 1 } }}>
+          <Typography sx={{ mt: 2, mb: { lg: 3, xs: 2 } }}>
             {slides[activeIndex].description}
           </Typography>
 
@@ -130,7 +130,7 @@ export default function HeroSlider() {
             zIndex: 2,
             position: "relative",
             left: { xs: "0", md: "6%" },
-            bottom: { lg: 0, xs: "4%" },
+            bottom: { lg: 0, xs: "6git add .%" },
           }}
         >
           <Swiper
