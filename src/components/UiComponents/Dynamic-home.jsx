@@ -101,6 +101,8 @@ export default function HeroSlider() {
             textAlign: { lg: "left", xs: "center" },
             width: { xs: "100%", sm: "100%", md: "50%", lg: "400px" },
             zIndex: 2,
+            position: 'relative',
+            top: {xs: 25,lg: 0}
           }}
         >
           <Typography variant="h1" fontWeight="bold">
