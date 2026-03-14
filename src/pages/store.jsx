@@ -29,7 +29,7 @@ function Store() {
     {
       name: "main.carsGallery.camry2022.name",
       price: "$25,000",
-      image: "/Images/Toyota Camry 2022.avif",
+      image: "/Images/Store/Toyota Camry 2022.avif",
       engine: "main.carsGallery.camry2022.engine",
       transmission: "main.carsGallery.camry2022.transmission",
       mileage: "main.carsGallery.camry2022.mileage",
@@ -38,7 +38,7 @@ function Store() {
     {
       name: "main.carsGallery.bmwX52021.name",
       price: "$58,000",
-      image: "/Images/BMW X5 2021.jpg",
+      image: "/Images/Store/BMW X5 2021.jpg",
       engine: "main.carsGallery.bmwX52021.engine",
       transmission: "main.carsGallery.bmwX52021.transmission",
       mileage: "main.carsGallery.bmwX52021.mileage",
@@ -47,7 +47,7 @@ function Store() {
     {
       name: "main.carsGallery.mercedesC300.name",
       price: "$45,000",
-      image: "/Images/Mercedes C300 2020.jpg",
+      image: "/Images/Store/Mercedes C300 2020.jpg",
       engine: "main.carsGallery.mercedesC300.engine",
       transmission: "main.carsGallery.mercedesC300.transmission",
       mileage: "main.carsGallery.mercedesC300.mileage",
@@ -56,7 +56,7 @@ function Store() {
     {
       name: "main.carsGallery.mercedesCLS.name",
       price: "$54,000",
-      image: "/Images/Mercedes-Benz CLS 2020.jpg",
+      image: "/Images/Store/Mercedes-Benz CLS 2020.jpg",
       engine: "main.carsGallery.mercedesCLS.engine",
       transmission: "main.carsGallery.mercedesCLS.transmission",
       mileage: "main.carsGallery.mercedesCLS.mileage",
@@ -65,7 +65,7 @@ function Store() {
     {
       name: "main.carsGallery.accord2021.name",
       price: "$28,000",
-      image: "/Images/Honda Accord 2021.webp",
+      image: "/Images/Store/Honda Accord 2021.webp",
       engine: "main.carsGallery.accord2021.engine",
       transmission: "main.carsGallery.accord2021.transmission",
       mileage: "main.carsGallery.accord2021.mileage",
@@ -74,7 +74,7 @@ function Store() {
     {
       name: "main.carsGallery.mustang2022.name",
       price: "$35,000",
-      image: "/Images/Ford Mustang 2022.jpg",
+      image: "/Images/Store/Ford Mustang 2022.jpg",
       engine: "main.carsGallery.mustang2022.engine",
       transmission: "main.carsGallery.mustang2022.transmission",
       mileage: "main.carsGallery.mustang2022.mileage",
@@ -83,7 +83,7 @@ function Store() {
     {
       name: "main.carsGallery.teslaModel3.name",
       price: "$40,000",
-      image: "/Images/Tesla Model 3 2022.jpg",
+      image: "/Images/Store/Tesla Model 3 2022.jpg",
       engine: "main.carsGallery.teslaModel3.engine",
       transmission: "main.carsGallery.teslaModel3.transmission",
       mileage: "main.carsGallery.teslaModel3.mileage",
@@ -92,7 +92,7 @@ function Store() {
     {
       name: "main.carsGallery.malibu2021.name",
       price: "$22,000",
-      image: "/Images/Chevrolet Malibu 2021.jpg",
+      image: "/Images/Store/Chevrolet Malibu 2021.jpg",
       engine: "main.carsGallery.malibu2021.engine",
       transmission: "main.carsGallery.malibu2021.transmission",
       mileage: "main.carsGallery.malibu2021.mileage",
@@ -101,7 +101,7 @@ function Store() {
     {
       name: "main.carsGallery.altima2020.name",
       price: "$24,000",
-      image: "/Images/Nissan Altima 2020.avif",
+      image: "/Images/Store/Nissan Altima 2020.avif",
       engine: "main.carsGallery.altima2020.engine",
       transmission: "main.carsGallery.altima2020.transmission",
       mileage: "main.carsGallery.altima2020.mileage",
@@ -110,7 +110,7 @@ function Store() {
     {
       name: "main.carsGallery.passat2021.name",
       price: "$27,000",
-      image: "/Images/Volkswagen Passat 2021.jpg",
+      image: "/Images/Store/Volkswagen Passat 2021.jpg",
       engine: "main.carsGallery.passat2021.engine",
       transmission: "main.carsGallery.passat2021.transmission",
       mileage: "main.carsGallery.passat2021.mileage",

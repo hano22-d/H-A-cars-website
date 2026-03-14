@@ -22,7 +22,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSelector from "../components/UiComponents/languageSelector";
 
 import HeroSlider from "../components/UiComponents/Dynamic-home";
-
+import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
 
 
 function Navbar() {
@@ -140,6 +140,7 @@ function Home() {
       <CarHero />
       <Navbar />
       <HeroSlider />
+      <TodayNewsHome />
       <Footer />
     </>
   );

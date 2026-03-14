@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Typography, Button, Card } from "@mui/material";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,28 +14,28 @@ const slides = [
     title: "Cars",
     description:
       "Explore our wide range of cars from leading global brands such as Mercedes, BMW, Audi, and more. Find the perfect car that suits your style and needs.",
-    image: "/Images/Mercedes-S-Class.jpg",
+    image: "/Images/Home/Mercedes-S-Class.jpg",
     buttonTitle: "Explore Cars",
   },
   {
     title: "Compare",
     description:
       "Compare different car easily to see the differences in performance, features, and prices. Make an informed decision before making your purchase.",
-    image: "/Images/Mercedes-S-Class-1.jpg",
+    image: "/Images/Home/Mercedes-S-Class-1.jpg",
     buttonTitle: "Compare Cars",
   },
   {
     title: "Store",
     description:
       "Visit our store to find the best deals on cars, accessories, and services. We offer competitive prices and excellent customer service to ensure you have a great shopping experience.",
-    image: "/Images/Mercedes-S-Class-2.jpg",
+    image: "/Images/Home/Mercedes-S-Class-2.jpg",
     buttonTitle: "Visit Store",
   },
   {
     title: "News",
     description:
       "Stay updated with the latest news and trends in the automotive world.",
-    image: "/Images/Mercedes-S-Class-3.webp",
+    image: "/Images/Home/Mercedes-S-Class-3.webp",
     buttonTitle: "Read News",
   },
 ];
