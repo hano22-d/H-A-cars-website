@@ -12,25 +12,29 @@ import { useNavigate } from "react-router-dom";
 const slides = [
   {
     title: "Cars",
-    description: "Explore our wide range of cars from leading global brands such as Mercedes, BMW, Audi, and more. Find the perfect car that suits your style and needs.",
+    description:
+      "Explore our wide range of cars from leading global brands such as Mercedes, BMW, Audi, and more. Find the perfect car that suits your style and needs.",
     image: "/Images/Mercedes-S-Class.jpg",
     buttonTitle: "Explore Cars",
   },
   {
     title: "Compare",
-    description: "Compare different car easily to see the differences in performance, features, and prices. Make an informed decision before making your purchase.",
+    description:
+      "Compare different car easily to see the differences in performance, features, and prices. Make an informed decision before making your purchase.",
     image: "/Images/Mercedes-S-Class-1.jpg",
     buttonTitle: "Compare Cars",
   },
   {
     title: "Store",
-    description: "Visit our store to find the best deals on cars, accessories, and services. We offer competitive prices and excellent customer service to ensure you have a great shopping experience.",
+    description:
+      "Visit our store to find the best deals on cars, accessories, and services. We offer competitive prices and excellent customer service to ensure you have a great shopping experience.",
     image: "/Images/Mercedes-S-Class-2.jpg",
     buttonTitle: "Visit Store",
   },
   {
     title: "News",
-    description: "Stay updated with the latest news and trends in the automotive world.",
+    description:
+      "Stay updated with the latest news and trends in the automotive world.",
     image: "/Images/Mercedes-S-Class-3.webp",
     buttonTitle: "Read News",
   },
@@ -56,7 +60,7 @@ export default function HeroSlider() {
           position: "relative",
           display: "flex",
           flexDirection: { lg: "row", xs: "column" },
-          justifyContent: { lg: "space-between", xs: "space-evenly" },
+          justifyContent: "space-between",
           alignItems: "center",
           px: 8,
           color: "white",
@@ -103,7 +107,7 @@ export default function HeroSlider() {
             {slides[activeIndex].title}
           </Typography>
 
-          <Typography sx={{ mt: 2, mb: 3 }}>
+          <Typography sx={{ mt: { lg: 2, xs: 1 }, mb: { lg: 3, xs: 1 } }}>
             {slides[activeIndex].description}
           </Typography>
 
@@ -124,6 +128,7 @@ export default function HeroSlider() {
             zIndex: 2,
             position: "relative",
             left: { xs: "0", md: "6%" },
+            bottom: { lg: 0, xs: "4%" },
           }}
         >
           <Swiper
