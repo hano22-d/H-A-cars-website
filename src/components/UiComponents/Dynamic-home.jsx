@@ -4,6 +4,7 @@ import { Box, Typography, Button, Card } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
+import "../../App.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +21,6 @@ const slides = [
     description: "Compare different car easily to see the differences in performance, features, and prices. Make an informed decision before making your purchase.",
     image: "/Images/Mercedes-S-Class-1.jpg",
     buttonTitle: "Compare Cars",
-
   },
   {
     title: "Store",
@@ -55,7 +55,8 @@ export default function HeroSlider() {
           height: "85vh",
           position: "relative",
           display: "flex",
-          justifyContent: "space-between",
+          flexDirection: { lg: "row", xs: "column" },
+          justifyContent: { lg: "space-between", xs: "space-evenly" },
           alignItems: "center",
           px: 8,
           color: "white",
@@ -93,11 +94,12 @@ export default function HeroSlider() {
         {/* النص */}
         <Box
           sx={{
+            textAlign: { lg: "left", xs: "center" },
             width: { xs: "100%", sm: "100%", md: "50%", lg: "400px" },
             zIndex: 2,
           }}
         >
-          <Typography variant="h2" fontWeight="bold">
+          <Typography variant="h1" fontWeight="bold">
             {slides[activeIndex].title}
           </Typography>
 
@@ -105,15 +107,20 @@ export default function HeroSlider() {
             {slides[activeIndex].description}
           </Typography>
 
-          <Button variant="outlined" onClick={() => navigate(`/${slides[activeIndex].title.toLowerCase()}`)}>
-            { slides[activeIndex].buttonTitle}
+          <Button
+            variant="contained"
+            onClick={() =>
+              navigate(`/${slides[activeIndex].title.toLowerCase()}`)
+            }
+          >
+            {slides[activeIndex].buttonTitle}
           </Button>
         </Box>
 
         {/* السلايدر */}
         <Box
           sx={{
-            width: "45vw",
+            width: { lg: "45vw", xs: "95vw" },
             zIndex: 2,
             position: "relative",
             left: { xs: "0", md: "6%" },
@@ -127,12 +134,23 @@ export default function HeroSlider() {
             autoplay={{ delay: 6000, disableOnInteraction: false }}
             loop
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            breakpoints={{
+              0: {
+                centeredSlides: true,
+              },
+              600: {
+                centeredSlides: true,
+              },
+              960: {
+                centeredSlides: false,
+              },
+            }}
           >
             {slides.map((item, index) => (
               <SwiperSlide key={index}>
                 <Card
                   sx={{
-                    height: 250,
+                    height: { lg: 250, xs: 150 },
                     backgroundColor: "transparent",
                     overflow: "hidden",
                     position: "relative",

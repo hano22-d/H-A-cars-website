@@ -70,3 +70,44 @@ transition: 0.3s;
 transform: translateX(-5px);
 transition: 0.3s;
 }
+
+/*تنسيقات ال navigations*/
+.swiper-button-prev {
+  left: 10px !important;
+  width: 40px !important;
+  height: 40px !important;
+  color: #ff4c29 !important;
+}
+
+.swiper-button-next {
+  right: 15px !important;
+  width: 40px !important;
+  height: 40px !important;
+  color: #ff4c29 !important;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: wheat !important;
+  background-color: #ff4d298a;
+  transform: scale(1.1);
+}
+
+@media (min-width: 960px) {
+  .swiper-button-prev {
+    left: 10px !important;
+    width: 60px !important;
+    height: 60px !important;
+    color: #ff4c29 !important;
+  }
+
+  .swiper-button-next {
+    right: 28px !important;
+    width: 60px !important;
+    height: 60px !important;
+    color: #ff4c29 !important;
+  }
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    color: wheat !important;
+    background-color: #ff4d298a;
+    transform: scale(1.1);
+  }
+}
