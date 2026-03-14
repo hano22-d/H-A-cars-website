@@ -130,7 +130,7 @@ export default function HeroSlider() {
             zIndex: 2,
             position: "relative",
             left: { xs: "0", md: "6%" },
-            bottom: { lg: 0, xs: "6git add .%" },
+            bottom: { lg: 0, xs: "6%" },
           }}
         >
           <Swiper
