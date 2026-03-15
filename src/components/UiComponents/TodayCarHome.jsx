@@ -29,6 +29,8 @@ import BoltIcon from "@mui/icons-material/Bolt";
 import VolumUpIcon from "@mui/icons-material/VolumeUp";
 import HealthAndSafety from "@mui/icons-material/HealthAndSafety";
 import CarCrashIcon from "@mui/icons-material/CarCrash";
+import OilBarrelOutlinedIcon from "@mui/icons-material/OilBarrelOutlined";
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 
 // معلومات السيارة الأساسية
@@ -38,18 +40,20 @@ const car = {
   price: "75,000",
   speed: "290 km/h",
   fuel: "Petrol",
+  year: "2023",
 };
 // قائمة المواصفات مرتبة حسب الأهمية
 const specs = [
   // الأداء
-  { icon: <BoltIcon />, label: "Power: 503 HP" },
-  { icon: <TimerIcon />, label: "0-100 km/h: 3.8s" },
-  { icon: <SpeedIcon />, label: "Top Speed: 290 km/h" },
+  { icon: <BoltIcon />, label: "Power: 510 HP" },
+  { icon: <TimerIcon />, label: "0-100 km/h: 3.9s" },
+  { icon: <SpeedIcon />, label: "Top Speed: 250 km/h" },
 
   // المحرك ونظام الدفع
-  { icon: <DirectionsCarIcon />, label: "Engine: 3.0L Twin-Turbo" },
+  { icon: <OilBarrelOutlinedIcon />, label: "Displacement: 3.0L" },
+  { icon: <SettingsOutlinedIcon />, label: "Engine: inline-6 Twin-Turbo" },
   { icon: <SettingsIcon />, label: "Drive System: RWD" },
-  { icon: <SettingsIcon />, label: "Transmission: Automatic" },
+  { icon: <SettingsIcon />, label: "Transmission: Automatic 8-Speed" },
   { icon: <LocalGasStationIcon />, label: "Fuel Type: Petrol" },
 
   // معلومات السيارة الأساسية
