@@ -55,7 +55,7 @@ export default function HeroSlider() {
     >
       <Box
         sx={{
-          width: "100%",
+          width: "95vw",
           height: "85vh",
           position: "relative",
           display: "flex",
@@ -65,6 +65,8 @@ export default function HeroSlider() {
           px: 8,
           color: "white",
           overflow: "hidden",
+          borderRadius: 1,
+          boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
         }}
       >
         {/* الخلفية المتغيرة */}

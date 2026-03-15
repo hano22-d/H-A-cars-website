@@ -1,4 +1,4 @@
-import { Card, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Stack, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { NavItem } from "../components/UiComponents/navLink";
@@ -7,7 +7,7 @@ import Drawer from "../components/layout/drawer";
 import Footer from "../components/layout/Footer";
 import CarHero from "../components/layout/heroNavbar";
 import { UsethemeToggle } from "../context/themeContext";
-import {Button} from "@mui/material";
+import { Button } from "@mui/material";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -21,22 +21,29 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "../components/UiComponents/languageSelector";
 
-import HeroSlider from "../components/UiComponents/Dynamic-home";
+import HeroSlider from "../components/UiComponents/DynamicHome";
 import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
 
-
 function Navbar() {
-
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   const navLinkList = [
     { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
     { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
-    { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
+    {
+      id: 3,
+      text: "navbar.compare",
+      link: "/compare",
+      icon: <CompareArrowsIcon />,
+    },
     { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
-    { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
+    {
+      id: 5,
+      text: "navbar.store",
+      link: "/store",
+      icon: <LocalGroceryStoreIcon />,
+    },
   ];
-
 
   let { progress } = UseHeroContext();
   const { toggleMode, toggleModeChange } = UsethemeToggle();
@@ -86,9 +93,9 @@ function Navbar() {
             }}
           />
         </Link>
-        <Stack sx={{position:'absolute',left: '12%'}} direction={"row"}>
+        <Stack sx={{ position: "absolute", left: "12%" }} direction={"row"}>
           <Button
-          title="Theme"
+            title="Theme"
             sx={{
               display: { lg: "block", xs: "none" },
               "&:hover": {
@@ -100,18 +107,23 @@ function Navbar() {
           >
             {toggleMode ? <BedtimeIcon /> : <WbSunnyIcon />}
           </Button>
-          <Button title="User" sx={{right: 10, display: { lg: "block", xs: "none" }, "&:hover": {
-            bgcolor: "transparent",
-            color: "background.paper",
-          },}}>
+          <Button
+            title="User"
+            sx={{
+              right: 10,
+              display: { lg: "block", xs: "none" },
+              "&:hover": {
+                bgcolor: "transparent",
+                color: "background.paper",
+              },
+            }}
+          >
             <AccountCircleIcon />
           </Button>
 
-          <Box sx={{display:{lg: 'block',xs: 'none'}}}>
-          <LanguageSelector/>
+          <Box sx={{ display: { lg: "block", xs: "none" } }}>
+            <LanguageSelector />
           </Box>
-     
-
         </Stack>
 
         <Stack
@@ -119,9 +131,9 @@ function Navbar() {
           textAlign={"center"}
           direction={{ lg: "row", xs: "column" }}
         >
-       {navLinkList.map((nav) => {
+          {navLinkList.map((nav) => {
             return (
-              <NavItem className={'nav-item'}  key={nav.id} to={nav.link}>
+              <NavItem className={"nav-item"} key={nav.id} to={nav.link}>
                 <span className="label">{t(nav.text)}</span>
                 <span className="icon">{nav.icon}</span>
               </NavItem>
@@ -139,6 +151,17 @@ function Home() {
     <>
       <CarHero />
       <Navbar />
+      <Typography
+        variant="h1"
+        sx={{
+          my: 10,
+          fontSize: { xs: 30, sm: 40, md: 50, lg: 60 },
+          fontFamily: "Black Ops One, system-ui",
+          textAlign: "center",
+        }}
+      >
+        Welcome ✨
+      </Typography>
       <HeroSlider />
       <TodayNewsHome />
       <Footer />
