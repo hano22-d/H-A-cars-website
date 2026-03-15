@@ -23,6 +23,7 @@ import LanguageSelector from "../components/UiComponents/languageSelector";
 
 import HeroSlider from "../components/UiComponents/DynamicHome";
 import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
+import TodayCarHome from "../components/UiComponents/TodayCarHome";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -164,6 +165,7 @@ function Home() {
       </Typography>
       <HeroSlider />
       <TodayNewsHome />
+      <TodayCarHome />
       <Footer />
     </>
   );
