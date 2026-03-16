@@ -80,99 +80,85 @@ const specs = [
 export default function CarOfTheDay() {
   // حالة للتحكم في إظهار أو إخفاء المواصفات الإضافية
   const [show, setShow] = useState(false);
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
-    <Card
+    <Box
       sx={{
-        width: "95vw",
-        mx: "auto",
-        borderRadius: 1,
-        overflow: "hidden",
-        position: "relative",
-        backgroundImage: `url(${car.image})`,
-        backgroundSize: "cover",
-       backgroundPosition: 'center',
-        color: "#fff",
-        minHeight: 500,
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-end",
-        mb: 2
+        justifyContent: "center",
+        alignItems: "center",
+        my: 8
       }}
     >
-      {/* تعتيم */}
-      <Box
+    
+      <Card
         sx={{
-          position: "absolute",
-          inset: 0,
-          bgcolor: "rgba(0,0,0,0.55)",
+          width: "95vw",
+          mx: "auto",
+          borderRadius: 1,
+          overflow: "hidden",
+          position: "relative",
+          backgroundImage: `url(${car.image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          color: "#fff",
+          minHeight: 500,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          mb: 2,
         }}
-      />
-
-      {/* محتوى البطاقة */}
-      <CardContent sx={{ position: "relative" }}>
-        {/* شارة سيارة اليوم */}
-        <Chip
-          className="title"
-          icon={<LocalFireDepartmentIcon />}
-          label={t("home.carDay.labelTitle")}
-          color="primary"
-          sx={{ mb: 2, fontWeight: "bold" }}
+      >
+        {/* تعتيم */}
+        <Box
+          sx={{
+            position: "absolute",
+            inset: 0,
+            bgcolor: "rgba(0,0,0,0.55)",
+          }}
         />
 
-        {/* اسم السيارة */}
-        <Typography variant="h3" fontWeight="bold">
-          {car.name}
-        </Typography>
+        {/* محتوى البطاقة */}
+        <CardContent sx={{ position: "relative" }}>
+          {/* شارة سيارة اليوم */}
+          <Chip
+            className="title"
+            icon={<LocalFireDepartmentIcon />}
+            label={t("home.carDay.labelTitle")}
+            color="primary"
+            sx={{ mb: 2, fontWeight: "bold" }}
+          />
 
-        {/* السعر +  +   */}
-        <Stack direction="row" spacing={3} sx={{ my: 2 }}>
-          <Stack direction="row" spacing={0}>
-            <AttachMoneyIcon />
-            <Typography>{car.price}</Typography>
+          {/* اسم السيارة */}
+          <Typography variant="h3" fontWeight="bold">
+            {car.name}
+          </Typography>
+
+          {/* السعر +  +   */}
+          <Stack direction="row" spacing={3} sx={{ my: 2 }}>
+            <Stack direction="row" spacing={0}>
+              <AttachMoneyIcon />
+              <Typography>{car.price}</Typography>
+            </Stack>
+
+            <Stack direction="row" spacing={1}>
+              <SpeedIcon />
+              <Typography>{car.speed}</Typography>
+            </Stack>
+
+            <Stack direction="row" spacing={1}>
+              <LocalGasStationIcon />
+              <Typography>{car.fuel}</Typography>
+            </Stack>
           </Stack>
 
-          <Stack direction="row" spacing={1}>
-            <SpeedIcon />
-            <Typography>{car.speed}</Typography>
-          </Stack>
-
-          <Stack direction="row" spacing={1}>
-            <LocalGasStationIcon />
-            <Typography>{car.fuel}</Typography>
-          </Stack>
-        </Stack>
-
-        {/* شبكة المواصفات */}
-        <Grid container spacing={2} sx={{ mb: 3 }}>
-          {/* map  إنشاء عنصر لكل مواصفة */}
-          {specs.slice(0, 4).map((spec, i) => (
-            <Grid item xs={6} sm={3} key={i}>
-              {/* بطاقة صغيرة للمواصفة */}
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  p: 1.2,
-                  borderRadius: 2,
-                  bgcolor: "rgba(255,255,255,0.08)",
-                  border: "1px solid #ff4c29",
-                  backdropFilter: "blur(6px)",
-                }}
-              >
-                {spec.icon}
-                <Typography variant="body2">{spec.label}</Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-        {/* المواصفات الإضافية */}
-        <Collapse in={show}>
-          <Grid container spacing={2} mb={2}>
-            {specs.slice(4).map((spec, i) => (
+          {/* شبكة المواصفات */}
+          <Grid container spacing={2} sx={{ mb: 3 }}>
+            {/* map  إنشاء عنصر لكل مواصفة */}
+            {specs.slice(0, 4).map((spec, i) => (
               <Grid item xs={6} sm={3} key={i}>
+                {/* بطاقة صغيرة للمواصفة */}
                 <Box
                   sx={{
                     display: "flex",
@@ -191,19 +177,45 @@ export default function CarOfTheDay() {
               </Grid>
             ))}
           </Grid>
-        </Collapse>
+          {/* المواصفات الإضافية */}
+          <Collapse in={show}>
+            <Grid container spacing={2} mb={2}>
+              {specs.slice(4).map((spec, i) => (
+                <Grid item xs={6} sm={3} key={i}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      p: 1.2,
+                      borderRadius: 2,
+                      bgcolor: "rgba(255,255,255,0.08)",
+                      border: "1px solid #ff4c29",
+                      backdropFilter: "blur(6px)",
+                    }}
+                  >
+                    {spec.icon}
+                    <Typography variant="body2">{spec.label}</Typography>
+                  </Box>
+                </Grid>
+              ))}
+            </Grid>
+          </Collapse>
 
-        {/* زر إظهار أو إخفاء المواصفات */}
-        <Button
-          variant="outlined"
-          onClick={() => setShow(!show)}
-          sx={{
-            textTransform: 'capitalize',
-          }}
-        >
-          {show ? t("home.carDay.HideSpecifications") : t("home.carDay.ViewSpecifications")}
-        </Button>
-      </CardContent>
-    </Card>
+          {/* زر إظهار أو إخفاء المواصفات */}
+          <Button
+            variant="outlined"
+            onClick={() => setShow(!show)}
+            sx={{
+              textTransform: "capitalize",
+            }}
+          >
+            {show
+              ? t("home.carDay.HideSpecifications")
+              : t("home.carDay.ViewSpecifications")}
+          </Button>
+        </CardContent>
+      </Card>
+    </Box>
   );
 }

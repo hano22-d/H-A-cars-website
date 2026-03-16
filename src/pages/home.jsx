@@ -19,11 +19,12 @@ import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ArticleIcon from "@mui/icons-material/Article";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "../components/UiComponents/languageSelector";
 
+import LanguageSelector from "../components/UiComponents/languageSelector";
 import HeroSlider from "../components/UiComponents/DynamicHome";
 import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
 import TodayCarHome from "../components/UiComponents/TodayCarHome";
+import PopularCarsHome from "../components/UiComponents/PopularCarsHome";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -166,6 +167,7 @@ function Home() {
       <HeroSlider />
       <TodayNewsHome />
       <TodayCarHome />
+      <PopularCarsHome />
       <Footer />
     </>
   );
