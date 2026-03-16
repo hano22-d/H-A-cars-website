@@ -11,36 +11,35 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
+import { useTranslation } from "react-i18next";
+
 export default function TodayNewsHome() {
+
+  const {t} = useTranslation()
+
   const news = [
     {
-      description:
-        "Audi unveils new 2026 models, and expends its electric vehicle strategy with the launch of new models and technologies.",
+      description: "home.day.audi.description",
       image: "/Images/Home/Audi-Company.jpg",
     },
     {
-      description:
-        "Hyundai Palisade 2026. The latest addition to Hyundai's lineup of luxurious family SUVs.",
+      description: "home.day.palisade.description",
       image: "/Images/Home/Hyundai-Palisade-2026.jpeg",
     },
     {
-      description:
-        "The giant refuses to be left behind. Mercedes-Benz is expanding its lineup in a remarkable way, planning to launch 16-18 new cars in 2026",
+      description: "home.day.mercedes.description",
       image: "/Images/Home/Mercedes-Logo.jpg",
     },
     {
-      description:
-        "Kia is expanding its electric vehicle lineup with models such as EV3, EV4 and EV5 as part of a strong strategy to transition toward electric vehicles.",
+      description: "home.day.kia.description",
       image: "/Images/Home/Kia-EV.webp",
     },
     {
-      description:
-        "Alfa Romeo is developing a new generation of Stelvio and Giulia with hybird and possibly electric technology. A new SUV may also debut in 2027 with gasoline and electric options.",
+      description: "home.day.alfaRomeo.description",
       image: "/Images/Home/Alfa-Romeo.jpg",
     },
     {
-      description:
-        "BMW is preparing to launch new electric vehicles under the Neue Klasse platform, including the iX3 and i3, with plans to introduce more than 40 models by 2027.",
+      description: "home.day.bmw.description",
       image: "/Images/Home/BMW-inside.jpg",
     },
   ];
@@ -62,7 +61,7 @@ export default function TodayNewsHome() {
           width: "fit-content",
         }}
       >
-        Today's News
+        {t("home.day.title")}
       </Typography>
       <Card
         sx={{
@@ -71,9 +70,10 @@ export default function TodayNewsHome() {
         }}
       >
         <Swiper
+        slidesPerView={1}
+        loop={true}
           modules={[Autoplay]}
           autoplay={{ delay: 10000, disableOnInteraction: false }}
-          loop={true}
           grabCursor={true}
           style={{
             width: "100%",
@@ -113,7 +113,7 @@ export default function TodayNewsHome() {
                   width: "80%",
                 }}
               >
-                {item.description}
+               {t(item.description)}
               </CardContent>
               <CardActions
                 sx={{
@@ -124,7 +124,7 @@ export default function TodayNewsHome() {
                 }}
               >
                 <Button variant="outlined" color="primary">
-                  Read More
+                  {t("home.day.readMoreBtn")}
                 </Button>
               </CardActions>
             </SwiperSlide>

@@ -103,8 +103,8 @@ export default function HeroSlider() {
             textAlign: { lg: "left", xs: "center" },
             width: { xs: "100%", sm: "100%", md: "50%", lg: "400px" },
             zIndex: 2,
-            position: 'relative',
-            top: {xs: 25,lg: 0}
+            position: "relative",
+            top: { xs: 25, lg: 0 },
           }}
         >
           <Typography variant="h1" fontWeight="bold">
@@ -116,7 +116,7 @@ export default function HeroSlider() {
           </Typography>
 
           <Button
-            variant="contained"
+            variant="outlined"
             onClick={() =>
               navigate(`/${slides[activeIndex].title.toLowerCase()}`)
             }
@@ -137,7 +137,6 @@ export default function HeroSlider() {
         >
           <Swiper
             modules={[Navigation, Autoplay]}
-            slidesPerView={3}
             spaceBetween={5}
             navigation
             autoplay={{ delay: 6000, disableOnInteraction: false }}
@@ -145,12 +144,15 @@ export default function HeroSlider() {
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             breakpoints={{
               0: {
+                slidesPerView: 1,
                 centeredSlides: true,
               },
               600: {
+                slidesPerView: 2,
                 centeredSlides: true,
               },
               960: {
+                slidesPerView: 3,
                 centeredSlides: false,
               },
             }}

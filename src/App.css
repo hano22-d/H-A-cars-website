@@ -53,22 +53,22 @@
   display: inline-block;
   transform: translateX(5px);
 }
-.nav-item:hover .icon{
+.nav-item:hover .icon {
   opacity: 1;
   transform: translateX(7px);
   transition: transform 0.3s ease;
 }
 .nav-item.active .icon {
-opacity: 1;
-transform: translateX(7px);
+  opacity: 1;
+  transform: translateX(7px);
 }
 .nav-item:hover .label {
-transform: translateX(-5px);
-transition: 0.3s;
+  transform: translateX(-5px);
+  transition: 0.3s;
 }
 .nav-item.active .label {
-transform: translateX(-5px);
-transition: 0.3s;
+  transform: translateX(-5px);
+  transition: 0.3s;
 }
 
 /*تنسيقات ال navigations*/
@@ -85,7 +85,8 @@ transition: 0.3s;
   height: 40px !important;
   color: #ff4c29 !important;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   color: wheat !important;
   background-color: #ff4d298a;
   transform: scale(1.1);
@@ -105,9 +106,25 @@ transition: 0.3s;
     height: 60px !important;
     color: #ff4c29 !important;
   }
-  .swiper-button-next:hover, .swiper-button-prev:hover {
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
     color: wheat !important;
     background-color: #ff4d298a;
     transform: scale(1.1);
+  }
+}
+/*انيميشن لعنوان سيارة اليوم*/
+.title {
+  animation: pulse 5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.08);
   }
 }

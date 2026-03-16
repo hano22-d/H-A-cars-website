@@ -9,6 +9,9 @@ import {
   Box,
   Grid,
 } from "@mui/material";
+import Collapse from "@mui/material/Collapse";
+
+import { useTranslation } from "react-i18next";
 
 // استيراد الأيقونات
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
@@ -30,8 +33,7 @@ import VolumUpIcon from "@mui/icons-material/VolumeUp";
 import HealthAndSafety from "@mui/icons-material/HealthAndSafety";
 import CarCrashIcon from "@mui/icons-material/CarCrash";
 import OilBarrelOutlinedIcon from "@mui/icons-material/OilBarrelOutlined";
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 // معلومات السيارة الأساسية
 const car = {
@@ -78,8 +80,7 @@ const specs = [
 export default function CarOfTheDay() {
   // حالة للتحكم في إظهار أو إخفاء المواصفات الإضافية
   const [show, setShow] = useState(false);
-
-  const visibleSpecs = show ? specs : specs.slice(0, 4);
+  const {t} = useTranslation()
 
   return (
     <Card
@@ -91,12 +92,13 @@ export default function CarOfTheDay() {
         position: "relative",
         backgroundImage: `url(${car.image})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+       backgroundPosition: 'center',
         color: "#fff",
         minHeight: 500,
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
+        mb: 2
       }}
     >
       {/* تعتيم */}
@@ -112,14 +114,15 @@ export default function CarOfTheDay() {
       <CardContent sx={{ position: "relative" }}>
         {/* شارة سيارة اليوم */}
         <Chip
+          className="title"
           icon={<LocalFireDepartmentIcon />}
-          label="سيارة اليوم"
-          color="error"
+          label={t("home.carDay.labelTitle")}
+          color="primary"
           sx={{ mb: 2, fontWeight: "bold" }}
         />
 
         {/* اسم السيارة */}
-        <Typography variant="h4" fontWeight="bold">
+        <Typography variant="h3" fontWeight="bold">
           {car.name}
         </Typography>
 
@@ -144,7 +147,7 @@ export default function CarOfTheDay() {
         {/* شبكة المواصفات */}
         <Grid container spacing={2} sx={{ mb: 3 }}>
           {/* map  إنشاء عنصر لكل مواصفة */}
-          {visibleSpecs.map((spec, i) => (
+          {specs.slice(0, 4).map((spec, i) => (
             <Grid item xs={6} sm={3} key={i}>
               {/* بطاقة صغيرة للمواصفة */}
               <Box
@@ -155,7 +158,7 @@ export default function CarOfTheDay() {
                   p: 1.2,
                   borderRadius: 2,
                   bgcolor: "rgba(255,255,255,0.08)",
-                  border: "1px solid rgba(255,255,255,0.15)",
+                  border: "1px solid #ff4c29",
                   backdropFilter: "blur(6px)",
                 }}
               >
@@ -165,18 +168,40 @@ export default function CarOfTheDay() {
             </Grid>
           ))}
         </Grid>
+        {/* المواصفات الإضافية */}
+        <Collapse in={show}>
+          <Grid container spacing={2} mb={2}>
+            {specs.slice(4).map((spec, i) => (
+              <Grid item xs={6} sm={3} key={i}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    p: 1.2,
+                    borderRadius: 2,
+                    bgcolor: "rgba(255,255,255,0.08)",
+                    border: "1px solid #ff4c29",
+                    backdropFilter: "blur(6px)",
+                  }}
+                >
+                  {spec.icon}
+                  <Typography variant="body2">{spec.label}</Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Collapse>
 
         {/* زر إظهار أو إخفاء المواصفات */}
         <Button
           variant="outlined"
           onClick={() => setShow(!show)}
           sx={{
-            fontWeight: "bold",
-            borderColor: "#fff",
-            color: "#fff",
+            textTransform: 'capitalize',
           }}
         >
-          {show ? "إخفاء المواصفات" : "عرض المواصفات"}
+          {show ? t("home.carDay.HideSpecifications") : t("home.carDay.ViewSpecifications")}
         </Button>
       </CardContent>
     </Card>

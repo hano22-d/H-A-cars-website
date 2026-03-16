@@ -155,7 +155,7 @@ function CarCard({ car }) {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={1}
+            slidesPerView={3}
             spaceBetween={-100}
             loop={true}
             autoplay={{

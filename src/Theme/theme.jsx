@@ -58,7 +58,12 @@ function ThemeWrapper({ children }) {
           MuiPaper: { defaultProps: { elevation: 3 } },
           MuiButton: {
             styleOverrides: {
-              root: { transition: "all 300ms cubic-bezier(0.0, 0, 0.2, 1)" },
+              root: ({theme}) => ( { transition: "all 300ms cubic-bezier(0.0, 0, 0.2, 1)" ,
+                '&:hover': {
+                  color: 'wheat',
+                  backgroundColor: theme.palette.primary.main
+                }
+              }),
             },
           },
           MuiLink: {
