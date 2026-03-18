@@ -135,7 +135,7 @@ export default function PopularCars2() {
                   borderRadius: 1,
                   overflow: "hidden",
                   width: "100%",
-                  height: {sx: "300px", md: "400px", lg: "450px"},
+                  minHeight: {xs: "300px", md: "300px", lg:"250px"},
                   backgroundImage: `url(${car.image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -154,18 +154,18 @@ export default function PopularCars2() {
                   }}
                 />
 
-                <CardContent sx={{ position: "absolute", bottom: 0, left: 0 }}>
+                <CardContent sx={{position: 'relative'}}>
                   <Chip
                     icon={<LocalFireDepartmentIcon />}
                     label="Popular Car"
                     color="error"
                     sx={{ mb: 2, fontWeight: "bold" }}
                   />
-                  <Typography variant="h5" fontWeight="bold">
+                  <Typography variant="h3" fontWeight="bold">
                     {car.name}
                   </Typography>
 
-                  <Stack direction="row" spacing={2} mt={1}>
+                  <Stack direction={{lg:"row",xs: 'column'}}spacing={2} mt={1}>
                     <Stack direction="row" spacing={0.5}>
                       <AttachMoneyIcon />
                       <Typography>{car.price}</Typography>
