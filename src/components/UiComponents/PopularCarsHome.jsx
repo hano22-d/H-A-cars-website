@@ -115,7 +115,6 @@ export default function PopularCars2() {
 
   // فلترة السيارات حالياً غير فعالة → استخدم cars مباشرة
 
-
   return (
     <Container sx={{ my: 8 }}>
       <Typography variant="h1" fontWeight="bold" mb={4} align="center">
@@ -135,7 +134,7 @@ export default function PopularCars2() {
                   borderRadius: 1,
                   overflow: "hidden",
                   width: "100%",
-                  minHeight: {xs: "300px", md: "300px", lg:"250px"},
+                  minHeight: { xs: "300px", md: "300px", lg: "250px" },
                   backgroundImage: `url(${car.image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -154,7 +153,7 @@ export default function PopularCars2() {
                   }}
                 />
 
-                <CardContent sx={{position: 'relative'}}>
+                <CardContent sx={{ position: "relative" }}>
                   <Chip
                     icon={<LocalFireDepartmentIcon />}
                     label="Popular Car"
@@ -165,7 +164,11 @@ export default function PopularCars2() {
                     {car.name}
                   </Typography>
 
-                  <Stack direction={{lg:"row",xs: 'column'}}spacing={2} mt={1}>
+                  <Stack
+                    direction={{ lg: "row", xs: "column" }}
+                    spacing={2}
+                    mt={1}
+                  >
                     <Stack direction="row" spacing={0.5}>
                       <AttachMoneyIcon />
                       <Typography>{car.price}</Typography>
@@ -190,6 +193,7 @@ export default function PopularCars2() {
                           sx={{
                             p: 1,
                             bgcolor: "rgba(255,255,255,0.08)",
+                            backdropFilter: "blur(6px)",
                             borderRadius: 2,
                           }}
                         >

@@ -23,7 +23,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSelector from "../components/UiComponents/languageSelector";
 import HeroSlider from "../components/UiComponents/DynamicHome";
 import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
-import TodayCarHome from "../components/UiComponents/TodayCarHome";
+import ExceptionalCar from "../components/UiComponents/ExceptionalCarHome";
 import PopularCarsHome from "../components/UiComponents/PopularCarsHome";
 
 function Navbar() {
@@ -166,7 +166,7 @@ function Home() {
       </Typography>
       <HeroSlider />
       <TodayNewsHome />
-      <TodayCarHome />
+      <ExceptionalCar />
       <PopularCarsHome />
       <Footer />
     </>

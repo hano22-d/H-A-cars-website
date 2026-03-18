@@ -37,47 +37,47 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 // معلومات السيارة الأساسية
 const car = {
-  name: "BMW M4 Competition",
-  image: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738",
-  price: "75,000",
-  speed: "290 km/h",
+  name: "Mrcedes-Benz S-Class W223 S580",
+  image: "https://octane.rent/wp-content/uploads/2023/03/mercedes-benz-s-class-223-black-1.jpg",
+  price: "120,000",
+  speed: "250 km/h",
   fuel: "Petrol",
-  year: "2023",
+  year: "2026",
 };
 // قائمة المواصفات مرتبة حسب الأهمية
 const specs = [
   // الأداء
-  { icon: <BoltIcon />, label: "Power: 510 HP" },
-  { icon: <TimerIcon />, label: "0-100 km/h: 3.9s" },
+  { icon: <BoltIcon />, label: "Power: 537 HP" },
+  { icon: <TimerIcon />, label: "0-100 km/h: 4.2s" },
   { icon: <SpeedIcon />, label: "Top Speed: 250 km/h" },
 
   // المحرك ونظام الدفع
-  { icon: <OilBarrelOutlinedIcon />, label: "Displacement: 3.0L" },
-  { icon: <SettingsOutlinedIcon />, label: "Engine: inline-6 Twin-Turbo" },
-  { icon: <SettingsIcon />, label: "Drive System: RWD" },
-  { icon: <SettingsIcon />, label: "Transmission: Automatic 8-Speed" },
-  { icon: <LocalGasStationIcon />, label: "Fuel Type: Petrol" },
+  { icon: <OilBarrelOutlinedIcon />, label: "Displacement: 4.0L" },
+  { icon: <SettingsOutlinedIcon />, label: "Engine: V-8 Twin-Turbo" },
+  { icon: <SettingsIcon />, label: "Drive System: 4MATIC AWD" },
+  { icon: <SettingsIcon />, label: "Transmission: Automatic 9G-TRONIC" },
+  { icon: <LocalGasStationIcon />, label: "Fuel Type: Gasoline" },
 
   // معلومات السيارة الأساسية
-  { icon: <EventSeatIcon />, label: "Seats: 4" },
-  { icon: <FitnessCenterIcon />, label: "Weight: 1800 kg" },
-  { icon: <LocalGasStationIcon />, label: "Fuel Tank: 59L" },
+  { icon: <EventSeatIcon />, label: "Seats: 5" },
+  { icon: <FitnessCenterIcon />, label: "Weight: 2175 kg" },
+  { icon: <LocalGasStationIcon />, label: "Fuel Tank: 76L" },
 
   // الأمان
-  { icon: <HealthAndSafety />, label: "Airbags: 6" },
+  { icon: <HealthAndSafety />, label: "Airbags: 15" },
   { icon: <SecurityIcon />, label: "Safety: ABS System" },
   { icon: <CarCrashIcon />, label: "Stability: Traction Control" },
 
   // الراحة والتكنولوجيا
   { icon: <AcUnitIcon />, label: "Climate: Dual Zone AC" },
-  { icon: <MonitorIcon />, label: "Display: 12.3" },
-  { icon: <VolumUpIcon />, label: "Audio: Harman Kardon Sound" },
+  { icon: <MonitorIcon />, label: "Display: 12.8 inch" },
+  { icon: <VolumUpIcon />, label: "Audio: Burmester Sound" },
 
   // معلومات إضافية
   { icon: <PaletteIcon />, label: "Color: Black" },
 ];
 
-export default function CarOfTheDay() {
+export default function ExceptionalCar() {
   // حالة للتحكم في إظهار أو إخفاء المواصفات الإضافية
   const [show, setShow] = useState(false);
   const { t } = useTranslation();
@@ -125,7 +125,7 @@ export default function CarOfTheDay() {
           <Chip
             className="title"
             icon={<LocalFireDepartmentIcon />}
-            label={t("home.carDay.labelTitle")}
+            label="Exceptional Car"
             color="primary"
             sx={{ mb: 2, fontWeight: "bold" }}
           />
