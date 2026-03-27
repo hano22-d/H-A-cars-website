@@ -1,7 +1,10 @@
 import { Typography,Card } from '@mui/material';
+import DynamicTitle from '../components/layout/titleDynamic';
 
 function Cars () {
     return (
+      <>
+      <DynamicTitle title={'H & A Cars - Cars Page'} />
         <Card
         sx={{
             maxWidth: { xs: 0.8, lg: 0.55 },
@@ -20,6 +23,7 @@ function Cars () {
         <Typography>Devolopers: Hani and Ali</Typography>
         <Typography>هل تريد أن تستكشف عالم السيارات؟ أنت في المكان الصحيح</Typography>
       </Card>
+      </>
     )
 }
 export default Cars

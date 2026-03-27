@@ -25,6 +25,7 @@ import HeroSlider from "../components/UiComponents/DynamicHome";
 import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
 import ExceptionalCar from "../components/UiComponents/ExceptionalCarHome";
 import PopularCarsHome from "../components/UiComponents/PopularCarsHome";
+import DynamicTitle from "../components/layout/titleDynamic";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -151,6 +152,7 @@ function Navbar() {
 function Home() {
   return (
     <>
+    <DynamicTitle title={'H & A Cars - Home Page'}/>
       <CarHero />
       <Navbar />
       <Typography

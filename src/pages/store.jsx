@@ -21,6 +21,7 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import { cars } from "../components/UiComponents/CarsDataStore";
 import "../App.css";
 import { useTranslation } from "react-i18next";
+import DynamicTitle from "../components/layout/titleDynamic";
 
 function Store() {
   const { t } = useTranslation();
@@ -132,6 +133,7 @@ function Store() {
 
   return (
     <>
+    <DynamicTitle title={'H & A Cars - Store Page'} />
       {/* Carousel Section */}
       <Container sx={{ mt: 15 }}>
         <Typography
