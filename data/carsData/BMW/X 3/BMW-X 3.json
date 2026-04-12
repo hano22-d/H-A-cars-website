@@ -1,0 +1,39 @@
+{
+  "X 3": {
+    "2010": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254142/carsData/BMW/X%203/BMW-X3-2010-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254144/carsData/BMW/X%203/BMW-X3-2010-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254146/carsData/BMW/X%203/BMW-X3-2010-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254149/carsData/BMW/X%203/BMW-X3-2010-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254151/carsData/BMW/X%203/BMW-X3-2010-side.jpg"
+    },
+    "2014": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254153/carsData/BMW/X%203/BMW-X3-2014-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254155/carsData/BMW/X%203/BMW-X3-2014-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254157/carsData/BMW/X%203/BMW-X3-2014-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254159/carsData/BMW/X%203/BMW-X3-2014-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254161/carsData/BMW/X%203/BMW-X3-2014-side.jpg"
+    },
+    "2017": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254163/carsData/BMW/X%203/BMW-X3-2017-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254165/carsData/BMW/X%203/BMW-X3-2017-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254166/carsData/BMW/X%203/BMW-X3-2017-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254167/carsData/BMW/X%203/BMW-X3-2017-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254169/carsData/BMW/X%203/BMW-X3-2017-side.jpg"
+    },
+    "2022": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254170/carsData/BMW/X%203/BMW-X3-2022-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254171/carsData/BMW/X%203/BMW-X3-2022-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254172/carsData/BMW/X%203/BMW-X3-2022-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254173/carsData/BMW/X%203/BMW-X3-2022-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254174/carsData/BMW/X%203/BMW-X3-2022-side.jpg"
+    },
+    "2025": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254175/carsData/BMW/X%203/BMW-X3-2025-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254176/carsData/BMW/X%203/BMW-X3-2025-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254177/carsData/BMW/X%203/BMW-X3-2025-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254178/carsData/BMW/X%203/BMW-X3-2025-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254179/carsData/BMW/X%203/BMW-X3-2025-side.jpg"
+    }
+  }
+}

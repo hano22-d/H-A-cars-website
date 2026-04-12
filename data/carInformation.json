@@ -1,0 +1,84 @@
+{
+    "cars": [
+      {
+        "id": "honda-accord-2021",
+        "brand": "Honda",
+        "model": "Accord",
+        "year": 2021,
+        "category": "Sedan",
+        "colors": ["black", "white", "gray"],
+        "mainImages": {},
+        "specs": {
+          "engine": "1.5L Turbo",
+          "horsepower": 192,
+          "transmission": "Automatic",
+          "fuel": "Petrol",
+          "drive": "FWD"
+        }
+      },
+      {
+        "id": "toyota-camry-2020",
+        "brand": "Toyota",
+        "model": "Camry",
+        "year": 2020,
+        "category": "Sedan",
+        "colors": ["white", "silver", "black"],
+        "mainImages": {},
+        "specs": {
+          "engine": "2.5L",
+          "horsepower": 203,
+          "transmission": "Automatic",
+          "fuel": "Petrol",
+          "drive": "FWD"
+        }
+      },
+      {
+        "id": "bmw-x5-2022",
+        "brand": "BMW",
+        "model": "X5",
+        "year": 2022,
+        "category": "SUV",
+        "colors": ["black", "blue", "white"],
+        "mainImages": {},
+        "specs": {
+          "engine": "3.0L Turbo",
+          "horsepower": 335,
+          "transmission": "Automatic",
+          "fuel": "Petrol",
+          "drive": "AWD"
+        }
+      },
+      {
+        "id": "ford-mustang-2019",
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 2019,
+        "category": "Coupe",
+        "colors": ["red", "black", "yellow"],
+        "mainImages": {},
+        "specs": {
+          "engine": "5.0L V8",
+          "horsepower": 450,
+          "transmission": "Manual",
+          "fuel": "Petrol",
+          "drive": "RWD"
+        }
+      },
+      {
+        "id": "hyundai-tucson-2021",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2021,
+        "category": "SUV",
+        "colors": ["gray", "white", "blue"],
+        "mainImages": {},
+        "specs": {
+          "engine": "2.0L",
+          "horsepower": 161,
+          "transmission": "Automatic",
+          "fuel": "Petrol",
+          "drive": "FWD"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,10 @@
+{
+  "GT-R": {
+    "R": {
+      "2017": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255143/carsData/Nissan/GT-R/Nissan-GT-R-2017-side.jpg",
+      "2024": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255147/carsData/Nissan/GT-R/Nissan-GT-R-2024-side.jpg",
+      "R34": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255153/carsData/Nissan/GT-R/Nissan-GT-R-R34-1999-side.jpg",
+      "R35": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255166/carsData/Nissan/GT-R/Nissan-GT-R-R35-2012-side.jpg"
+    }
+  }
+}

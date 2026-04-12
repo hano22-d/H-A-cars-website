@@ -1,0 +1,39 @@
+{
+  "Escape": {
+    "2011": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254213/carsData/Ford/Escape/Ford-Escape-2011-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254214/carsData/Ford/Escape/Ford-Escape-2011-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254215/carsData/Ford/Escape/Ford-Escape-2011-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254216/carsData/Ford/Escape/Ford-Escape-2011-main.jpg",
+      "room": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254218/carsData/Ford/Escape/Ford-Escape-2011-room.jpg"
+    },
+    "2016": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254221/carsData/Ford/Escape/Ford-Escape-2016-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254225/carsData/Ford/Escape/Ford-Escape-2016-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254226/carsData/Ford/Escape/Ford-Escape-2016-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254230/carsData/Ford/Escape/Ford-Escape-2016-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254232/carsData/Ford/Escape/Ford-Escape-2016-side.jpg"
+    },
+    "2019": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254234/carsData/Ford/Escape/Ford-Escape-2019-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254238/carsData/Ford/Escape/Ford-Escape-2019-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254241/carsData/Ford/Escape/Ford-Escape-2019-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254242/carsData/Ford/Escape/Ford-Escape-2019-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254245/carsData/Ford/Escape/Ford-Escape-2019-side.jpg"
+    },
+    "2020": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254246/carsData/Ford/Escape/Ford-Escape-2020-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254247/carsData/Ford/Escape/Ford-Escape-2020-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254248/carsData/Ford/Escape/Ford-Escape-2020-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254250/carsData/Ford/Escape/Ford-Escape-2020-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254251/carsData/Ford/Escape/Ford-Escape-2020-side.jpg"
+    },
+    "2022": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254253/carsData/Ford/Escape/Ford-Escape-2022-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254254/carsData/Ford/Escape/Ford-Escape-2022-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254256/carsData/Ford/Escape/Ford-Escape-2022-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254257/carsData/Ford/Escape/Ford-Escape-2022-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254259/carsData/Ford/Escape/Ford-Escape-2022-side.jpg"
+    }
+  }
+}

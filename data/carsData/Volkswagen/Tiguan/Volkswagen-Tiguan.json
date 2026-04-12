@@ -1,0 +1,35 @@
+{
+  "Tiguan": {
+    "2007": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255587/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2007-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255588/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2007-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255590/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2007-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255591/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2007-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255593/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2007-side.jpg"
+    },
+    "2011": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255594/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2011-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255594/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2011-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255595/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2011-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255596/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2011-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255597/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2011-side.jpg"
+    },
+    "2016": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255598/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2016-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255598/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2016-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255600/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2016-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255601/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2016-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255602/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2016-side.jpg"
+    },
+    "2024": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255604/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2024-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255605/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2024-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255605/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2024-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255606/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2024-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255608/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-2024-side.jpg"
+    },
+    "R": {
+      "2020": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255614/carsData/Volkswagen/Tiguan/Volkswagen-Tiguan-R-2020-side.jpg"
+    }
+  }
+}

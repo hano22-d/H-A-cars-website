@@ -1,0 +1,272 @@
+{
+  "brands": [
+    { "name": "bmw", "categories": ["x5", "x3", "z4"] },
+    { "name": "mercedes", "categories": ["s-class", "g-class", "cls"] }
+  ],
+  "carData": [
+    {
+      "id": "honda-accord-2021",
+      "brand": "Honda",
+      "model": "Accord",
+      "year": 2021,
+      "category": "Sedan",
+      "colors": ["black", "white", "gray"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254510/carsData/Honda/Accord/Honda-Accord-2021-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254511/carsData/Honda/Accord/Honda-Accord-2021-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254512/carsData/Honda/Accord/Honda-Accord-2021-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254514/carsData/Honda/Accord/Honda-Accord-2021-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254515/carsData/Honda/Accord/Honda-Accord-2021-side.jpg"
+      },
+      "specs": {
+        "engine": "1.5L Turbo",
+        "horsepower": 192,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "FWD"
+      }
+    },
+    {
+      "id": "toyota-camry-2020",
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2020,
+      "category": "Sedan",
+      "colors": ["white", "silver", "black"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255274/carsData/Toyota/Camry/Toyota-Camry-2020-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255276/carsData/Toyota/Camry/Toyota-Camry-2020-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255277/carsData/Toyota/Camry/Toyota-Camry-2020-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255278/carsData/Toyota/Camry/Toyota-Camry-2020-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255279/carsData/Toyota/Camry/Toyota-Camry-2020-side.jpg"
+      },
+      "specs": {
+        "engine": "2.5L",
+        "horsepower": 203,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "FWD"
+      }
+    },
+    {
+      "id": "bmw-x5-2022",
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2022,
+      "category": "SUV",
+      "colors": ["black", "blue", "white"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255105/carsData/Nissan/Altima/Nissan-Altima-2008-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255107/carsData/Nissan/Altima/Nissan-Altima-2008-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255108/carsData/Nissan/Altima/Nissan-Altima-2008-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255109/carsData/Nissan/Altima/Nissan-Altima-2008-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255111/carsData/Nissan/Altima/Nissan-Altima-2008-side.jpg"
+      },
+      "specs": {
+        "engine": "3.0L Turbo",
+        "horsepower": 335,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "AWD"
+      }
+    },
+    {
+      "id": "ford-mustang-2019",
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 2019,
+      "category": "Coupe",
+      "colors": ["red", "black", "yellow"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255133/carsData/Nissan/Altima/Nissan-Altima-2023-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255134/carsData/Nissan/Altima/Nissan-Altima-2023-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255135/carsData/Nissan/Altima/Nissan-Altima-2023-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255137/carsData/Nissan/Altima/Nissan-Altima-2023-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255137/carsData/Nissan/Altima/Nissan-Altima-2023-side.jpg"
+      },
+      "specs": {
+        "engine": "5.0L V8",
+        "horsepower": 450,
+        "transmission": "Manual",
+        "fuel": "Petrol",
+        "drive": "RWD"
+      }
+    },
+    {
+      "id": "hyundai-tucson-2021",
+      "brand": "Hyundai",
+      "model": "Tucson",
+      "year": 2021,
+      "category": "SUV",
+      "colors": ["gray", "white", "blue"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254764/carsData/Hyundai/Tucson/Hyundai-Tucson-2021-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254764/carsData/Hyundai/Tucson/Hyundai-Tucson-2021-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254765/carsData/Hyundai/Tucson/Hyundai-Tucson-2021-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254766/carsData/Hyundai/Tucson/Hyundai-Tucson-2021-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254767/carsData/Hyundai/Tucson/Hyundai-Tucson-2021-side.jpg"
+      },
+      "specs": {
+        "engine": "2.0L",
+        "horsepower": 161,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "FWD"
+      }
+    },
+    {
+      "id": "car6",
+      "brand": "Honda",
+      "model": "Accord",
+      "year": 2021,
+      "category": "Sedan",
+      "colors": ["black", "white", "gray"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255167/carsData/Nissan/Murano/Nissan-Murano-2003-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255169/carsData/Nissan/Murano/Nissan-Murano-2003-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255170/carsData/Nissan/Murano/Nissan-Murano-2003-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255172/carsData/Nissan/Murano/Nissan-Murano-2003-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255173/carsData/Nissan/Murano/Nissan-Murano-2003-side.jpg"
+      },
+      "specs": {
+        "engine": "1.5L Turbo",
+        "horsepower": 192,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "FWD"
+      }
+    },
+    {
+      "id": "car7",
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2020,
+      "category": "Sedan",
+      "colors": ["white", "silver", "black"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255174/carsData/Nissan/Murano/Nissan-Murano-2009-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255175/carsData/Nissan/Murano/Nissan-Murano-2009-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255176/carsData/Nissan/Murano/Nissan-Murano-2009-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255178/carsData/Nissan/Murano/Nissan-Murano-2009-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255179/carsData/Nissan/Murano/Nissan-Murano-2009-side.jpg"
+      },
+      "specs": {
+        "engine": "2.5L",
+        "horsepower": 203,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "FWD"
+      }
+    },
+    {
+      "id": "car8",
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2022,
+      "category": "SUV",
+      "colors": ["black", "blue", "white"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255180/carsData/Nissan/Murano/Nissan-Murano-2015-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255181/carsData/Nissan/Murano/Nissan-Murano-2015-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255183/carsData/Nissan/Murano/Nissan-Murano-2015-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255184/carsData/Nissan/Murano/Nissan-Murano-2015-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255185/carsData/Nissan/Murano/Nissan-Murano-2015-side.jpg"
+      },
+      "specs": {
+        "engine": "3.0L Turbo",
+        "horsepower": 335,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "AWD"
+      }
+    },
+    {
+      "id": "car9",
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 2019,
+      "category": "Coupe",
+      "colors": ["red", "black", "yellow"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255186/carsData/Nissan/Murano/Nissan-Murano-2019-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255188/carsData/Nissan/Murano/Nissan-Murano-2019-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255190/carsData/Nissan/Murano/Nissan-Murano-2019-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255191/carsData/Nissan/Murano/Nissan-Murano-2019-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255192/carsData/Nissan/Murano/Nissan-Murano-2019-side.jpg"
+      },
+      "specs": {
+        "engine": "5.0L V8",
+        "horsepower": 450,
+        "transmission": "Manual",
+        "fuel": "Petrol",
+        "drive": "RWD"
+      }
+    },
+    {
+      "id": "car10",
+      "brand": "Hyundai",
+      "model": "Tucson",
+      "year": 2021,
+      "category": "SUV",
+      "colors": ["gray", "white", "blue"],
+      "mainImages": {
+       "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255193/carsData/Nissan/Murano/Nissan-Murano-2025-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255194/carsData/Nissan/Murano/Nissan-Murano-2025-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255195/carsData/Nissan/Murano/Nissan-Murano-2025-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255197/carsData/Nissan/Murano/Nissan-Murano-2025-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255198/carsData/Nissan/Murano/Nissan-Murano-2025-side.jpg"
+      },
+      "specs": {
+        "engine": "2.0L",
+        "horsepower": 161,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "FWD"
+      }
+    },
+    {
+      "id": "car11",
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 2019,
+      "category": "Coupe",
+      "colors": ["red", "black", "yellow"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255433/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255434/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255436/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255437/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255439/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-side.jpg"
+      },
+      "specs": {
+        "engine": "5.0L V8",
+        "horsepower": 450,
+        "transmission": "Manual",
+        "fuel": "Petrol",
+        "drive": "RWD"
+      }
+    },
+    {
+      "id": "car12",
+      "brand": "Hyundai",
+      "model": "Tucson",
+      "year": 2021,
+      "category": "SUV",
+      "colors": ["gray", "white", "blue"],
+      "mainImages": {
+        "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255441/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-back.jpg",
+        "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255449/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-front.jpg",
+        "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255451/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-inside.jpg",
+        "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255452/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-main.jpg",
+        "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255454/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-side.jpg"
+      },
+      "specs": {
+        "engine": "2.0L",
+        "horsepower": 161,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "drive": "FWD"
+      }
+    }
+  ]
+}

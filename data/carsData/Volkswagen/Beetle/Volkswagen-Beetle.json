@@ -1,0 +1,39 @@
+{
+  "Beetle": {
+    "2001": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255433/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255434/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255436/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255437/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255439/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2001-side.jpg"
+    },
+    "2006": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255441/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255449/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255451/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255452/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255454/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2006-side.jpg"
+    },
+    "2012": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255455/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2012-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255457/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2012-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255459/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2012-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255460/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2012-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255461/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2012-side.jpg"
+    },
+    "2014": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255464/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2014-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255465/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2014-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255472/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2014-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255474/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2014-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255476/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2014-side.jpg"
+    },
+    "2016": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255477/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2016-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255478/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2016-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255479/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2016-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255480/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2016-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255481/carsData/Volkswagen/Beetle/Volkswagen-Beetle-2016-side.jpg"
+    }
+  }
+}

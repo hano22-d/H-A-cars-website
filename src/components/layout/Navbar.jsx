@@ -14,6 +14,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import LanguageSelector from "../UiComponents/languageSelector";
 import { useTranslation } from "react-i18next";
+import CollectionsIcon from '@mui/icons-material/Collections';
 
 const navLinkList = [
   { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
@@ -21,6 +22,7 @@ const navLinkList = [
   { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
   { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
   { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
+  {id: 6, text: "navbar.gallery", link: "/gallery",icon: <CollectionsIcon/> }
 ];
 
 function Navbar() {

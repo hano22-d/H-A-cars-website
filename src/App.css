@@ -1,3 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  cursor: url("/icons8-cursor-24.png"), auto !important;
+}
+a:hover,
+button:hover {
+  cursor: url("/icons8-hand-cursor-26.png"), auto !important;
+}
+
 /* Navigation Styles for Swiper */
 .swiper-button-next,
 .swiper-button-prev {
@@ -70,7 +81,6 @@
   transform: translateX(-5px);
   transition: 0.3s;
 }
-
 /*تنسيقات ال navigations*/
 .swiper-button-prev {
   left: 10px !important;
@@ -126,5 +136,86 @@
   }
   90% {
     transform: scale(1.08);
+  }
+}
+.active2dGallery {
+  color: wheat !important ;
+  background-image: linear-gradient(to left, #ff4d29 60%, transparent);
+  transition: all 0.3s ease;
+}
+.active3dGallery {
+  color: wheat !important ;
+  background-image: linear-gradient(to right, #ff4d29 60%, transparent);
+  transition: all 0.3s ease;
+}
+.showFiltersGallery {
+  max-height: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  margin-top: 0 !important;
+  transition: all 0.3s ease-in-out;
+}
+.showDetailsGaleery {
+  opacity: 1 !important;
+  transform: translateY(-100px) !important;
+  transition: all 0.4s ease;
+  visibility: visible !important;
+}
+.bluringCard {
+  filter: blur(3px) brightness(0.8);
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+}
+
+.my-masonry-grid {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin-left: 10px;
+}
+
+.my-masonry-grid_column {
+  background-clip: padding-box;
+  padding-left: 0;
+  flex: 1;
+}
+.spec-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  align-self: center;
+  margin-left: 16px;
+  position: absolute;
+  right: 20%;
+  top: 8%;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ff4c29;
+  border: 1px solid #ff4c29;
+  padding: 8px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.spec-link:hover {
+  background-color: #ff4c29;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .my-masonry-grid {
+    display: flex;
+    width: auto;
+    column-gap: 5px;
+  }
+  .my-masonry-grid_column img {
+    object-fit: cover;
+  }
+
+  .spec-link {
+    right: 32%;
+    top: 13%;
   }
 }

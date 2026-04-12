@@ -1,0 +1,39 @@
+{
+  "Murano": {
+    "2003": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255167/carsData/Nissan/Murano/Nissan-Murano-2003-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255169/carsData/Nissan/Murano/Nissan-Murano-2003-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255170/carsData/Nissan/Murano/Nissan-Murano-2003-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255172/carsData/Nissan/Murano/Nissan-Murano-2003-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255173/carsData/Nissan/Murano/Nissan-Murano-2003-side.jpg"
+    },
+    "2009": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255174/carsData/Nissan/Murano/Nissan-Murano-2009-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255175/carsData/Nissan/Murano/Nissan-Murano-2009-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255176/carsData/Nissan/Murano/Nissan-Murano-2009-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255178/carsData/Nissan/Murano/Nissan-Murano-2009-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255179/carsData/Nissan/Murano/Nissan-Murano-2009-side.jpg"
+    },
+    "2015": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255180/carsData/Nissan/Murano/Nissan-Murano-2015-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255181/carsData/Nissan/Murano/Nissan-Murano-2015-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255183/carsData/Nissan/Murano/Nissan-Murano-2015-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255184/carsData/Nissan/Murano/Nissan-Murano-2015-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255185/carsData/Nissan/Murano/Nissan-Murano-2015-side.jpg"
+    },
+    "2019": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255186/carsData/Nissan/Murano/Nissan-Murano-2019-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255188/carsData/Nissan/Murano/Nissan-Murano-2019-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255190/carsData/Nissan/Murano/Nissan-Murano-2019-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255191/carsData/Nissan/Murano/Nissan-Murano-2019-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255192/carsData/Nissan/Murano/Nissan-Murano-2019-side.jpg"
+    },
+    "2025": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255193/carsData/Nissan/Murano/Nissan-Murano-2025-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255194/carsData/Nissan/Murano/Nissan-Murano-2025-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255195/carsData/Nissan/Murano/Nissan-Murano-2025-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255197/carsData/Nissan/Murano/Nissan-Murano-2025-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255198/carsData/Nissan/Murano/Nissan-Murano-2025-side.jpg"
+    }
+  }
+}

@@ -133,7 +133,7 @@ function Store() {
 
   return (
     <>
-    <DynamicTitle title={'H & A Cars - Store Page'} />
+      <DynamicTitle title={"H & A Cars - Store Page"} />
       {/* Carousel Section */}
       <Container sx={{ mt: 15 }}>
         <Typography

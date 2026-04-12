@@ -1,0 +1,39 @@
+{
+  "Patrol": {
+    "1998": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255199/carsData/Nissan/Patrol/Nissan-Patrol-1998-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255200/carsData/Nissan/Patrol/Nissan-Patrol-1998-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255201/carsData/Nissan/Patrol/Nissan-Patrol-1998-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255203/carsData/Nissan/Patrol/Nissan-Patrol-1998-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255204/carsData/Nissan/Patrol/Nissan-Patrol-1998-side.jpg"
+    },
+    "2004": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255205/carsData/Nissan/Patrol/Nissan-Patrol-2004-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255206/carsData/Nissan/Patrol/Nissan-Patrol-2004-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255207/carsData/Nissan/Patrol/Nissan-Patrol-2004-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255208/carsData/Nissan/Patrol/Nissan-Patrol-2004-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255209/carsData/Nissan/Patrol/Nissan-Patrol-2004-side.jpg"
+    },
+    "2011": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255210/carsData/Nissan/Patrol/Nissan-Patrol-2011-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255212/carsData/Nissan/Patrol/Nissan-Patrol-2011-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255213/carsData/Nissan/Patrol/Nissan-Patrol-2011-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255214/carsData/Nissan/Patrol/Nissan-Patrol-2011-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255216/carsData/Nissan/Patrol/Nissan-Patrol-2011-side.jpg"
+    },
+    "2015": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255217/carsData/Nissan/Patrol/Nissan-Patrol-2015-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255219/carsData/Nissan/Patrol/Nissan-Patrol-2015-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255220/carsData/Nissan/Patrol/Nissan-Patrol-2015-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255222/carsData/Nissan/Patrol/Nissan-Patrol-2015-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255224/carsData/Nissan/Patrol/Nissan-Patrol-2015-side.jpg"
+    },
+    "2025": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255225/carsData/Nissan/Patrol/Nissan-Patrol-2025-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255225/carsData/Nissan/Patrol/Nissan-Patrol-2025-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255227/carsData/Nissan/Patrol/Nissan-Patrol-2025-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255227/carsData/Nissan/Patrol/Nissan-Patrol-2025-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775255228/carsData/Nissan/Patrol/Nissan-Patrol-2025-side.jpg"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "Sportage": {
+    "2013": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254893/carsData/Kia/Sportage/Kia-Sportage-2013-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254894/carsData/Kia/Sportage/Kia-Sportage-2013-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254896/carsData/Kia/Sportage/Kia-Sportage-2013-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254897/carsData/Kia/Sportage/Kia-Sportage-2013-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254898/carsData/Kia/Sportage/Kia-Sportage-2013-side.jpg"
+    },
+    "2015": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254900/carsData/Kia/Sportage/Kia-Sportage-2015-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254902/carsData/Kia/Sportage/Kia-Sportage-2015-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254904/carsData/Kia/Sportage/Kia-Sportage-2015-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254906/carsData/Kia/Sportage/Kia-Sportage-2015-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254908/carsData/Kia/Sportage/Kia-Sportage-2015-side.jpg"
+    },
+    "2018": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254909/carsData/Kia/Sportage/Kia-Sportage-2018-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254910/carsData/Kia/Sportage/Kia-Sportage-2018-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254911/carsData/Kia/Sportage/Kia-Sportage-2018-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254912/carsData/Kia/Sportage/Kia-Sportage-2018-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254913/carsData/Kia/Sportage/Kia-Sportage-2018-side.jpg"
+    },
+    "2022": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254913/carsData/Kia/Sportage/Kia-Sportage-2022-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254915/carsData/Kia/Sportage/Kia-Sportage-2022-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254916/carsData/Kia/Sportage/Kia-Sportage-2022-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254917/carsData/Kia/Sportage/Kia-Sportage-2022-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254918/carsData/Kia/Sportage/Kia-Sportage-2022-side.jpg"
+    },
+    "2025": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254919/carsData/Kia/Sportage/Kia-Sportage-2025-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254920/carsData/Kia/Sportage/Kia-Sportage-2025-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254921/carsData/Kia/Sportage/Kia-Sportage-2025-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254922/carsData/Kia/Sportage/Kia-Sportage-2025-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254923/carsData/Kia/Sportage/Kia-Sportage-2025-side.jpg"
+    }
+  }
+}

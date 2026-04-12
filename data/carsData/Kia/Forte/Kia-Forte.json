@@ -1,0 +1,39 @@
+{
+  "Forte": {
+    "2009": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254839/carsData/Kia/Forte/Kia-Forte-2009-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254840/carsData/Kia/Forte/Kia-Forte-2009-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254841/carsData/Kia/Forte/Kia-Forte-2009-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254843/carsData/Kia/Forte/Kia-Forte-2009-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254845/carsData/Kia/Forte/Kia-Forte-2009-side.jpg"
+    },
+    "2014": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254846/carsData/Kia/Forte/Kia-Forte-2014-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254847/carsData/Kia/Forte/kia-Forte-2014-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254848/carsData/Kia/Forte/Kia-Forte-2014-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254849/carsData/Kia/Forte/Kia-Forte-2014-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254850/carsData/Kia/Forte/Kia-Forte-2014-side.jpg"
+    },
+    "2016": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254852/carsData/Kia/Forte/Kia-Forte-2016-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254853/carsData/Kia/Forte/Kia-Forte-2016-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254854/carsData/Kia/Forte/Kia-Forte-2016-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254855/carsData/Kia/Forte/Kia-Forte-2016-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254857/carsData/Kia/Forte/Kia-Forte-2016-side.jpg"
+    },
+    "2018": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254858/carsData/Kia/Forte/Kia-Forte-2018-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254859/carsData/Kia/Forte/Kia-Forte-2018-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254860/carsData/Kia/Forte/Kia-Forte-2018-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254861/carsData/Kia/Forte/Kia-Forte-2018-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254863/carsData/Kia/Forte/Kia-Forte-2018-side.jpg"
+    },
+    "2021": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254864/carsData/Kia/Forte/Kia-Forte-2021-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254865/carsData/Kia/Forte/Kia-Forte-2021-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254866/carsData/Kia/Forte/Kia-Forte-2021-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254867/carsData/Kia/Forte/Kia-Forte-2021-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254868/carsData/Kia/Forte/Kia-Forte-2021-side.jpg"
+    }
+  }
+}

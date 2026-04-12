@@ -1,0 +1,25 @@
+{
+  "Palisade": {
+    "2022": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254665/carsData/Hyundai/Palisade/Hyundai-Palisade-2022-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254667/carsData/Hyundai/Palisade/Hyundai-Palisade-2022-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254669/carsData/Hyundai/Palisade/Hyundai-Palisade-2022-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254670/carsData/Hyundai/Palisade/Hyundai-Palisade-2022-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254672/carsData/Hyundai/Palisade/Hyundai-Palisade-2022-side.jpg"
+    },
+    "2023": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254677/carsData/Hyundai/Palisade/Hyundai-Palisade-2023-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254678/carsData/Hyundai/Palisade/Hyundai-Palisade-2023-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254679/carsData/Hyundai/Palisade/Hyundai-Palisade-2023-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254680/carsData/Hyundai/Palisade/Hyundai-Palisade-2023-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254681/carsData/Hyundai/Palisade/Hyundai-Palisade-2023-side.jpg"
+    },
+    "2026": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254683/carsData/Hyundai/Palisade/Hyundai-Palisade-2026-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254684/carsData/Hyundai/Palisade/Hyundai-Palisade-2026-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254687/carsData/Hyundai/Palisade/Hyundai-Palisade-2026-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254688/carsData/Hyundai/Palisade/Hyundai-Palisade-2026-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254689/carsData/Hyundai/Palisade/Hyundai-Palisade-2026-side.jpg"
+    }
+  }
+}

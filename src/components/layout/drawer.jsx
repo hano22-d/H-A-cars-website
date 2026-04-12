@@ -13,6 +13,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "../../App.css";
 
 import HomeIcon from "@mui/icons-material/Home";
+import CollectionsIcon from '@mui/icons-material/Collections';
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ArticleIcon from "@mui/icons-material/Article";
@@ -24,13 +25,14 @@ function Drawer() {
   const {t} = useTranslation()
   const { toggleMode, toggleModeChange } = UsethemeToggle();
 
-  const navLinkList = [
-    { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
-    { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
-    { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
-    { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
-    { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
-  ];
+const navLinkList = [
+  { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
+  { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
+  { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
+  { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
+  { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
+  {id: 6, text: "navbar.gallery", link: "/gallery",icon: <CollectionsIcon/> }
+];
 
   const [open, setOpen] = useState(true);
 

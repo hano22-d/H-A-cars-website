@@ -1,0 +1,39 @@
+{
+  "A-4": {
+    "2005": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253800/carsData/Audi/A-4/Audi-A4-2005-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253802/carsData/Audi/A-4/Audi-A4-2005-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253804/carsData/Audi/A-4/Audi-A4-2005-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253805/carsData/Audi/A-4/Audi-A4-2005-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253806/carsData/Audi/A-4/Audi-A4-2005-side.jpg"
+    },
+    "2012": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253808/carsData/Audi/A-4/Audi-A4-2012-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253810/carsData/Audi/A-4/Audi-A4-2012-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253811/carsData/Audi/A-4/Audi-A4-2012-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253812/carsData/Audi/A-4/Audi-A4-2012-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253814/carsData/Audi/A-4/Audi-A4-2012-side.jpg"
+    },
+    "2016": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253815/carsData/Audi/A-4/Audi-A4-2016-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253816/carsData/Audi/A-4/Audi-A4-2016-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253818/carsData/Audi/A-4/Audi-A4-2016-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253819/carsData/Audi/A-4/Audi-A4-2016-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253820/carsData/Audi/A-4/Audi-A4-2016-side.jpg"
+    },
+    "2019": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253822/carsData/Audi/A-4/Audi-A4-2019-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253824/carsData/Audi/A-4/Audi-A4-2019-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253826/carsData/Audi/A-4/Audi-A4-2019-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253828/carsData/Audi/A-4/Audi-A4-2019-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253829/carsData/Audi/A-4/Audi-A4-2019-side.jpg"
+    },
+    "2020": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253831/carsData/Audi/A-4/Audi-A4-2020-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253832/carsData/Audi/A-4/Audi-A4-2020-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253833/carsData/Audi/A-4/Audi-A4-2020-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253834/carsData/Audi/A-4/Audi-A4-2020-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775253835/carsData/Audi/A-4/Audi-A4-2020-side.jpg"
+    }
+  }
+}

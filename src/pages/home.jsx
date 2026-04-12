@@ -26,27 +26,19 @@ import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
 import ExceptionalCar from "../components/UiComponents/ExceptionalCarHome";
 import PopularCarsHome from "../components/UiComponents/PopularCarsHome";
 import DynamicTitle from "../components/layout/titleDynamic";
+import CollectionsIcon from '@mui/icons-material/Collections';
 
 function Navbar() {
   const { t } = useTranslation();
 
-  const navLinkList = [
-    { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
-    { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
-    {
-      id: 3,
-      text: "navbar.compare",
-      link: "/compare",
-      icon: <CompareArrowsIcon />,
-    },
-    { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
-    {
-      id: 5,
-      text: "navbar.store",
-      link: "/store",
-      icon: <LocalGroceryStoreIcon />,
-    },
-  ];
+const navLinkList = [
+  { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
+  { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
+  { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
+  { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
+  { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
+  {id: 6, text: "navbar.gallery", link: "/gallery",icon: <CollectionsIcon/> }
+];
 
   let { progress } = UseHeroContext();
   const { toggleMode, toggleModeChange } = UsethemeToggle();

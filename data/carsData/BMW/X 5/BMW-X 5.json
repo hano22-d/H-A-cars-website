@@ -1,0 +1,39 @@
+{
+  "X 5": {
+    "2007": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254180/carsData/BMW/X%205/BMW-X5-2007-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254182/carsData/BMW/X%205/BMW-X5-2007-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254183/carsData/BMW/X%205/BMW-X5-2007-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254184/carsData/BMW/X%205/BMW-X5-2007-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254185/carsData/BMW/X%205/BMW-X5-2007-side.jpg"
+    },
+    "2010": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254186/carsData/BMW/X%205/BMW-X5-2010-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254187/carsData/BMW/X%205/BMW-X5-2010-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254189/carsData/BMW/X%205/BMW-X5-2010-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254190/carsData/BMW/X%205/BMW-X5-2010-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254191/carsData/BMW/X%205/BMW-X5-2010-side.jpg"
+    },
+    "2014": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254193/carsData/BMW/X%205/BMW-X5-2014-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254195/carsData/BMW/X%205/BMW-X5-2014-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254197/carsData/BMW/X%205/BMW-X5-2014-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254199/carsData/BMW/X%205/BMW-X5-2014-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254201/carsData/BMW/X%205/BMW-X5-2014-side.jpg"
+    },
+    "2019": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254202/carsData/BMW/X%205/BMW-X5-2019-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254203/carsData/BMW/X%205/BMW-X5-2019-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254205/carsData/BMW/X%205/BMW-X5-2019-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254206/carsData/BMW/X%205/BMW-X5-2019-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254207/carsData/BMW/X%205/BMW-X5-2019-side.jpg"
+    },
+    "2024": {
+      "back": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254208/carsData/BMW/X%205/BMW-X5-2024-back.jpg",
+      "front": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254209/carsData/BMW/X%205/BMW-X5-2024-front.jpg",
+      "inside": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254210/carsData/BMW/X%205/BMW-X5-2024-inside.jpg",
+      "main": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254211/carsData/BMW/X%205/BMW-X5-2024-main.jpg",
+      "side": "https://res.cloudinary.com/ddp0imyjp/image/upload/v1775254212/carsData/BMW/X%205/BMW-X5-2024-side.jpg"
+    }
+  }
+}
