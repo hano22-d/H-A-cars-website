@@ -8,11 +8,11 @@ function ThemeToggleProvider({ children }) {
 
   const [toggleMode, setToggleMode] = useState(() => {
     const saved = localStorage.getItem("theme");
-    return saved !== null ? JSON.parse(saved) : true;
+    return saved !== null ? saved : true;
   });
   
 useEffect(() => {
-  localStorage.setItem('theme',JSON.stringify(toggleMode))
+  localStorage.setItem('theme',toggleMode);
 },[toggleMode])
 
   function toggleModeChange() {
