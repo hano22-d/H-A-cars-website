@@ -25,12 +25,19 @@ import MenuComponent from "./menu";
 import ShowList from "./galleryShowList";
 import ShowMasonry from "./galleryShowMasonry";
 import ShowGrid from "./galleryShowGrid";
+import PagesLoading from "../skeletons/pagesSkeleton";
+import { useCarData } from "../../hooks/carData";
+import EmptySkeleton from "../skeletons/emptySkeleton";
+import SearchLoading from "../skeletons/searchLoading";
 
 const colors = [
   { name: "Black", hex: "#000000" },
   { name: "Silver", hex: "#C0C0C0" },
   { name: "Red", hex: "#FF0000" },
   { name: "White", hex: "#FFFFFF" },
+  { name: "Blue", hex: "#0000FF" },
+  { name: "Gray", hex: "#708090" },
+  { name: "Brown", hex: "#483C32" },
 ];
 //بيانات المينو الخاص بطريقة عرض الصور
 const menuData = [
@@ -43,7 +50,7 @@ function Gallery2D() {
   //حالة عرض وإخفاء حقول الفلترة
   const [showFilterElemet, setShowFilterElement] = useState(false);
   // حالة جلب بيانات حقول الفلترة والصور
-  const [data, setData] = useState({ brands: [], carData: [] });
+  const [data, setData] = useState({ brands: [], cars: [] });
   //حالة حقل البحث
   const [inputSearchValue, setInputSearchValue] = useState("");
   //حالة حقل الشركة والموديل
@@ -52,21 +59,16 @@ function Gallery2D() {
   const [colorValue, setColorValue] = useState(null);
   //حالة طريقة العرض
   const [value, setValue] = useState("");
+  //حالة انيميشن الفلترة
+  const [uiLoading, setUiLoading] = useState(false);
 
   const lottieRef = useRef(null);
 
-  //جلب البيانات//
+  //جلب البيانات
+  const { carData, brands, loading } = useCarData();
   useEffect(() => {
-    fetch("/data/finalCars.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setData({
-          brands: data.brands || [],
-          carData: data.carData || [],
-        });
-      })
-      .catch((error) => console.log(error));
-  }, []);
+    setData({ brands: brands, cars: carData });
+  }, [carData, brands]);
 
   //إظهار الانيميشن كل فترة زمنية//
   useEffect(() => {
@@ -79,13 +81,23 @@ function Gallery2D() {
     return () => clearInterval(interval);
   }, []);
 
+  //اظهار انيميشن الانتظار اثناء الفلترة
+  useEffect(() => {
+    setUiLoading(true);
+    const timeout = setTimeout(() => {
+      setUiLoading(false);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, [inputSearchValue, brandValue, colorValue]);
+
   //منطق الفلترة//
   const filterImg = useMemo(() => {
-    return data.carData.filter((imgObject) => {
+    return data.cars.filter((imgObject) => {
       const brand = (imgObject.brand || "").toLowerCase();
       const model = (imgObject.model || "").toLowerCase();
       const year = imgObject.year || "";
-      const color = (imgObject.color || "").toLowerCase();
+      const color = (imgObject.colors || imgObject.color || "").toLowerCase();
 
       const search = (inputSearchValue || "")
         .toLowerCase()
@@ -105,7 +117,7 @@ function Gallery2D() {
         (selectColor === "" || color === selectColor)
       );
     });
-  }, [data.carData, inputSearchValue, brandValue, colorValue]);
+  }, [data.cars, inputSearchValue, brandValue, colorValue]);
 
   //infinite scroll//
   const LIMIT = 4;
@@ -131,13 +143,10 @@ function Gallery2D() {
 
   // observer
   const observer = useRef();
-
   const lastRef = useCallback(
     (node) => {
       if (!node) return;
-
       if (observer.current) observer.current.disconnect();
-
       observer.current = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting && hasMore) {
@@ -148,22 +157,21 @@ function Gallery2D() {
           rootMargin: "200px",
         }
       );
-
       observer.current.observe(node);
     },
     [hasMore]
   );
 
   //عرض خيارات الشركات
-  const brandsOptions = data.brands.map((brand) => brand.name);
+  const brandsOptions = data.brands.map((brand) => brand.brand);
 
   //عرض خيارات الفئات حسب كل شركة
   const categoriesOptions = useMemo(() => {
     if (!brandValue.brand) {
-      return data.brands.map((brand) => brand.categories).flat();
+      return data.brands.map((brand) => brand.models).flat();
     }
-    const foundBrand = data.brands.find((b) => b.name === brandValue.brand);
-    return foundBrand ? foundBrand.categories : [];
+    const foundBrand = data.brands.find((b) => b.brand === brandValue.brand);
+    return foundBrand ? foundBrand.models : [];
   }, [brandValue, data.brands]);
 
   //حفظ قيم الحقول في localStorage
@@ -180,6 +188,7 @@ function Gallery2D() {
 
   return (
     <Box sx={{ width: "100%", background: "rgba(15, 23, 42, 0.21)" }}>
+      {loading && <PagesLoading />}
       <Container sx={{ borderRadius: 1, pt: 3 }}>
         {/*العنوان*/}
         <Stack
@@ -275,7 +284,7 @@ function Gallery2D() {
             }
             options={brandsOptions}
             sx={{ width: { lg: 250, xs: "100%" } }}
-            renderInput={(info) => <TextField {...info} label="Breands" />}
+            renderInput={(info) => <TextField {...info} label="Brands" />}
           />
 
           <Autocomplete
@@ -320,15 +329,21 @@ function Gallery2D() {
             )}
           />
         </Stack>
-        {/*== حقول الفلترة ==*/}
-
-        {/*طرق عرض الصور*/}
-        {value === "Gallery" ? (
-          <ShowMasonry datas={visible} />
-        ) : value === "List" ? (
-          <ShowList datas={visible} />
+        {uiLoading ? (
+          <SearchLoading show={true} />
+        ) : !visible.length ? (
+          <EmptySkeleton />
         ) : (
-          <ShowGrid datas={visible} />
+          <>
+          {/*طرق عرض الصور */}
+            {value === "Gallery" ? (
+              <ShowMasonry datas={visible} />
+            ) : value === "List" ? (
+              <ShowList datas={visible} />
+            ) : (
+              <ShowGrid datas={visible} />
+            )}
+          </>
         )}
         {/*== طرق عرض الصور ==*/}
         <div ref={lastRef} style={{ height: "1px" }} />

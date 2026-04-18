@@ -123,7 +123,7 @@ function Footer() {
           }}
         >
           <SimpleAvatar
-            image={"/IMG-20260301-WA0015.jpg"}
+            image={"/1774473224863.jpg"}
             color={toggleMode ? "#555" : "#B2F0C8"}
             name={t("footer.avatars.aliSaado.name")}
             text={t("footer.avatars.aliSaado.text")}

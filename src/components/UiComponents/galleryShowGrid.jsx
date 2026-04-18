@@ -8,7 +8,7 @@ function ShowGrid({ datas }) {
       Object.values(data.mainImages).map((img, index) => (
         <Grid item lg={3} xs={6} key={data.id + "-" + index}>
           <CardGallery
-            height={'auto'}
+            height={200}
             src={img}
             name={`${data.brand} ${data.model}`}
             id={data.id}

@@ -13,19 +13,54 @@ import {
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
-import { TbEngineFilled } from "react-icons/tb";
+//icons
 import { GiPowerLightning } from "react-icons/gi";
 import { SiTransmission } from "react-icons/si";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import { FaChevronCircleDown } from "react-icons/fa";
+import { TbEngine } from "react-icons/tb";
+import { GiGearStickPattern, GiCarWheel } from "react-icons/gi";
+import {
+  FaTachometerAlt,
+  FaCarSide,
+  FaCar,
+  FaDrawPolygon,
+  FaVolumeUp,
+  FaEye,
+  FaParking,
+} from "react-icons/fa";
+import {
+  MdSpeed,
+  MdLightbulb,
+  MdDashboard,
+  MdOutlineScreenSearchDesktop,
+  MdWarning,
+  MdOutlineDriveEta,
+} from "react-icons/md";
 
+//files
 import GalleryDetailsSkeleton from "../skeletons/galleryDetailsSkeleton";
 
 const icons = {
-  engine: <TbEngineFilled />,
-  horsepower: <GiPowerLightning />,
+  engine: <TbEngine />,
+  power: <GiPowerLightning />,
+  torque: <GiGearStickPattern />,
   transmission: <SiTransmission />,
-  fuel: <BsFillFuelPumpFill />,
+  acceleration: <FaTachometerAlt />,
+  topSpeed: <MdSpeed />,
+  drivetrain: <GiCarWheel />,
+  fuel_tank_capacity: <BsFillFuelPumpFill />,
+  suspension: <FaCarSide />,
+  front_grille: <FaCar />,
+  lighting_technology: <MdLightbulb />,
+  body_lines: <FaDrawPolygon />,
+  digital_cluster: <MdDashboard />,
+  infotainment_system: <MdOutlineScreenSearchDesktop />,
+  audio_system: <FaVolumeUp />,
+  collision_avoidance: <MdWarning />,
+  driver_assistance: <MdOutlineDriveEta />,
+  blind_spot_monitoring: <FaEye />,
+  "parking-assistance": <FaParking />,
 };
 
 function CarsDetailsGallery() {
@@ -34,10 +69,17 @@ function CarsDetailsGallery() {
   const [imgShow, setImgShow] = useState(0);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 500,
+      behavior: "smooth",
+    });
+  }, []);
+
+  useEffect(() => {
     fetch("/data/finalCars.json")
       .then((res) => res.json())
       .then((data) => {
-        const filData = data.carData.find((car) => {
+        const filData = data.cars.find((car) => {
           return car.id == id;
         });
         setData(filData);
@@ -77,6 +119,7 @@ function CarsDetailsGallery() {
           <Stack
             sx={{ flexDirection: { lg: "row", xs: "column" } }}
             justifySelf={"center"}
+            mb={2}
           >
             <Typography
               textAlign={"center"}
@@ -168,6 +211,7 @@ function CarsDetailsGallery() {
                     onLoad={handleImageLoad}
                     src={img}
                     width={"100%"}
+                    height={{ lg: "150", xs: "auto" }}
                   />
                 </SwiperSlide>
               ))}
@@ -181,6 +225,7 @@ function CarsDetailsGallery() {
               <Grid key={index} item lg={3} xs={6}>
                 <Card
                   sx={{
+                    height: 200,
                     p: 2,
                     borderRadius: 1,
                     background:

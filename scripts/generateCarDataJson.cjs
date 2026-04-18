@@ -33,7 +33,9 @@ const finalCars = cars.cars.map((car) => {
     }
 
     const modelImages = cache[key];
-    const carImages = modelImages[car.model]?.[car.year];
+    const carImages =
+    modelImages[car.model]?.[car.year] ||
+    modelImages[car.year];
 
     if (!carImages) {
       console.warn(`⚠️ No images for ${car.model} ${car.year}`);
