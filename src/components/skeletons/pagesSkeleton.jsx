@@ -5,13 +5,13 @@ import { Container } from "@mui/material";
 
 function PagesLoading() {
   return (
-    <Container sx={{ mt: 20 }}>
+    <Container sx={{ my: 20,width: {lg: "40%",xs: "100%"} }}>
       <DotLottieReact
         src="/animations/loading_gray.lottie"
         autoplay={true}
         loop={true}
         style={{
-          width: "50%",
+          width: "100%",
           justifySelf: "center",
         }}
       />
