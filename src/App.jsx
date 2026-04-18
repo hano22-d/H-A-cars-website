@@ -13,9 +13,7 @@ function App() {
           <ThemeWrapper>
             <CssBaseline>
               <HeroProvide>
-                <useCarData>
                   <RouterProvider router={router} />
-                  </useCarData>
               </HeroProvide>
             </CssBaseline>
           </ThemeWrapper>
