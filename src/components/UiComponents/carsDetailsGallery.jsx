@@ -116,26 +116,24 @@ function CarsDetailsGallery() {
           >
             {data.brand}
           </Typography>
-          <Stack
-            sx={{ flexDirection: { lg: "row", xs: "column" } }}
-            justifySelf={"center"}
-            mb={2}
-          >
-            <Typography
-              textAlign={"center"}
-              variant="h1"
-              sx={{
-                color: "#fff",
-                textShadow: `0px 1px 2px rgb(0, 0, 0),
+
+          <Typography
+            textAlign={"center"}
+            variant="h1"
+            sx={{
+              color: "#fff",
+              textShadow: `0px 1px 2px rgb(0, 0, 0),
                            0px 6px 12px rgba(0, 0, 0, 0.92);`,
-              }}
-              mb={5}
-            >{`${data.model} - ${data.year}`}</Typography>
+            }}
+            mb={5}
+          >{`${data.model} - ${data.year}`}</Typography>
+
+          <Box justifySelf={"center"} mb={5}>
             <a href="#Specifications" className="spec-link">
               Specifications
               <FaChevronCircleDown />
             </a>
-          </Stack>
+          </Box>
 
           {Object.values(data.mainImages).map((img, index) => (
             <Card
@@ -225,7 +223,7 @@ function CarsDetailsGallery() {
               <Grid key={index} item lg={3} xs={6}>
                 <Card
                   sx={{
-                    height: 200,
+                    height: 250,
                     p: 2,
                     borderRadius: 1,
                     background:

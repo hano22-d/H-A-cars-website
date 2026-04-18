@@ -6,7 +6,7 @@ function GallerySkeleton({height}) {
     <Box
       sx={{
         width: "100%",
-        height: height,
+        height: height === "auto"? 200 : height,
         position: "relative",
         borderRadius: 2,
         overflow: "hidden",

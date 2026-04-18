@@ -8,6 +8,7 @@ import "@fontsource/black-ops-one";
 import { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 function ArrowIcon() {
   return (
@@ -28,65 +29,60 @@ function ArrowIcon() {
 }
 
 function HeroContent() {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const { progress } = UseHeroContext();
 
-// Mobile Hero show Images
+  const navigate = useNavigate();
+
+  // Mobile Hero show Images
   const imagesHeroMobile = [
-    '/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
-    '/CarHeroMobileImg/pexels-highervibration-10215508.jpg',
-    '/CarHeroMobileImg/pexels-maxavans-5058350.jpg',
-    '/CarHeroMobileImg/pexels-odobesku-9018708.jpg',
-    '/CarHeroMobileImg/pexels-saimon-6070046.jpg'
-  ] 
+    "/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg",
+    "/CarHeroMobileImg/pexels-highervibration-10215508.jpg",
+    "/CarHeroMobileImg/pexels-maxavans-5058350.jpg",
+    "/CarHeroMobileImg/pexels-odobesku-9018708.jpg",
+    "/CarHeroMobileImg/pexels-saimon-6070046.jpg",
+  ];
 
-  const [heroImgMobile,setHeroImgMobile] = useState(
-    '/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg',
-  )
+  const [heroImgMobile, setHeroImgMobile] = useState(
+    "/CarHeroMobileImg/pexels-barczakshoots-8830048.jpg"
+  );
 
-
- 
   useEffect(() => {
-    let countMobile = 0
+    let countMobile = 0;
     let intervalMobile = setInterval(() => {
-        countMobile = (countMobile + 1) % imagesHeroMobile.length;
-        const img = new Image();
-        img.src = imagesHeroMobile[countMobile];
-        img.onload = () => setHeroImgMobile(imagesHeroMobile[countMobile]);
+      countMobile = (countMobile + 1) % imagesHeroMobile.length;
+      const img = new Image();
+      img.src = imagesHeroMobile[countMobile];
+      img.onload = () => setHeroImgMobile(imagesHeroMobile[countMobile]);
     }, 10000);
 
     return () => clearInterval(intervalMobile);
   }, []);
 
-
-// Laptop Hero show Images
+  // Laptop Hero show Images
   const images = [
     "/imgHero/pexels-alex-amorales-321095-909907.jpg",
     "/imgHero/pexels-lalesh-168938.jpg",
     "/imgHero/pexels-maria-geller-801267-2127037.jpg",
     "/imgHero/pexels-srkportraits-8911015.jpg",
     "/imgHero/pexels-szymon-shields-1503561-6152812.jpg",
-   
   ];
 
   const [heroBackgroundImage, setHeroBackgroundImage] = useState(
-    "/imgHero/pexels-vladalex94-1402787.jpg",
+    "/imgHero/pexels-vladalex94-1402787.jpg"
   );
 
-
-
   useEffect(() => {
-    let count = 0
+    let count = 0;
     let interval = setInterval(() => {
-        count = (count + 1) % images.length;
-        const img = new Image();
-        img.src = images[count];
-        img.onload = () => setHeroBackgroundImage(images[count]);
+      count = (count + 1) % images.length;
+      const img = new Image();
+      img.src = images[count];
+      img.onload = () => setHeroBackgroundImage(images[count]);
     }, 10000);
 
     return () => clearInterval(interval);
   }, []);
-
 
   return (
     <Box
@@ -103,8 +99,8 @@ function HeroContent() {
           position: "absolute",
           inset: 0,
           backgroundImage: {
-          lg : `url(${heroBackgroundImage})`,
-          xs : `url(${heroImgMobile})`
+            lg: `url(${heroBackgroundImage})`,
+            xs: `url(${heroImgMobile})`,
           },
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -171,18 +167,18 @@ function HeroContent() {
           H & A CARS
         </Typography>
         <Typography
-        color={'#fff'}
+          color={"#fff"}
           variant="h3"
           sx={{
             transform: `translateY(-${progress * 100}px)`,
           }}
         >
-         {t("home.hero.destination")}
+          {t("home.hero.destination")}
         </Typography>
 
         <TextField
           sx={{
-            width: {lg:"50%",xs: '75%'},
+            width: { lg: "50%", xs: "75%" },
             my: 4,
             "& .MuiOutlinedInput-input": {
               color: "#fff",
@@ -213,6 +209,7 @@ function HeroContent() {
           <Button
             variant="contained"
             endIcon={<ArrowIcon />}
+            onClick={() => navigate("/gallery")}
             sx={{
               bgcolor: "primary.main",
               fontWeight: 700,
@@ -228,11 +225,12 @@ function HeroContent() {
               },
             }}
           >
-          {t("home.hero.button1")}
+            {t("home.hero.button1")}
           </Button>
 
           <Button
             variant="outlined"
+            onClick={() => navigate("/news")}
             sx={{
               borderColor: "rgba(255,255,255,0.25)",
               color: "white",
