@@ -186,6 +186,11 @@ function Gallery2D() {
     localStorage.setItem("search", inputSearchValue);
   }, [inputSearchValue]);
 
+
+  if (loading) {
+    return <PagesLoading />;
+  }
+  
   return (
     <Box sx={{ width: "100%", background: "rgba(15, 23, 42, 0.21)" }}>
       {loading && <PagesLoading />}

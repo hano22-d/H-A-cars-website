@@ -9,7 +9,7 @@ export const useCarData = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("data/finalCars.json")
+    fetch("/data/finalCars.json")
       .then((response) => response.json())
       .then((data) => {
         setData({
