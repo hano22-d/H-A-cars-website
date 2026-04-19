@@ -14,7 +14,6 @@ function SimpleAvatar({ image, color, name, text }) {
         alt="صورة شخصية"
         sx={{
           width: 140,
-          height: 170,
           border: `4px solid #ff4c29`,
           boxShadow: "0 4px 15px rgba(22, 15, 36, 0.3)",
           borderRadius: "30px 0 30px 0",

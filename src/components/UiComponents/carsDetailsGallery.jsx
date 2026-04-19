@@ -1,4 +1,11 @@
-import { Card, Container, Grid, Typography, Box, Stack } from "@mui/material";
+import {
+  Card,
+  Container,
+  Grid,
+  Typography,
+  Box,
+  Button,
+} from "@mui/material";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -67,6 +74,8 @@ function CarsDetailsGallery() {
   const { id } = useParams();
   const [data, setData] = useState(null);
   const [imgShow, setImgShow] = useState(0);
+
+  const [moreSpec, setMoreSpec] = useState(false);
 
   useEffect(() => {
     window.scrollTo({
@@ -218,12 +227,21 @@ function CarsDetailsGallery() {
           <Typography id="Specifications" variant="h2" mt={5} mb={2}>
             Specifications
           </Typography>
-          <Grid width={{ lg: "80%", xs: "100%" }} spacing={2} container>
-            {Object.entries(data.specs).map(([key, value], index) => (
+        </Container>
+        <Grid
+          width={{ lg: "80%", xs: "100%" }}
+          mb={3}
+          pl={2}
+          spacing={2}
+          container
+        >
+          {Object.entries(data.specs)
+            .slice(0, moreSpec ? -1 : 6)
+            .map(([key, value], index) => (
               <Grid key={index} item lg={3} xs={6}>
                 <Card
                   sx={{
-                    height: 250,
+                    height: {lg:225,xs: 250},
                     p: 2,
                     borderRadius: 1,
                     background:
@@ -264,8 +282,29 @@ function CarsDetailsGallery() {
                 </Card>
               </Grid>
             ))}
+          <Grid
+            item
+            lg={3}
+            xs={12}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "end",
+              pb: 2,
+            }}
+          >
+            <Button
+              variant="outlined"
+              sx={{
+                width: { lg: "70%", xs: "100%" },
+                p: 3,
+              }}
+              onClick={() => setMoreSpec((prev) => !prev)}
+            >
+              {moreSpec ? "Show less" : "More specifications"}
+            </Button>
           </Grid>
-        </Container>
+        </Grid>
       </Box>
     </>
   );
