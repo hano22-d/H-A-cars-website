@@ -5,7 +5,6 @@ import {
   CardMedia,
   Button,
   Box,
-  Container,
   Typography,
 } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,16 +52,6 @@ export default function TodayNewsHome() {
         my: 10,
       }}
     >
-      <Typography
-        variant="h1"
-        gutterBottom
-        sx={{
-          margin: "0 auto",
-          width: "fit-content",
-        }}
-      >
-        {t("home.day.title")}
-      </Typography>
       <Card
         sx={{
           width: "95vw",

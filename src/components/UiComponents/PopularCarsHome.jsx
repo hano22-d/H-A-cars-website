@@ -55,7 +55,7 @@ export default function PopularCars2() {
       price: "95,000",
       speed: "322 km/h",
       fuel: "Electric",
-      image: "https://images.unsplash.com/photo-1619767886558-efdc7f1cf6b0",
+      image: "https://s1.cdn.autoevolution.com/images/gallery/tesla-model-s-2021-7847_32.jpg",
       specs: [
         { icon: <BoltIcon />, label: "Power: 1020 HP" },
         { icon: <TimerIcon />, label: "0-100: 2.1s" },
@@ -75,7 +75,7 @@ export default function PopularCars2() {
       price: "249,000",
       speed: "330 km/h",
       fuel: "Electric",
-      image: "https://images.unsplash.com/photo-1638618164682-0b7c4b9c6d2d",
+      image: "https://4kwallpapers.com/images/wallpapers/lucid-air-sapphire-electric-cars-luxury-sedan-2023-2880x1800-8599.jpeg",
       specs: [
         { icon: <BoltIcon />, label: "Power: 1234 HP" },
         { icon: <TimerIcon />, label: "0-100: 1.9s" },
@@ -95,7 +95,7 @@ export default function PopularCars2() {
       price: "67,000",
       speed: "260 km/h",
       fuel: "Electric",
-      image: "https://images.unsplash.com/photo-1680028194370-3c4bbd7c7a2b",
+      image: "https://www.hdcarwallpapers.com/download/hyundai_ioniq_5_n-1920x1080.jpg",
       specs: [
         { icon: <BoltIcon />, label: "Power: 650 HP" },
         { icon: <TimerIcon />, label: "0-100: 3.4s" },
@@ -117,10 +117,6 @@ export default function PopularCars2() {
 
   return (
     <Container sx={{ my: 8 }}>
-      <Typography variant="h1" fontWeight="bold" mb={4} align="center">
-        Luxury Cars 2026
-      </Typography>
-
       <Grid container spacing={4}>
         {cars.map((car, index) => {
           const isShown = showSpecs[index] || false;

@@ -26,19 +26,37 @@ import TodayNewsHome from "../components/UiComponents/TodayNewsHome";
 import ExceptionalCar from "../components/UiComponents/ExceptionalCarHome";
 import PopularCarsHome from "../components/UiComponents/PopularCarsHome";
 import DynamicTitle from "../components/layout/titleDynamic";
-import CollectionsIcon from '@mui/icons-material/Collections';
+import CollectionsIcon from "@mui/icons-material/Collections";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 function Navbar() {
   const { t } = useTranslation();
 
-const navLinkList = [
-  { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
-  { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
-  { id: 3, text: "navbar.compare", link: "/compare", icon: <CompareArrowsIcon /> },
-  { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
-  { id: 5, text: "navbar.store", link: "/store", icon: <LocalGroceryStoreIcon /> },
-  {id: 6, text: "navbar.gallery", link: "/gallery",icon: <CollectionsIcon/> }
-];
+  const navLinkList = [
+    { id: 1, text: "navbar.home", link: "/", icon: <HomeIcon /> },
+    { id: 2, text: "navbar.cars", link: "/cars", icon: <DirectionsCarIcon /> },
+    {
+      id: 3,
+      text: "navbar.compare",
+      link: "/compare",
+      icon: <CompareArrowsIcon />,
+    },
+    { id: 4, text: "navbar.news", link: "/news", icon: <ArticleIcon /> },
+    {
+      id: 5,
+      text: "navbar.store",
+      link: "/store",
+      icon: <LocalGroceryStoreIcon />,
+    },
+    {
+      id: 6,
+      text: "navbar.gallery",
+      link: "/gallery",
+      icon: <CollectionsIcon />,
+    },
+  ];
 
   let { progress } = UseHeroContext();
   const { toggleMode, toggleModeChange } = UsethemeToggle();
@@ -144,7 +162,7 @@ const navLinkList = [
 function Home() {
   return (
     <>
-    <DynamicTitle title={'H & A Cars - Home Page'}/>
+      <DynamicTitle title={"H & A Cars - Home Page"} />
       <CarHero />
       <Navbar />
       <Typography
@@ -159,9 +177,32 @@ function Home() {
         Welcome ✨
       </Typography>
       <HeroSlider />
+      <Typography variant="h1" fontWeight="bold" my={4} align="center">
+        <CalendarTodayIcon sx={{ mx: 2, fontSize: 35, color: "Green" }} />
+        Today News
+      </Typography>
       <TodayNewsHome />
+      <Typography variant="h1" fontWeight="bold" my={4} align="center">
+        <AutoAwesomeIcon sx={{ mx: 2, fontSize: 40, color: "gold" }} />
+        Exceptional Car
+      </Typography>
       <ExceptionalCar />
+      <Typography variant="h1" fontWeight="bold" my={4} align="center">
+        <WorkspacePremiumIcon sx={{ mx: 2, fontSize: 40, color: "red" }} />
+        Luxury Cars 2026
+      </Typography>
       <PopularCarsHome />
+      <Typography
+        variant="h1"
+        sx={{
+          my: 10,
+          fontSize: { xs: 20, sm: 30, md: 40, lg: 50 },
+          fontFamily: "Black Ops One, system-ui",
+          textAlign: "center",
+        }}
+      >
+        ✨It's not just a ride, it's a passion.✨
+      </Typography>
       <Footer />
     </>
   );
