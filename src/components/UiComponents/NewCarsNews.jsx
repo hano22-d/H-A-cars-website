@@ -77,9 +77,10 @@ export default function NewCars() {
         <CardContent sx={{ position: "absolute", bottom: 0 }}>
           <Typography
             gutterBottom
+            variant="h2"
             component="div"
             sx={{
-              fontSize: { xs: "20px", sm: "40px", lg: "50px" },
+              fontSize: { xs: "15px", sm: "40px", lg: "40px" },
               fontWeight: "bold",
             }}
           >
@@ -87,6 +88,7 @@ export default function NewCars() {
           </Typography>
           <Typography
             color="text.secondary"
+            variant="h3"
             sx={{ fontSize: { xs: "10px", sm: "20px", lg: "25px" } }}
           >
             {newsData[0].description}

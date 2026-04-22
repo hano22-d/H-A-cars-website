@@ -55,7 +55,7 @@ export default function TodayNewsHome() {
       <Card
         sx={{
           width: "95vw",
-          height: "85vh",
+          height: { xs: "50vh", lg: "100vh" },
         }}
       >
         <Swiper
