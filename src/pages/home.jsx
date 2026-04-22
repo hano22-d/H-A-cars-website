@@ -196,7 +196,7 @@ function Home() {
         variant="h1"
         sx={{
           my: 10,
-          fontSize: { xs: 35, sm: 30, md: 40, lg: 50 },
+          fontSize: { xs: 30, sm: 30, md: 40, lg: 50 },
           fontFamily: "Black Ops One, system-ui",
           textAlign: "center",
         }}
