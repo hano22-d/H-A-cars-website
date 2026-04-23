@@ -22,6 +22,7 @@ import { cars } from "../components/UiComponents/CarsDataStore";
 import "../App.css";
 import { useTranslation } from "react-i18next";
 import DynamicTitle from "../components/layout/titleDynamic";
+import Offers from "../components/UiComponents/OffersStore";
 
 function Store() {
   const { t } = useTranslation();
@@ -128,7 +129,7 @@ function Store() {
       car.name.toLowerCase().includes(search.toLowerCase()) &&
       (maxPrice === "" ||
         parseInt(car.price.replace(/[$,]/g, "")) <= parseInt(maxPrice)) &&
-      (year === "" || car.year === year)
+      (year === "" || car.year === year),
   );
 
   return (
@@ -233,6 +234,13 @@ function Store() {
         </Swiper>
       </Container>
       {/* End of Carousel Section */}
+      
+      {/* Special Offers Section */}
+      <Typography variant="h1" align="center" mt={5} mb={3}>
+        Special Offers
+      </Typography>
+      <Offers />
+      {/* End of Special Offers Section */}
 
       <Container sx={{ mt: 4 }}>
         <Container sx={{ my: 5 }}>
